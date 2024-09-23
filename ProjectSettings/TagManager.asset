@@ -49,6 +49,9 @@ TagManager:
   - name: Enemy
     uniqueID: 2780944603
     locked: 0
+  - name: Tree Bottom Shadow
+    uniqueID: 2201819397
+    locked: 0
   - name: Tree 1
     uniqueID: 2723654829
     locked: 0
