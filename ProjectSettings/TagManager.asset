@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Area
+  - Enemy
+  - Bullet
+  - Wall
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 2780944603
+    locked: 0
+  - name: Tree 1
+    uniqueID: 2723654829
+    locked: 0
+  - name: Tree 2
+    uniqueID: 82426311
+    locked: 0
+  - name: Fence
+    uniqueID: 3768325561
+    locked: 0
+  - name: Player
+    uniqueID: 617994065
+    locked: 0
+  - name: Tree 3
+    uniqueID: 2485095389
+    locked: 0
+  - name: Shadow
+    uniqueID: 2177364243
+    locked: 0
+  - name: Tent
+    uniqueID: 2238823897
+    locked: 0
+  - name: Melee Weapon
+    uniqueID: 793431829
+    locked: 0

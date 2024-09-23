@@ -1,0 +1,38 @@
+# Unity 프로젝트의 Library 폴더 무시
+[Ll]ibrary/
+
+# Temp 폴더 무시
+[Tt]emp/
+
+# 기타 유니티 자동 생성 파일 무시
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]serSettings/
+
+# Visual Studio 관련 파일 무시
+.vscode/
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Mono auto generated files
+mono_crash.*
+
+# 빌드 파일 무시
+*.apk
+*.aab
+*.unitypackage
+
+# 기타 파일 무시
+.DS_Store
