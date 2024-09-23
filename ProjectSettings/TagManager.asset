@@ -46,6 +46,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 2327716677
+    locked: 0
+  - name: ForeGround
+    uniqueID: 41457267
+    locked: 0
   - name: Enemy
     uniqueID: 2780944603
     locked: 0
@@ -72,9 +78,6 @@ TagManager:
     locked: 0
   - name: Shadow
     uniqueID: 2177364243
-    locked: 0
-  - name: Tent
-    uniqueID: 2238823897
     locked: 0
   - name: Bottom Shadow
     uniqueID: 3643413289
