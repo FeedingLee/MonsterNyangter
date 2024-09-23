@@ -61,6 +61,9 @@ TagManager:
   - name: Player
     uniqueID: 617994065
     locked: 0
+  - name: Bottom Fence
+    uniqueID: 975959403
+    locked: 0
   - name: Tree 3
     uniqueID: 2485095389
     locked: 0
@@ -69,6 +72,9 @@ TagManager:
     locked: 0
   - name: Tent
     uniqueID: 2238823897
+    locked: 0
+  - name: Bottom Shadow
+    uniqueID: 3643413289
     locked: 0
   - name: Melee Weapon
     uniqueID: 793431829
