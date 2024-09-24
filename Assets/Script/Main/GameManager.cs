@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         isLive = false;
 
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1f);
 
         uiResult.gameObject.SetActive(true);
         uiResult.Lose();
