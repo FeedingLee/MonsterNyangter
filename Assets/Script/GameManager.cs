@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public LevelUp uiLevelUp;
     public Result uiResult;
-    public Transform uiJoy;
+    public GameObject uiJoyStick;
     public GameObject enemyCleaner;
 
     void Awake()
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         health = maxHealth;
 
         player.gameObject.SetActive(true);
-        uiJoy.localScale = Vector3.one;
+        uiJoyStick.SetActive(true);
         uiLevelUp.Select(playerId % 2); 
         Resume();
 
@@ -131,13 +131,13 @@ public class GameManager : MonoBehaviour
     {
         isLive = false;
         Time.timeScale = 0;
-        uiJoy.localScale = Vector3.zero;
+        uiJoyStick.SetActive(false);
     }
 
     public void Resume()
     {
         isLive = true;
         Time.timeScale = 1;
-        uiJoy.localScale = Vector3.one;
+        uiJoyStick.SetActive(true);
     }
 }
