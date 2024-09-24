@@ -37438,7 +37438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 12
+  speed: 3
   scanner: {fileID: 0}
   animCon:
   - {fileID: 9100000, guid: 638267c0df993ff4fa6d856b487c5305, type: 2}
@@ -38036,7 +38036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &683695229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41437,7 +41437,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1310757827
   m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &745926497
@@ -44910,7 +44910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.27450982, g: 0.2509804, b: 0.24705884, a: 0.39215687}
+  m_Color: {r: 0.27450982, g: 0.2509804, b: 0.24705884, a: 0.7647059}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -54277,14 +54277,6 @@ CompositeCollider2D:
         Y: -1040000000
       - X: 430000000
         Y: -1040000000
-    - - X: 0
-        Y: 0
-      - X: 0
-        Y: 10000000
-      - X: 10000000
-        Y: 10000000
-      - X: 10000000
-        Y: 0
     - - X: -120000000
         Y: -500000000
       - X: -120000000
@@ -54307,10 +54299,6 @@ CompositeCollider2D:
       - {x: 42.999973, y: 17}
       - {x: -66, y: 16.999971}
       - {x: -65.99997, y: -104}
-    - - {x: 1, y: 0.0000294}
-      - {x: 0, y: 0.0000294}
-      - {x: 0.0000294, y: 1}
-      - {x: 1, y: 0.9999706}
     - - {x: -8, y: -49.999973}
       - {x: -12, y: -49.999973}
       - {x: -11.99997, y: -47}
@@ -168364,6 +168352,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 14
+      m_TileSpriteIndex: 8
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
   - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -186254,7 +186252,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: a20b6678c312f2a4e99e6557c15cbcb9, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 580be166b73687b4384528b4286f0db5, type: 2}
-  - m_RefCount: 12894
+  - m_RefCount: 12895
     m_Data: {fileID: 11400000, guid: fa7c9b63b580e7e4684dcd57551a2107, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: bf0b7365c73984743ab3b83ad619829e, type: 2}
@@ -186283,7 +186281,7 @@ Tilemap:
     m_Data: {fileID: 21300058, guid: 1c9ed9d1200c29d4cbfd2071028c1cd5, type: 3}
   - m_RefCount: 281
     m_Data: {fileID: 21300018, guid: 1c9ed9d1200c29d4cbfd2071028c1cd5, type: 3}
-  - m_RefCount: 915
+  - m_RefCount: 916
     m_Data: {fileID: 21300050, guid: 1c9ed9d1200c29d4cbfd2071028c1cd5, type: 3}
   - m_RefCount: 617
     m_Data: {fileID: 21300014, guid: 1c9ed9d1200c29d4cbfd2071028c1cd5, type: 3}
@@ -186366,7 +186364,7 @@ Tilemap:
   - m_RefCount: 184
     m_Data: {fileID: -1761290167, guid: 29e21165cb3ae334d969d4be634eaa9e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 13178
+  - m_RefCount: 13179
     m_Data:
       e00: 1
       e01: 0
@@ -186457,7 +186455,7 @@ Tilemap:
       e32: 4.5905e-41
       e33: 0
   m_TileColorArray:
-  - m_RefCount: 13178
+  - m_RefCount: 13179
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -374778,7 +374776,7 @@ MonoBehaviour:
   - spawnTime: 0.2
     spriteType: 1
     health: 80
-    speed: 2.8
+    speed: 2.5
   levelTime: 0
 --- !u!1 &1966386764
 GameObject:

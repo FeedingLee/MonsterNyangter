@@ -82,6 +82,9 @@ TagManager:
   - name: Bottom Shadow
     uniqueID: 3643413289
     locked: 0
-  - name: Melee Weapon
+  - name: Weapon
     uniqueID: 793431829
+    locked: 0
+  - name: JOY STICK
+    uniqueID: 2984209469
     locked: 0
