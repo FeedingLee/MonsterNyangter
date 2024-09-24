@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 7fdfc2e1b4cbdf243adf3a3efeb98836
+guid: 94a8fa29388d83541920c962189e3062
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -48,9 +48,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,89 +119,115 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jagras_0
+      name: Title Logo
       rect:
         serializedVersion: 2
         x: 6
-        y: 45
-        width: 58
-        height: 28
+        y: 180
+        width: 82
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01b76a8dd14e0d64fa9f8182799a8101
-      internalID: -1772610535
+      spriteID: ba1d6b51c056b734db38f77302347185
+      internalID: 1694419602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jagras_1
+      name: Game Over
       rect:
         serializedVersion: 2
-        x: 67
-        y: 45
-        width: 57
+        x: 106
+        y: 180
+        width: 36
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 056124edc97871340b934cd733bf5f38
-      internalID: 2005959311
+      spriteID: d105c5e6548e9964a9e17a84304fcd21
+      internalID: 1395897117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jagras_2
+      name: Quest Failed
       rect:
         serializedVersion: 2
-        x: 128
-        y: 45
-        width: 58
-        height: 28
+        x: 2
+        y: 90
+        width: 71
+        height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52e4f5f797126ed438f6f499bac57dfd
-      internalID: -270067372
+      spriteID: 2acf0b3eef3d1b442ac7b788f26ab3bb
+      internalID: -1552437647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jagras_3
+      name: Quest Clear
       rect:
         serializedVersion: 2
-        x: 6
-        y: 8
-        width: 58
-        height: 15
+        x: 74
+        y: 105
+        width: 86
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d49b459713d922499a3d5d52ceaf1b6
-      internalID: -510076823
+      spriteID: 114f26f5372b53f4d945924b776b9f86
+      internalID: 282719160
       vertices: []
       indices: 
       edges: []
@@ -217,10 +243,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jagras_0: -1772610535
-      Jagras_1: 2005959311
-      Jagras_2: -270067372
-      Jagras_3: -510076823
+      Game Over: 1395897117
+      Logo_10: -159282998
+      Logo_2: 204917914
+      Logo_3: 350272011
+      Logo_4: 1513096983
+      Logo_5: -1345970311
+      Logo_8: -46225288
+      Logo_9: 1954125693
+      Quest Clear: 282719160
+      Quest Failed: -1552437647
+      Title Logo: 1694419602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

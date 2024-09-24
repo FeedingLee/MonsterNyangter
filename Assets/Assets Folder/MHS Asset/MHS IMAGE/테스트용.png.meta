@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 48839462ed8dfbd4284f28e962c55a59
+guid: 894e90f206746014192dbce18ec5f974
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -48,9 +48,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,17 +119,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monster2_0
+      name: "\uD14C\uC2A4\uD2B8\uC6A9_0"
       rect:
         serializedVersion: 2
-        x: 5
-        y: 43
-        width: 52
-        height: 23
+        x: 2
+        y: 178
+        width: 63
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,40 +163,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4f9b0ea35268f74ba7dad4a4e47cc2c
-      internalID: 2003856678
+      spriteID: 3b261b9ea1a45b94bae1c8fa8a87ac59
+      internalID: -48366414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster2_1
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 43
-        width: 52
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c05e1b9d3a9b5a949907f3811489aa9c
-      internalID: 2119114851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster2_2
+      name: "\uD14C\uC2A4\uD2B8\uC6A9_3"
       rect:
         serializedVersion: 2
         x: 115
-        y: 43
-        width: 52
+        y: 177
+        width: 44
         height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a31baf93282f2224386deea0b3125650
-      internalID: 1418337068
+      spriteID: 51f3202063ef77e499040bd799d1d352
+      internalID: -2126562461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster2_3
+      name: "\uD14C\uC2A4\uD2B8\uC6A9_4"
       rect:
         serializedVersion: 2
-        x: 5
-        y: 13
-        width: 51
-        height: 23
+        x: 4
+        y: 143
+        width: 58
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +205,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 873fce38e059ae648bdb98db9bb86849
-      internalID: 230423511
+      spriteID: 3ae43b42b5c286d419f7385bb7841a03
+      internalID: 773530018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD14C\uC2A4\uD2B8\uC6A9_6"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 142
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c7bab3be618c8429c6ebe90589be3f
+      internalID: -2019513058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD14C\uC2A4\uD2B8\uC6A9_11"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 79
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d9a97ae0f3956488b74df45bb5fcff
+      internalID: 873564381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD14C\uC2A4\uD2B8\uC6A9_13"
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 80
+        width: 47
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e047412fd48dc2948a3ce5075f5f8e6e
+      internalID: 2020725470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uD14C\uC2A4\uD2B8\uC6A9_1"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 178
+        width: 50
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafb507f82bb28244b5a853c367f92cc
+      internalID: 1658938972
       vertices: []
       indices: 
       edges: []
@@ -217,10 +306,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monster2_0: 2003856678
-      Monster2_1: 2119114851
-      Monster2_2: 1418337068
-      Monster2_3: 230423511
+      "\uD14C\uC2A4\uD2B8\uC6A9_0": -48366414
+      "\uD14C\uC2A4\uD2B8\uC6A9_1": 1658938972
+      "\uD14C\uC2A4\uD2B8\uC6A9_10": -1864301495
+      "\uD14C\uC2A4\uD2B8\uC6A9_11": 873564381
+      "\uD14C\uC2A4\uD2B8\uC6A9_12": -170834545
+      "\uD14C\uC2A4\uD2B8\uC6A9_13": 2020725470
+      "\uD14C\uC2A4\uD2B8\uC6A9_14": -634426972
+      "\uD14C\uC2A4\uD2B8\uC6A9_15": -1551569315
+      "\uD14C\uC2A4\uD2B8\uC6A9_16": -288637235
+      "\uD14C\uC2A4\uD2B8\uC6A9_17": -1903353445
+      "\uD14C\uC2A4\uD2B8\uC6A9_18": 1093905329
+      "\uD14C\uC2A4\uD2B8\uC6A9_2": 506843261
+      "\uD14C\uC2A4\uD2B8\uC6A9_3": -2126562461
+      "\uD14C\uC2A4\uD2B8\uC6A9_4": 773530018
+      "\uD14C\uC2A4\uD2B8\uC6A9_5": 1777804535
+      "\uD14C\uC2A4\uD2B8\uC6A9_6": -2019513058
+      "\uD14C\uC2A4\uD2B8\uC6A9_7": -1268494922
+      "\uD14C\uC2A4\uD2B8\uC6A9_8": -1029024990
+      "\uD14C\uC2A4\uD2B8\uC6A9_9": -1344522699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

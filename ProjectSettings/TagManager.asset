@@ -67,6 +67,9 @@ TagManager:
   - name: Fence
     uniqueID: 3768325561
     locked: 0
+  - name: Player Outline
+    uniqueID: 993168847
+    locked: 0
   - name: Player
     uniqueID: 617994065
     locked: 0

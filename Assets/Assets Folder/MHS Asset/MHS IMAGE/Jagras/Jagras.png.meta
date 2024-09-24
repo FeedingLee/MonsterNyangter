@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: aa8dd57b973f67c42987a4b9914ba561
+guid: 7fdfc2e1b4cbdf243adf3a3efeb98836
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 18
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,6 +82,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -107,11 +120,24 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground_0
+      name: Jagras_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 23
-        width: 19
-        height: 19
+        x: 6
+        y: 45
+        width: 58
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89e2b1435fdb9a04c9349e0af7f091cf
-      internalID: -446925682
+      spriteID: 01b76a8dd14e0d64fa9f8182799a8101
+      internalID: -1772610535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_1
+      name: Jagras_1
       rect:
         serializedVersion: 2
-        x: 23
-        y: 23
-        width: 19
-        height: 19
+        x: 67
+        y: 45
+        width: 57
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a9dce01ed312314e817e7d0bb3d7e69
-      internalID: -578820877
+      spriteID: 056124edc97871340b934cd733bf5f38
+      internalID: 2005959311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_2
+      name: Jagras_2
       rect:
         serializedVersion: 2
-        x: 43
-        y: 23
-        width: 19
-        height: 19
+        x: 128
+        y: 45
+        width: 58
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13e46f66cd282874bad03be527c1fbe0
-      internalID: 1335486140
+      spriteID: 52e4f5f797126ed438f6f499bac57dfd
+      internalID: -270067372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_3
+      name: Jagras_3
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 19
-        height: 19
+        x: 6
+        y: 8
+        width: 58
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,50 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fabb8d5e9edfcf4c9dceb7283ba4a7b
-      internalID: -2130259462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground_4
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 3
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 778e67e80383fd3418685f5bd9f63331
-      internalID: -1204200965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground_5
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 3
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a90ceb49db71534c8d9cf6e032c5693
-      internalID: 599634219
+      spriteID: 5d49b459713d922499a3d5d52ceaf1b6
+      internalID: -510076823
       vertices: []
       indices: 
       edges: []
@@ -259,12 +243,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ground_0: -446925682
-      Ground_1: -578820877
-      Ground_2: 1335486140
-      Ground_3: -2130259462
-      Ground_4: -1204200965
-      Ground_5: 599634219
+      Jagras_0: -1772610535
+      Jagras_1: 2005959311
+      Jagras_2: -270067372
+      Jagras_3: -510076823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
