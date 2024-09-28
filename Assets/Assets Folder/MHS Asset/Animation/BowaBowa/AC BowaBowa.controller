@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BowaBowa_Dead
-  m_Speed: 0.65
+  m_Speed: 0.45
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -62,7 +62,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1768026688758197994}
-    m_Position: {x: 30, y: 80, z: 0}
+    m_Position: {x: 40, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1009523853157834715}
     m_Position: {x: 30, y: 150, z: 0}
@@ -101,9 +101,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_TransitionDuration: 0.5178571
+  m_TransitionOffset: 0.013672962
+  m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
