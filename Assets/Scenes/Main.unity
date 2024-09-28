@@ -29180,7 +29180,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.545455
+  orthographic size: 12.787879
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -37438,7 +37438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 15
+  speed: 3
   scanner: {fileID: 0}
   animCon:
   - {fileID: 9100000, guid: 638267c0df993ff4fa6d856b487c5305, type: 2}
@@ -41514,6 +41514,7 @@ MonoBehaviour:
   mainCamera: {fileID: 519420031}
   player: {fileID: 672580340}
   moveSpeed: 5
+  LevelUpUi: {fileID: 0}
 --- !u!114 &745926494
 MonoBehaviour:
   m_ObjectHideFlags: 0

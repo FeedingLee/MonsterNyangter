@@ -139,5 +139,12 @@ public class GameManager : MonoBehaviour
         isLive = true;
         Time.timeScale = 1;
         uiJoyStick.SetActive(true);
+
+        // 게임 Resume 시 조이스틱 초기화
+        JoystickController joystickHandle = uiJoyStick.GetComponent<JoystickController>();
+        if (joystickHandle != null)
+        {
+            joystickHandle.ResetJoystick();
+        }
     }
 }
