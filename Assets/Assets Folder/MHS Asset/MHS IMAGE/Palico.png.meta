@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,253 +149,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stand 0
+      name: Palico_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 162
-        width: 27
-        height: 43
+        x: 98
+        y: 810
+        width: 139
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49b9a993936852649a5bd8c73ed6e1e0
-      internalID: -1831878893
+      spriteID: 9fa1307f30bea8a448f9b89bf3a49fd8
+      internalID: -1561516970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stand 1
+      name: Palico_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 163
-        width: 27
-        height: 42
+        x: 333
+        y: 810
+        width: 139
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a8685bfd9fa17b49bc878b4daa38b22
-      internalID: -1590717092
+      spriteID: fff97345c9edbd14187bb0765b73c53b
+      internalID: -1561199791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stand 2
+      name: Palico_2
       rect:
         serializedVersion: 2
-        x: 114
-        y: 162
-        width: 27
-        height: 44
+        x: 568
+        y: 810
+        width: 139
+        height: 222
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6b5bf551d8be04490fea2601dd661d
-      internalID: 1767929079
+      spriteID: 04a070915febc3f40910a341db56916f
+      internalID: -1951886192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 0
+      name: Palico_3
       rect:
         serializedVersion: 2
-        x: 20
-        y: 111
-        width: 27
-        height: 44
+        x: 98
+        y: 555
+        width: 139
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b3520f3539d2514881a112aede9b472
-      internalID: -2070653051
+      spriteID: bddb40a25755e6c43bbe830d15cf742e
+      internalID: -1124160052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1
+      name: Palico_4
       rect:
         serializedVersion: 2
-        x: 67
-        y: 111
-        width: 27
-        height: 44
+        x: 333
+        y: 555
+        width: 139
+        height: 222
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 922cd76276123d04d8264e957e5bdfc7
-      internalID: 1095911548
+      spriteID: e27ec9de99c288d4797d557194a74b41
+      internalID: -994385971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 2
+      name: Palico_5
       rect:
         serializedVersion: 2
-        x: 114
-        y: 111
-        width: 27
-        height: 43
+        x: 568
+        y: 555
+        width: 139
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79e85ec354fb2944195a4e64335f6ae9
-      internalID: -693094424
+      spriteID: d34fc2ddabfbf1244b23e52768faaa2a
+      internalID: -1770013103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 3
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 60
-        width: 27
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba6fd5392bb7ac64cb78c19419d69334
-      internalID: 865952784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk 4
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 60
-        width: 27
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8f43cfa3c0ce4943a9742f59381078b
-      internalID: 1000120713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk 5
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 60
-        width: 27
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47ab9b95caa635a42a1188f101abad02
-      internalID: -1491227502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Damage 0
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 8
-        width: 32
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de1a56a4aff3961448695a7a3f489911
-      internalID: -1159795004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Damage 1
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 8
-        width: 32
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89d75613969444d4ba3654a220a42cf6
-      internalID: -678028740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Die
+      name: Palico_6
       rect:
         serializedVersion: 2
         x: 103
-        y: 6
-        width: 47
-        height: 29
+        y: 300
+        width: 139
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bea33f5bff78f24fb8af256883d8b9d
-      internalID: -1822433362
+      spriteID: afedbbf85577cf1429dbf5ef473951bc
+      internalID: -1605431199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palico_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 300
+        width: 139
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac6670de881e0942b9852902e5deba9
+      internalID: 158645562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palico_8
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 300
+        width: 139
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718c2b56e34bfbc47a22499931000d76
+      internalID: -814310023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palico_9
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 40
+        width: 164
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac15680f51f5081498ce5abed315c7b0
+      internalID: -548858937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palico_10
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 40
+        width: 164
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90de523a9ec557e44bf121afc272069f
+      internalID: 835414981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Palico_11
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 40
+        width: 214
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946de3f2a27d83143b61ff7b5a29eecc
+      internalID: 1801079941
       vertices: []
       indices: 
       edges: []
@@ -417,11 +417,19 @@ TextureImporter:
       Palico_0: -1561516970
       Palico_1: -1561199791
       Palico_10: 835414981
+      Palico_11: 1801079941
       Palico_13: -1976130297
       Palico_15: 509305
       Palico_18: 2036465898
       Palico_19: 63379703
+      Palico_2: -1951886192
+      Palico_3: -1124160052
+      Palico_4: -994385971
+      Palico_5: -1770013103
+      Palico_6: -1605431199
+      Palico_7: 158645562
       Palico_8: -814310023
+      Palico_9: -548858937
       Stand 0: -1831878893
       Stand 1: -1590717092
       Stand 2: 1767929079

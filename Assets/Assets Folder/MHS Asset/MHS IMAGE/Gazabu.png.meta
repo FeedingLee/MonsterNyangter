@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,253 +149,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stand 0
+      name: Gazabu_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 162
-        width: 34
-        height: 43
+        x: 93
+        y: 810
+        width: 174
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7863def695341a24a8e6660037a981ce
-      internalID: -495303133
+      spriteID: c4b7d879f33db314889b4038de021657
+      internalID: -605636818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stand 1
+      name: Gazabu_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 162
-        width: 34
-        height: 43
+        x: 328
+        y: 810
+        width: 174
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 809e8c94fffe5dd4ba1e7ebdfd4af361
-      internalID: -514476193
+      spriteID: f81953a14bcdc1448a42faaa048c210b
+      internalID: 729733127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stand 2
+      name: Gazabu_2
       rect:
         serializedVersion: 2
-        x: 113
-        y: 162
-        width: 34
-        height: 44
+        x: 563
+        y: 810
+        width: 174
+        height: 222
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2bb73020444eb34fba9419d14f1472a
-      internalID: -1045090301
+      spriteID: be575acd455851142a1ee5b4f4341bdd
+      internalID: -1523866634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 0
+      name: Gazabu_3
       rect:
         serializedVersion: 2
-        x: 19
-        y: 111
-        width: 34
-        height: 43
+        x: 93
+        y: 555
+        width: 174
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e3abc3a46eb016468d802db0129d344
-      internalID: 1729673025
+      spriteID: 89e5c54bef772304ea67eb319b0dafe6
+      internalID: -1162535655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 1
+      name: Gazabu_4
       rect:
         serializedVersion: 2
-        x: 66
-        y: 111
-        width: 34
-        height: 44
+        x: 328
+        y: 555
+        width: 174
+        height: 222
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50326a3dbb1f3c748a69f6dda77dfebc
-      internalID: 72666024
+      spriteID: d089b2b62c49c7440b58f37d805af077
+      internalID: 1206936539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 2
+      name: Gazabu_5
       rect:
         serializedVersion: 2
-        x: 113
-        y: 111
-        width: 34
-        height: 43
+        x: 563
+        y: 555
+        width: 174
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e0565141ead67e4da10b7f3bd1cf5ed
-      internalID: 347778555
+      spriteID: 4f53c8f7ea77e704eb306312c196fcd2
+      internalID: -1053827632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 3
+      name: Gazabu_6
       rect:
         serializedVersion: 2
-        x: 19
-        y: 60
-        width: 34
-        height: 43
+        x: 93
+        y: 300
+        width: 174
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc25bb9c588e5b34cb8ce4c984276ca5
-      internalID: 1693983534
+      spriteID: d84b78e349382364689147aeefd640ed
+      internalID: -918426643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 4
+      name: Gazabu_7
       rect:
         serializedVersion: 2
-        x: 66
-        y: 60
-        width: 34
-        height: 44
+        x: 328
+        y: 300
+        width: 174
+        height: 222
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25edde6e233128d41ad9bbba2bbddd6e
-      internalID: -1293932297
+      spriteID: dfa3dd31947dfcd4c90f0485a40e2bcc
+      internalID: 2028122774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk 5
+      name: Gazabu_8
       rect:
         serializedVersion: 2
-        x: 113
-        y: 60
-        width: 34
-        height: 43
+        x: 563
+        y: 300
+        width: 174
+        height: 217
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de7b6e921cbee8e4daadbaefd7bc7319
-      internalID: -1767067972
+      spriteID: fb471072cfe3fa44cbbf4fb285156a82
+      internalID: -2127246997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damage 0
+      name: Gazabu_9
       rect:
         serializedVersion: 2
-        x: 18
-        y: 8
-        width: 36
-        height: 44
+        x: 88
+        y: 40
+        width: 184
+        height: 222
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cbf4ae21ec35a348b092b2b99997783
-      internalID: -191292569
+      spriteID: 15ef99f71f42e6d43b39c16cd90ecff2
+      internalID: -1801109858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Damage 1
+      name: Gazabu_10
       rect:
         serializedVersion: 2
-        x: 65
-        y: 8
-        width: 36
-        height: 44
+        x: 323
+        y: 40
+        width: 184
+        height: 222
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f97a042e89f041f4faed62ab762ec87e
-      internalID: -1243189433
+      spriteID: e99b94c5beab3be4bbce05a5862c2859
+      internalID: -1870080286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dead
+      name: Gazabu_11
       rect:
         serializedVersion: 2
-        x: 108
-        y: 8
-        width: 37
-        height: 39
+        x: 538
+        y: 40
+        width: 187
+        height: 197
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dd5ccd4ad0e98d40831e8391ff31d8d
-      internalID: -1334325569
+      spriteID: ebc064c0d62f9c9408491dca3ae32560
+      internalID: 1189649952
       vertices: []
       indices: 
       edges: []
@@ -411,18 +411,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Damage 0: -191292569
-      Damage 1: -1243189433
-      Dead: -1334325569
-      Stand 0: -495303133
-      Stand 1: -514476193
-      Stand 2: -1045090301
-      Walk 0: 1729673025
-      Walk 1: 72666024
-      Walk 2: 347778555
-      Walk 3: 1693983534
-      Walk 4: -1293932297
-      Walk 5: -1767067972
+      Gazabu_0: -605636818
+      Gazabu_1: 729733127
+      Gazabu_10: -1870080286
+      Gazabu_11: 1189649952
+      Gazabu_2: -1523866634
+      Gazabu_3: -1162535655
+      Gazabu_4: 1206936539
+      Gazabu_5: -1053827632
+      Gazabu_6: -918426643
+      Gazabu_7: 2028122774
+      Gazabu_8: -2127246997
+      Gazabu_9: -1801109858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
