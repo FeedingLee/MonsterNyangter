@@ -28,7 +28,7 @@ public class HUD : MonoBehaviour
                 mySlider.value = curExp / maxExp;
                 break;
             case InfoType.Level:
-                myText.text = string.Format("LV.{0:F0}", GameManager.instance.level); 
+                myText.text = string.Format("HR.{0:F0}", GameManager.instance.level); 
                 break;
             case InfoType.Kill:
                 myText.text = string.Format("{0:F0}", GameManager.instance.kill);

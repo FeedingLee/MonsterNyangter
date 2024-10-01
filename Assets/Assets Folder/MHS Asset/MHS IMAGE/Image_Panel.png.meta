@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e4038aa80a2f52647bbf4c2397f3691a
+guid: 69ca38d23c2337044a1870e11443e001
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,85 +136,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monster_Jagras_0
+      name: Image_Panel
       rect:
         serializedVersion: 2
-        x: 6
-        y: 45
-        width: 58
-        height: 27
+        x: 261
+        y: 0
+        width: 713
+        height: 635
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0c3f064beb47814fa4e5c63e160d22c
-      internalID: 1044192556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_Jagras_1
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 45
-        width: 57
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c573b5e8cb8ff254782645f834a72f7e
-      internalID: 712604584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_Jagras_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 45
-        width: 58
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd0464a9b3441a4408da72d34c6597f2
-      internalID: -1667608980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_Jagras_3
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 8
-        width: 60
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56ca73cc6d5b72348a914ccdbdcb5e30
-      internalID: 599265948
+      spriteID: 231cdd7b546f6884d83b7642dcf7f87e
+      internalID: -1877414405
       vertices: []
       indices: 
       edges: []
@@ -230,13 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monster_Jagras_0: 1044192556
-      Monster_Jagras_1: 712604584
-      Monster_Jagras_2: -1667608980
-      Monster_Jagras_3: 599265948
-      Monster_Jagras_4: -1958399784
-      Monster_Jagras_5: -361087576
-      Monster_Jagras_6: 1458295184
+      Image_Panel: -1877414405
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

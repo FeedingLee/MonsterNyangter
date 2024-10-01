@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AC Hercudrome
+  m_Controller: {fileID: 9100000, guid: feb4cf95c2ae85b4882bb2d3a2f77649, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d5bbb36d576b30a448ef08ef5331cb38, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9b265999b03a1a04aa0703c8c853edf8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 08643a997bec47d4b844eb1cd93e6e27, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9ae459a9b11a2b34383056c6feec23c8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0c79291467e4af94d882144074cd5459, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a93efff73e7f3b74c9dad574693e8ced, type: 2}

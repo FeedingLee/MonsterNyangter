@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jagras_Stand
+  m_Name: Mosswine_Damage
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1791795284, guid: aeb33be20fb469544ac8a2cd008974bf, type: 3}
+      value: {fileID: -877758107, guid: 6a627e211c3bcb545954e161136ea500, type: 3}
     - time: 0.083333336
-      value: {fileID: 1027739300, guid: aeb33be20fb469544ac8a2cd008974bf, type: 3}
+      value: {fileID: 325432715, guid: 6a627e211c3bcb545954e161136ea500, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1791795284, guid: aeb33be20fb469544ac8a2cd008974bf, type: 3}
-    - {fileID: 1027739300, guid: aeb33be20fb469544ac8a2cd008974bf, type: 3}
+    - {fileID: -877758107, guid: 6a627e211c3bcb545954e161136ea500, type: 3}
+    - {fileID: 325432715, guid: 6a627e211c3bcb545954e161136ea500, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
