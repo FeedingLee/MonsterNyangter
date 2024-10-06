@@ -26314,14 +26314,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 0
   gameTime: 0
-  maxGameTime: 100
+  maxGameTime: 200
   playerId: 0
   health: 0
   maxHealth: 100
   level: 0
   kill: 0
   exp: 0
-  nextExp: 0a000000140000001e00000028000000320000005000000078000000aa000000e60000002c010000
+  nextExp: 050000000a0000000f00000014000000280000003c0000005a00000082000000c8000000fa000000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -29324,7 +29324,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.545455
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -37598,7 +37598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 5
+  speed: 2
   scanner: {fileID: 0}
   animCon:
   - {fileID: 9100000, guid: 638267c0df993ff4fa6d856b487c5305, type: 2}
@@ -41087,8 +41087,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5531aebfb93102a42a075f34e7a87af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmClip: {fileID: 8300000, guid: 4559935c00ef8e94b846e2e03e39f0d0, type: 3}
-  bgmVolume: 0.2
+  bgmClip: {fileID: 8300000, guid: 365168f9b2057324ca839268e643fe44, type: 3}
+  bgmVolume: 1
   bgmPlayer: {fileID: 0}
   sfxClips:
   - {fileID: 8300000, guid: 291608b8d286e2a4580ff36324455ce2, type: 3}
@@ -198181,7 +198181,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 5
 --- !u!222 &1133523152
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -206040,7 +206040,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 5
 --- !u!222 &1289776025
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -210034,7 +210034,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1131374742}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 0.8
+  m_MaxValue: 0.4
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -224035,7 +224035,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 651456285}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 0.4
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -251306,13 +251306,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.5
+  - spawnTime: 0.8
     spriteType: 0
-    health: 10
-    speed: 1
-  - spawnTime: 0.2
+    health: 30
+    speed: 0.8
+  - spawnTime: 0.5
     spriteType: 1
-    health: 20
+    health: 90
     speed: 1.6
   levelTime: 0
 --- !u!1 &1966386764
