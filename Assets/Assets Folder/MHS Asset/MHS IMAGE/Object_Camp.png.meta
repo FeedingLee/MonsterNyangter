@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a904d4b39bde99459035599222aca2a
+guid: 8dc629185bf56f9418938a2fd27851eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MH_Panel
+      name: Object_Camp_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 38
-        width: 106
-        height: 98
+        x: 25
+        y: 30
+        width: 750
+        height: 670
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b7381c13bd6bf547b059a8eff974ea4
-      internalID: 1249603285
+      spriteID: bb35f45d01ac6264faeebe8209148237
+      internalID: -1761059572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Music
+      name: Object_Camp_2
       rect:
         serializedVersion: 2
-        x: 7
-        y: 20
-        width: 15
-        height: 16
+        x: 860
+        y: 350
+        width: 260
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdc336087aebe2046856fb2c8bada7c7
-      internalID: 1698379842
+      spriteID: cc05baa629d62444da7800a09240c6f3
+      internalID: 88327862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SFX
+      name: Object_Camp_8
       rect:
         serializedVersion: 2
-        x: 23
-        y: 20
-        width: 13
-        height: 14
+        x: 860
+        y: 220
+        width: 85
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e89254b2fc5e354d8d578c816d54b1d
-      internalID: 567597471
+      spriteID: b8e4b6dd0abe52948a84e2118f62c435
+      internalID: -645268297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MH_SoundBar
+      name: Object_Camp_16
       rect:
         serializedVersion: 2
-        x: 44
-        y: 24
-        width: 66
-        height: 7
+        x: 865
+        y: 60
+        width: 205
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,71 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea24af3a05747a945a30da476d622ac2
-      internalID: 1991968569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Option_Title
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 4
-        width: 53
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94635b918899a494f84f5931bc68dfad
-      internalID: 403150165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MH_Panel(2)
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 1
-        width: 47
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 658d9b7bc26fdc4498137d528d0a57ac
-      internalID: -884097729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MH_Handle
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 23
-        width: 4
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21a8ca60b385dd6429c58efbae1783d7
-      internalID: -398798039
+      spriteID: bcbd428cee2a39c4a93ace20c24c80c1
+      internalID: -820806425
       vertices: []
       indices: 
       edges: []
@@ -293,13 +230,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MH_Handle: -398798039
-      MH_Panel: 1249603285
-      MH_Panel(2): -884097729
-      MH_SoundBar: 1991968569
-      Music: 1698379842
-      Option_Title: 403150165
-      SFX: 567597471
+      Object_Camp_0: -1761059572
+      Object_Camp_1: -226904237
+      Object_Camp_10: -820409059
+      Object_Camp_11: 1416123271
+      Object_Camp_12: 1549215822
+      Object_Camp_13: -1357961078
+      Object_Camp_14: -876474126
+      Object_Camp_15: -1050114642
+      Object_Camp_16: -820806425
+      Object_Camp_17: 1121672067
+      Object_Camp_18: -1052131636
+      Object_Camp_19: 2136160639
+      Object_Camp_2: 88327862
+      Object_Camp_20: 1984036857
+      Object_Camp_21: 917595293
+      Object_Camp_22: 999125899
+      Object_Camp_23: -1429252013
+      Object_Camp_3: -994835801
+      Object_Camp_4: 1424762350
+      Object_Camp_5: -819260337
+      Object_Camp_6: -1285786047
+      Object_Camp_7: 235784766
+      Object_Camp_8: -645268297
+      Object_Camp_9: 669194867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
