@@ -9,6 +9,7 @@ public class ChangeBtn : MonoBehaviour
     public float delayBeforeSceneChange = 1.0f; // 씬 변경 전 대기 시간 (초)
     public Image transparentBlock; // 투명한 블럭 UI
     public AudioSource bgmAudioSource; // BGM AudioSource
+    public Button ExitBtn; // 게임종료 버튼
 
     private bool isClicked = false; // 버튼이 클릭되었는지 여부
     private bool hasFadedOut = false; // FadeOut이 완료되었는지 여부
@@ -24,7 +25,12 @@ public class ChangeBtn : MonoBehaviour
         }
     }
 
-    // 버튼을 클릭할 때 호출되는 함수
+    public void ExitBtnOff()
+    {
+        ExitBtn.interactable = false;
+    }
+
+    // 버튼을 클릭하면 씬 변경
     public void SceneChange()
     {
         // 버튼을 처음 눌렀을 때 한 번만 실행
