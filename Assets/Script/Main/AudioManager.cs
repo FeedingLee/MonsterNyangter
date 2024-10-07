@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+
+    [Header("#Checking Is Playing")]
+    public GameObject GameResult_Obj;
+    public GameObject Player_Obj;
 
     [Header("#BGM")]
     public AudioClip[] bgmClip;
@@ -91,6 +96,18 @@ public class AudioManager : MonoBehaviour
             break;
         }
     }
+    // Player가 On이고, GameResult가 OFF면 게임진행중이니 다시 랜덤 노래 재생
+    public void Update()
+    {
+        if (GameResult_Obj.gameObject.activeInHierarchy == false 
+            && Player_Obj.gameObject.activeInHierarchy == true 
+            && !bgmPlayer.isPlaying)
+        {
+            bgmPlayer.clip = bgmClip[Random.Range(0, bgmClip.Length)];
+            bgmPlayer.Play();
+        }
+    }
+
     public void RandomPlay()
     {
         bgmPlayer.clip = bgmClip[Random.Range(0, bgmClip.Length)];
