@@ -41345,7 +41345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5531aebfb93102a42a075f34e7a87af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmClip: {fileID: 8300000, guid: 365168f9b2057324ca839268e643fe44, type: 3}
+  bgmClip:
+  - {fileID: 8300000, guid: d06ad6f890f3a3c4e908da7fe252cd4f, type: 3}
+  - {fileID: 8300000, guid: c30a35b9bd118394c81cd41e2baca2d1, type: 3}
+  - {fileID: 8300000, guid: ab555248508d1e74097de512fd955e32, type: 3}
   bgmVolume: 0.6
   bgmPlayer: {fileID: 0}
   sfxClips:
@@ -43685,7 +43688,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.03695979}
+  m_Offset: {x: -0.0010271072, y: -0.049284965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -43696,7 +43699,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.3660804}
+  m_Size: {x: 0.5960052, y: 0.39073074}
   m_EdgeRadius: 0
 --- !u!1 &769446727
 GameObject:
