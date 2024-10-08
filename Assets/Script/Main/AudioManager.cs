@@ -1,21 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
     [Header("#Checking Is Playing")]
-    public GameObject GameResult_Obj;
-    public GameObject Player_Obj;
+    public GameObject Need_GameResult_Obj;
+    public GameObject Need_Player_Obj;
 
     [Header("#BGM")]
-    public AudioClip[] bgmClip;
+    public List<AudioClip> bgmClip = new List<AudioClip>();
     public float bgmVolume;
     public AudioSource bgmPlayer;
     AudioHighPassFilter bgmEffect;
+    // BGM 마지막 재생곡을 체크하기 위한 값
+    private int LastIndex = -1;
 
     [Header("#SFX")]
     public AudioClip[] sfxClips;
@@ -99,18 +105,27 @@ public class AudioManager : MonoBehaviour
     // Player가 On이고, GameResult가 OFF면 게임진행중이니 다시 랜덤 노래 재생
     public void Update()
     {
-        if (GameResult_Obj.gameObject.activeInHierarchy == false 
-            && Player_Obj.gameObject.activeInHierarchy == true 
+        if (Need_GameResult_Obj.gameObject.activeInHierarchy == false
+            && Need_Player_Obj.gameObject.activeInHierarchy == true
             && !bgmPlayer.isPlaying)
         {
-            bgmPlayer.clip = bgmClip[Random.Range(0, bgmClip.Length)];
-            bgmPlayer.Play();
+            RandomPlay();
         }
     }
 
+    // 노래 랜덤재생 함수
     public void RandomPlay()
     {
-        bgmPlayer.clip = bgmClip[Random.Range(0, bgmClip.Length)];
+        int RanNum = Random.Range(0, bgmClip.Count);
+
+        while (RanNum == LastIndex)
+        {
+            RanNum = Random.Range(0, bgmClip.Count);
+        }
+
+        bgmPlayer.clip = bgmClip[RanNum];
+        LastIndex = RanNum;
+
         bgmPlayer.Play();
     }
 }
