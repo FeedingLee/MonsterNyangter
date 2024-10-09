@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Option : MonoBehaviour
 {
+    public GameObject player; // 플레이 유무를 파악할 PlayerObject 받기
     public GameObject panel;         // Option Panel 오브젝트
     public Button optionButton;      // Option 버튼 오브젝트
     public Button continueButton;    // Continue 버튼 오브젝트
@@ -32,22 +33,30 @@ public class Option : MonoBehaviour
         // 게임 일시정지 및 재개
         if (isPaused)
         {
-            Time.timeScale = 0;  // 게임 일시정지
+            Time.timeScale = 0;  // 게임 시간 정지
             uiJoy.SetActive(false);
         }
         else
         {
-            Time.timeScale = 1;  // 게임 재개
-            uiJoy.SetActive(true);
+            ContinueGame();
         }
     }
 
     public void ContinueGame()
     {
-        // Option Panel을 비활성화하고 게임을 계속 진행
-        panel.SetActive(false);
-        uiJoy.SetActive(true);
-        Time.timeScale = 1;
-        isPaused = false;
+        // 플레이어 오브젝트가 꺼져있으면, 게임 실행중이 아니기 때문에
+        if (player.gameObject.activeInHierarchy == false)
+        {
+            panel.SetActive(false);
+            uiJoy.SetActive(false); // 조이스틱이 꺼진 상태를 유지
+            Time.timeScale = 1;
+            isPaused = false;
+        }
+        else { 
+            panel.SetActive(false);
+            uiJoy.SetActive(true);
+            Time.timeScale = 1;
+            isPaused = false;
+        }
     }
 }

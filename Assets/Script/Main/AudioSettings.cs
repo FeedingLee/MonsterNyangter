@@ -26,6 +26,7 @@ public class AudioSettings : MonoBehaviour
     {
         AudioManager.instance.bgmVolume = volume;
         AudioManager.instance.bgmPlayer.volume = volume;
+        AudioManager.instance.WaitingbgmPlayer.volume = volume;
         PlayerPrefs.SetFloat("BgmVolume", volume);
     }
 

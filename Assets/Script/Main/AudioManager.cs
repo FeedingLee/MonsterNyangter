@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -11,19 +12,22 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    [Header("#Checking Is Playing")]
+    [Header("# Checking Is Playing")]
     public GameObject Need_GameResult_Obj;
     public GameObject Need_Player_Obj;
 
-    [Header("#BGM")]
+    [Header("# Game Playing BGM")]
     public List<AudioClip> bgmClip = new List<AudioClip>();
+    [Header("# Waiting Room BGM")]
+    public List<AudioClip> WaitingbgmClip = new List<AudioClip>();
     public float bgmVolume;
-    public AudioSource bgmPlayer;
+    [HideInInspector] public AudioSource bgmPlayer;
+    [HideInInspector] public AudioSource WaitingbgmPlayer;
     AudioHighPassFilter bgmEffect;
     // BGM 마지막 재생곡을 체크하기 위한 값
-    private int LastIndex = -1;
+    [HideInInspector] public int LastIndex = -1;
 
-    [Header("#SFX")]
+    [Header("# SFX")]
     public AudioClip[] sfxClips;
     public float sfxVolume;
     public int channels;
@@ -35,13 +39,16 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         bgmPlayer = GetComponent<AudioSource>();
+        WaitingbgmPlayer = GetComponent<AudioSource>();
         instance = this;
         Init();
+
+        WaitBgmPlay();
     }
 
     void Init()
     {
-        // 배경음 플레이어 초기화
+        // BGM Player 생성
         GameObject bgmObject = new GameObject("BgmPlayer");
         bgmObject.transform.parent = transform;
         bgmPlayer = bgmObject.AddComponent<AudioSource>();
@@ -50,7 +57,15 @@ public class AudioManager : MonoBehaviour
         bgmPlayer.volume = bgmVolume;
         bgmEffect = Camera.main.GetComponent<AudioHighPassFilter>();
 
-        // 효과음 플레이어 초기화
+        // Waitingbgm Player 생성
+        GameObject WaitRoomBGM = new GameObject("Waiting_BgmPlayer");
+        WaitRoomBGM.transform.parent = transform;
+        WaitingbgmPlayer = WaitRoomBGM.AddComponent<AudioSource>();
+        WaitingbgmPlayer.playOnAwake = true;
+        WaitingbgmPlayer.loop = true;
+        WaitingbgmPlayer.volume = bgmVolume;
+
+        // SFX Player 생성
         GameObject sfxObject = new GameObject("SfxPlayer");
         sfxObject.transform.parent = transform;
         sfxPlayers = new AudioSource[channels];
@@ -68,9 +83,10 @@ public class AudioManager : MonoBehaviour
     {
         if (isPlay)
         {
+            WaitingbgmPlayer.Stop();
             RandomPlay();
         }
-        else
+        else 
         {
             bgmPlayer.Stop();
         }
@@ -102,9 +118,9 @@ public class AudioManager : MonoBehaviour
             break;
         }
     }
-    // Player가 On이고, GameResult가 OFF면 게임진행중이니 다시 랜덤 노래 재생
+    
     public void Update()
-    {
+    {   // Player가 On이고, GameResult가 OFF면 게임진행중이니 다시 랜덤 노래 재생
         if (Need_GameResult_Obj.gameObject.activeInHierarchy == false
             && Need_Player_Obj.gameObject.activeInHierarchy == true
             && !bgmPlayer.isPlaying)
@@ -127,5 +143,16 @@ public class AudioManager : MonoBehaviour
         LastIndex = RanNum;
 
         bgmPlayer.Play();
+    }
+
+    public void WaitBgmPlay()
+    {
+        // 게임 결과 오브젝트가 비활성화 + 플레이어 오브젝트가 비활성화 = 게임중이 아님.
+        if (Need_GameResult_Obj.gameObject.activeInHierarchy == false
+            && Need_Player_Obj.gameObject.activeInHierarchy == false)
+        {
+            WaitingbgmPlayer.clip = WaitingbgmClip[0];
+            WaitingbgmPlayer.Play();
+        }
     }
 }

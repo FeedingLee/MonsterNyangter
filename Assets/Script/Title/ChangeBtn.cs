@@ -79,7 +79,7 @@ public class ChangeBtn : MonoBehaviour
             transparentBlock.color = color;
 
             // BGM 볼륨을 서서히 줄임
-            bgmAudioSource.volume = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            bgmAudioSource.volume = Mathf.Lerp(0.5f, 0f, elapsedTime / fadeDuration);
 
             yield return null;
         }

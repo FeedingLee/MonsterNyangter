@@ -5,8 +5,8 @@ using UnityEngine;
 public class FadeIn : MonoBehaviour
 {
     private AudioSource audioSource;
-    public float maxVolume = 0.7f; // 최대 음량 설정
-    public double fadeInSeconds = 1.0;
+    public float maxVolume; // 최대 음량 설정
+    public double fadeInSeconds;
     bool isFadeIn = true;
     double fadeDeltaTime = 0;
 

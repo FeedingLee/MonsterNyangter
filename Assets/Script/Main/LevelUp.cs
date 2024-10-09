@@ -10,10 +10,13 @@ public class LevelUp : MonoBehaviour
     public RectTransform Joy;
     public RectTransform Stick;
 
+    public static LevelUp instance;
+
     void Awake()
     {
         rect = GetComponent<RectTransform>();
         items = GetComponentsInChildren<Item>(true);
+        instance = this;
     }
 
     public void Show() // 아이템 창 띄우기
