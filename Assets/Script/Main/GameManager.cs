@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         isLive = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
 
         uiResult.gameObject.SetActive(true);
         uiResult.Lose();
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         isLive = false;
         enemyCleaner.SetActive(true);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
 
         uiResult.gameObject.SetActive(true);
         uiResult.Win();
