@@ -11,6 +11,7 @@ public class LevelUp : MonoBehaviour
     public RectTransform Stick;
 
     public static LevelUp instance;
+    public bool LevelUpFinish = true;
 
     void Awake()
     {
@@ -21,6 +22,7 @@ public class LevelUp : MonoBehaviour
 
     public void Show() // 아이템 창 띄우기
     {
+        LevelUpFinish = false;
         Next();
         rect.localScale = Vector3.one;
         Joy.gameObject.SetActive(false);
@@ -32,6 +34,7 @@ public class LevelUp : MonoBehaviour
 
     public void Hide() // 아이템 창 숨기기
     {
+        LevelUpFinish = true;
         rect.localScale = Vector3.zero;
         Joy.gameObject.SetActive(true);
         Stick.gameObject.SetActive(true);
