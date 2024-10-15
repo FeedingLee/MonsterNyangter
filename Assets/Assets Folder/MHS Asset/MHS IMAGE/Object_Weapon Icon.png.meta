@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,7 +134,385 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Object_Weapon Icon_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 183
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146409118921ab843b69287556ef9e24
+      internalID: 1787623071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 183
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18921748f19de7439091d2aad456809
+      internalID: -192682222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 183
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ff97be0c5d9c84bb47475b4b13a3cb
+      internalID: -1472057054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_7
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 150
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76de07d8436f864fa8d52225a893b72
+      internalID: 1151449329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_8
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 149
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc3aa8eb0b359b4fbf6bd7160163cba
+      internalID: 1914463840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_9
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 150
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72349e876c9eaa4a83ae35f1e1db2bc
+      internalID: -270185474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 114
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfaab76b01cf0f45805dba95764faf5
+      internalID: 194593140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_12
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 117
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56dbc6cea30da8348abc233f557ae847
+      internalID: 410891870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_13
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 117
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee10e93110540ad4688eca878e2510d6
+      internalID: -1584999135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 83
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce2e662cb2df4340bec80c750fecf87
+      internalID: 172545254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_17
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 82
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698ce93912ea62249bd637fb587840a5
+      internalID: -378922361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_18
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 84
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc1c32a8388b864dbf5366dd5ca792c
+      internalID: 1752145799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_21
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 50
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57364b7d2d333c44da111b1ca87f0846
+      internalID: 2097614312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_22
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 50
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f683c2aefefb14f8b219ca4b7c2119
+      internalID: 1685018758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_23
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 51
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dd17e1f8f960a469b3781e51096e5c
+      internalID: 2115403843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_25
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 19
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f42ceba0fddad4e8533c43045898bd
+      internalID: -967454354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_26
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 19
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4a46a0eea50444482072e2275e73ae
+      internalID: 419503145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Object_Weapon Icon_27
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 19
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ec0158346743a44a6fd6c5e239729a
+      internalID: 784460612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +523,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Object_Weapon Icon_0: -273283304
+      Object_Weapon Icon_1: 1787623071
+      Object_Weapon Icon_10: -1413201983
+      Object_Weapon Icon_11: 194593140
+      Object_Weapon Icon_12: 410891870
+      Object_Weapon Icon_13: -1584999135
+      Object_Weapon Icon_14: 2013481610
+      Object_Weapon Icon_15: 1142549678
+      Object_Weapon Icon_16: 172545254
+      Object_Weapon Icon_17: -378922361
+      Object_Weapon Icon_18: 1752145799
+      Object_Weapon Icon_19: 1015620625
+      Object_Weapon Icon_2: -192682222
+      Object_Weapon Icon_20: -195335211
+      Object_Weapon Icon_21: 2097614312
+      Object_Weapon Icon_22: 1685018758
+      Object_Weapon Icon_23: 2115403843
+      Object_Weapon Icon_24: 543212367
+      Object_Weapon Icon_25: -967454354
+      Object_Weapon Icon_26: 419503145
+      Object_Weapon Icon_27: 784460612
+      Object_Weapon Icon_28: -1339363795
+      Object_Weapon Icon_3: -1472057054
+      Object_Weapon Icon_4: 1840770031
+      Object_Weapon Icon_5: -1758198520
+      Object_Weapon Icon_6: -1067247092
+      Object_Weapon Icon_7: 1151449329
+      Object_Weapon Icon_8: 1914463840
+      Object_Weapon Icon_9: -270185474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
