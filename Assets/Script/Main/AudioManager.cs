@@ -34,7 +34,16 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] sfxPlayers;
     int channelIndex;
 
-    public enum Sfx { Dead, Hit, LevelUp = 3, Lose, Melee, Range = 7, Select, Win }
+    public enum Sfx { 
+        Dead = 0,
+        Hit = 3, 
+        LevelUp = 6, 
+        Lose, 
+        Melee,
+        Select = 11,
+        Range, 
+        Win = 15
+    }
 
     void Awake()
     {
@@ -107,9 +116,9 @@ public class AudioManager : MonoBehaviour
                 continue;
 
             int ranIndex = 0;
-            if (sfx == Sfx.Hit || sfx == Sfx.Melee)
+            if (sfx == Sfx.Dead || sfx == Sfx.Hit || sfx == Sfx.Melee || sfx == Sfx.Range)
             {
-                ranIndex = Random.Range(0, 2);
+                ranIndex = Random.Range(0, 3);
             }
 
             channelIndex = loopIndex;

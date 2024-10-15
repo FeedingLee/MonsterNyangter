@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
 
-    //������ �������� Ȯ��
     bool isLive;
 
     Rigidbody2D rigid;
@@ -28,24 +27,20 @@ public class Enemy : MonoBehaviour
         wait = new WaitForFixedUpdate();
     }
 
-    // ���Ͱ� ���� ���� ���
     void FixedUpdate()
     {
         if (!GameManager.instance.isLive)
             return;
 
-        // ���� ���Ͱ� �׾��ٸ� �� ���� ����� �۵���Ű�� ����
         if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
             return;
 
         Vector2 dirVec = target.position - rigid.position;
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
-        // ���� �ӵ��� �̵��� ������ �����ʰ� ����
         rigid.velocity = Vector2.zero;
     }
 
-    // ��������Ʈ�� ���� ������Ʈ
     void LateUpdate()
     {
         if (!GameManager.instance.isLive)
@@ -54,7 +49,6 @@ public class Enemy : MonoBehaviour
         if (!isLive)
             return;
 
-        // ��������Ʈ�� X�� ������
         spriter.flipX = target.position.x < rigid.position.x;
     }
 
@@ -69,7 +63,6 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
     }
 
-    // ���Ϳ� ���� ���ϸ����� ��Ʈ�ѷ� ����
     public void Init(SpawnData data)
     {
         anim.runtimeAnimatorController = animCon[data.spriteType];
@@ -88,13 +81,11 @@ public class Enemy : MonoBehaviour
         
         if (health > 0)
         {
-            // ������, �´� �׼�
             anim.SetTrigger("Hit");
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
         }
         else
         {
-            // �����
             isLive = false;
             coll.enabled = false;
             rigid.simulated = false;
@@ -110,7 +101,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator KnockBack()
     {
-        yield return wait; // ���� �ϳ��� ���� ������ ������ 
+        yield return wait; 
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse); 

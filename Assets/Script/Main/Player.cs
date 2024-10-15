@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public Scanner scanner;
     public RuntimeAnimatorController[] animCon;
 
-    public JoystickController joystick;  // JoystickController를 연결합니다.
+    public JoystickController joystick;      // JoystickController를 연결합니다.
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -33,10 +33,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (!GameManager.instance.isLive)
-            return;
-
-        // JoystickController에서 inputVec을 가져옵니다.
-        inputVec = joystick.GetInputVector();
+            return;               
+        inputVec = joystick.GetInputVector(); // JoystickController에서 inputVec을 가져옵니다.
     }
 
     void FixedUpdate()
@@ -54,14 +52,11 @@ public class Player : MonoBehaviour
             return;
 
         anim.SetFloat("Speed", inputVec.magnitude);
-        // 방향에 따른 스프라이트 뒤집기
-        if (inputVec.x != 0)
+        if (inputVec.x != 0)                  // 방향에 따른 스프라이트 뒤집기
         {
             spriter.flipX = inputVec.x > 0;
         }
     }
-
-   
 
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -69,19 +64,11 @@ public class Player : MonoBehaviour
             {
             if (!GameManager.instance.isLive)
                 return;
-            GameManager.instance.health -= Time.deltaTime * 50;
-            
-            // 사망로직
-            if (GameManager.instance.health <= 0)
+                GameManager.instance.health -= Time.deltaTime * 50;
+                 
+            if (GameManager.instance.health <= 0)// 사망로직
             {
-                // 자식 오브젝트를 비활성화 하는 이유 : 사망을 했을 경우 나머지 Player의 자식 이펙트들을 비활성화 해야하는데,
-                // Index 0 또는 1까지 비활성화 하면 뭔가 다른것까지 사라질거라고 판단됨
-                // index가 0~1일 경우 : 바닥이 사라짐
-                /*for (int index = 2; index < transform.childCount; index++)
-                {
-                    transform.GetChild(index).gameObject.SetActive(false);
-                }*/
-
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 anim.SetTrigger("Dead");
                 GameManager.instance.GameOver();
             }
