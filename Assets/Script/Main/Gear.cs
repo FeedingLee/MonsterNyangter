@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Gear : MonoBehaviour
 {
-        public ItemData.ItemType type;
-        public float rate;
+    public ItemData.ItemType type;
+    public float rate;
+    ItemData data;
 
-        public void Init(ItemData data)
+    public void Init(ItemData data)
         {
             // Basic Set
             name = "Gear " + data.itemId;
@@ -39,19 +40,21 @@ public class Gear : MonoBehaviour
         }
     }
 
+    // 장갑의 연사력 증가 로직 
     void RateUp()
     {
         Weapon[] weapons = transform.parent.GetComponentsInChildren<Weapon>();
 
-        foreach(Weapon weapon in weapons) 
+        foreach (Weapon weapon in weapons)
         {
-            switch(weapon.id)
+            switch (weapon.id)
             {
-                case 0:
+                
+                case 0:     // 0번 = 쌍검
                     float speed = 150 * Character.WeaponSpeed;
                     weapon.speed = 150 + (150 * rate);
                     break;
-                default:
+                default:    // 0번 이외 = 활
                     speed = 0.5f * Character.WeaponRate;
                     weapon.speed = speed * 0.5f * (1f - rate);
                     break;
@@ -59,6 +62,7 @@ public class Gear : MonoBehaviour
         }
     }
 
+    // 신발의 이동속도 증가 로직
     void SpeedUp()
     {
         float speed = 3 * Character.Speed;

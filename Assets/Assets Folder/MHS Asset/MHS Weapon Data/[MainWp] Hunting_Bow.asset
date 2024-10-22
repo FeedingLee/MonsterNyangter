@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
+  m_Name: '[MainWp] Hunting_Bow'
+  m_EditorClassIdentifier: 
+  itemType: 1
+  itemId: 1
+  itemName: "\uC5FD\uCD1D"
+  itemDesc: "\uB370\uBBF8\uC9C0 {0}% \uC99D\uAC00\n\uAD00\uD1B5\uB825 {1}\uC99D\uAC00"
+  itemIcon: {fileID: -205726582, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  baseDamage: 3
+  baseSpeed: 0
+  baseRate: 0.9
+  baseCount: 0
+  damages:
+  - 0
+  - 2
+  - 3
+  - 4
+  - 5
+  W_Speeds:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  W_Rates:
+  - 0
+  - -0.1
+  - -0.2
+  - -0.3
+  - -0.4
+  counts: 0000000001000000020000000300000004000000
+  projectile: {fileID: 3358505908942346658, guid: 7790583530daee94886705d8ae9d210f, type: 3}

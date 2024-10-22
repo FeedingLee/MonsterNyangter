@@ -26460,14 +26460,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 0
   gameTime: 0
-  maxGameTime: 100
+  maxGameTime: 500
   playerId: 0
   health: 0
   maxHealth: 100
   level: 0
   kill: 0
   exp: 0
-  nextExp: 010000000a0000000f00000014000000280000003c0000005a00000082000000c8000000fa000000
+  nextExp: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -29478,7 +29478,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.545455
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -37872,7 +37872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 9
+  speed: 4.5
   scanner: {fileID: 0}
   animCon:
   - {fileID: 9100000, guid: 638267c0df993ff4fa6d856b487c5305, type: 2}
@@ -245699,10 +245699,10 @@ MonoBehaviour:
   - spawnTime: 0.1
     spriteType: 0
     health: 1
-    speed: 3
+    speed: 2
   - spawnTime: 0.5
     spriteType: 1
-    health: 90
+    health: 80
     speed: 1.6
   levelTime: 0
 --- !u!1 &1966386764
