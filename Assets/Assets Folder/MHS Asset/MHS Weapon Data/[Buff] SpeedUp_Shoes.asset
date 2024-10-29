@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
   m_Name: '[Buff] SpeedUp_Shoes'
   m_EditorClassIdentifier: 
-  itemType: 3
-  itemId: 3
+  itemType: 4
+  itemId: 4
   itemName: "\uC804\uD22C \uC7A5\uD654"
   itemDesc: "\uC774\uB3D9\uC18D\uB3C4 {0}% \uC99D\uAC00"
   itemIcon: {fileID: -966295699, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}

@@ -45,7 +45,6 @@ public class Weapon : MonoBehaviour
 
     public void LevelUp(float damage, float speed, float rate, int count)
     {
-        // 이 character. 을 data. 에서 가져와야함 [ 레벨을 선언해서 1~5 값의 리스트만큼 곱해야함 ]
         this.damage = damage * Character.Damage;
         this.speed = speed * Character.WeaponSpeed;
         this.rate = rate * Character.WeaponRate;

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "item", menuName ="Scriptble Object/ItemData")]
 public class ItemData : ScriptableObject
 {
-    public enum ItemType {  DualBlades, HuntingBow, Glove, Shoe, Heal }
+    public enum ItemType {  DualBlades, HuntingBow, SniperHBG , Glove, Shoe, Heal }
 
     [Header("Main Info")]
     public ItemType itemType;

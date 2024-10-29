@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
-  m_Name: '[MainWp] Hunting_Bow'
+  m_Name: '[MainWp] Sniper_HBG'
   m_EditorClassIdentifier: 
-  itemType: 1
-  itemId: 1
-  itemName: "\uD65C "
+  itemType: 2
+  itemId: 2
+  itemName: "\uD5E4\uBE44\uBCF4\uC6B0\uAC74 [\uC800\uACA9]"
   itemDesc: "\uACF5\uACA9\uB825   : {6} ({0}+{3})\n\uC5F0\uC0AC\uC18D\uB3C4 : {7}
     ({1}-{4}%)\n\uAD00\uD1B5\uB825   : {8} ({2}+{5})"
-  itemIcon: {fileID: -1584999135, guid: c9dbade04f8fea64da5f4e76f0402c8d, type: 3}
-  baseDamage: 20
+  itemIcon: {fileID: 194593140, guid: c9dbade04f8fea64da5f4e76f0402c8d, type: 3}
+  baseDamage: 50
   baseSpeed: 0
-  baseRate: 0.9
-  baseCount: 0
+  baseRate: 3
+  baseCount: 20
   damages:
   - 0
+  - 0.1
   - 0.2
   - 0.3
   - 0.4
-  - 0.5
   W_Speeds:
   - 0
   - 0
@@ -36,9 +36,9 @@ MonoBehaviour:
   - 0
   W_Rates:
   - 0
-  - -0.1
-  - -0.2
-  - -0.3
   - -0.4
-  counts: 0000000001000000020000000200000002000000
-  projectile: {fileID: 3358505908942346658, guid: 7790583530daee94886705d8ae9d210f, type: 3}
+  - -0.5
+  - -0.6
+  - -0.7
+  counts: 1400000014000000140000001400000014000000
+  projectile: {fileID: 3358505908942346658, guid: 9a201c24213c85d468952987b2c5ec6f, type: 3}

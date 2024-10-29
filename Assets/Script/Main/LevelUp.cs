@@ -77,7 +77,7 @@ public class LevelUp : MonoBehaviour
             {
                 // 랜덤아이템이 많다면 (4~7번까지) 강의 12 [39:42] 참고
                 // items[Random.Range(4, 7)].gameObject.SetActive(true);
-                items[4].gameObject.SetActive(true);
+                items[5].gameObject.SetActive(true);
             }
             else
             {
