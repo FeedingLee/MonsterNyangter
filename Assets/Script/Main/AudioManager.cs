@@ -42,7 +42,8 @@ public class AudioManager : MonoBehaviour
         Melee,
         Select = 11,
         Range, 
-        Win = 15
+        Win,
+        NyanEaster = 16
     }
 
     void Awake()
