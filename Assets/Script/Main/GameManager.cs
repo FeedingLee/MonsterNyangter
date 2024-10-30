@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public JoystickController joystickController;
 
     [Header("# Game Control")]
     public bool isLive;

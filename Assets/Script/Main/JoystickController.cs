@@ -5,16 +5,16 @@ using UnityEngine.UIElements;
 
 public class JoystickController : MonoBehaviour
 {
-    public RectTransform joystickBackground; // 조이스틱 배경 RectTransform
-    public RectTransform joystickHandle;     // 조이스틱 핸들 RectTransform
-    public Canvas canvas;                    // 조이스틱이 위치할 캔버스
-    public Camera mainCamera;                // 메인 카메라 (사용되지 않았지만 추가 가능성)
-    public GameObject player;                // 플레이어 객체
-    public float moveSpeed = 5f;             // 플레이어의 이동 속도
-    public GameObject LevelUpUi;             // 레벨 업 UI
+    public RectTransform joystickBackground;            // 조이스틱 배경 RectTransform
+    public RectTransform joystickHandle;                // 조이스틱 핸들 RectTransform
+    public Canvas canvas;                               // 조이스틱이 위치할 캔버스
+    public Camera mainCamera;                           // 메인 카메라 (사용되지 않았지만 추가 가능성)
+    public GameObject player;                           // 플레이어 객체
+    public float moveSpeed = 5f;                        // 플레이어의 이동 속도
+    public GameObject LevelUpUi;                        // 레벨 업 UI
 
-    private Vector2 inputVec;                // 조이스틱 입력 벡터
-    private bool isJoy;                      // 조이스틱이 활성 상태인지 여부
+    private Vector2 inputVec;                           // 조이스틱 입력 벡터
+    private bool isJoy;                                 // 조이스틱이 활성 상태인지 여부
 
     void Start()
     {
@@ -25,28 +25,28 @@ public class JoystickController : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount > 0) // 터치가 하나 이상 감지되었을 때
+        if (Input.touchCount > 0)                                  // 터치가 하나 이상 감지되었을 때
         {
-            Touch touch = Input.GetTouch(0); // 첫 번째 터치 정보 가져오기
+            Touch touch = Input.GetTouch(0);                       // 첫 번째 터치 정보 가져오기
 
-            if (touch.phase == TouchPhase.Began) // 터치가 시작될 때
+            if (touch.phase == TouchPhase.Began)                   // 터치가 시작될 때
             {
-                if (!IsTouchingUI(touch)) // 터치가 UI 요소를 누른 것이 아니라면
+                if (!IsTouchingUI(touch))                          // 터치가 UI 요소를 누른 것이 아니라면
                 {
-                    SetJoystickPosition(touch.position); // 터치 위치에 조이스틱 배경 위치 설정
+                    SetJoystickPosition(touch.position);           // 터치 위치에 조이스틱 배경 위치 설정
                     joystickBackground.gameObject.SetActive(true); // 조이스틱 배경 표시
                     joystickHandle.gameObject.SetActive(true);     // 조이스틱 핸들 표시
                     isJoy = true;                                  // 조이스틱 활성화 상태로 설정
                 }
             }
-            else if (isJoy && (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)) // 터치가 이동 중이거나 가만히 있을 때
+            else if (isJoy && (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary))        // 터치가 이동 중이거나 가만히 있을 때
             {
-                MoveJoystickHandle(touch.position); // 조이스틱 핸들을 터치 위치에 맞게 이동
+                MoveJoystickHandle(touch.position);                                                             // 조이스틱 핸들을 터치 위치에 맞게 이동
                 inputVec = (joystickHandle.anchoredPosition / (joystickBackground.sizeDelta.x / 2)).normalized; // 입력 벡터를 계산하여 정규화
             }
-            else if (isJoy && (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)) // 터치가 끝나거나 취소되었을 때
+            else if (isJoy && (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled))          // 터치가 끝나거나 취소되었을 때
             {
-                ResetJoystick(); // 터치가 끝났을 때 조이스틱을 초기화하고 숨김
+                ResetJoystick();                                                                                // 터치가 끝났을 때 조이스틱을 초기화하고 숨김
             }
         }
     }
@@ -54,33 +54,33 @@ public class JoystickController : MonoBehaviour
     // 터치가 UI를 눌렀는지 확인하는 함수
     bool IsTouchingUI(Touch touch)
     {
-        PointerEventData pointerData = new PointerEventData(EventSystem.current); // 터치 위치에 대한 포인터 데이터 생성
-        pointerData.position = touch.position; // 터치의 위치를 설정
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);                               // 터치 위치에 대한 포인터 데이터 생성
+        pointerData.position = touch.position;                                                                  // 터치의 위치를 설정
 
-        List<RaycastResult> results = new List<RaycastResult>(); // Raycast 결과를 저장할 리스트 생성
-        EventSystem.current.RaycastAll(pointerData, results); // 현재 터치가 UI에 맞는지 확인
+        List<RaycastResult> results = new List<RaycastResult>();                                                // Raycast 결과를 저장할 리스트 생성
+        EventSystem.current.RaycastAll(pointerData, results);                                                   // 현재 터치가 UI에 맞는지 확인
 
-        foreach (RaycastResult result in results) // 결과를 순회하면서
+        foreach (RaycastResult result in results)                                                               // 결과를 순회하면서
         {
-            if (result.gameObject.name == "Option Button") // 만약 "Option Button"이라는 UI를 터치했다면
+            if (result.gameObject.name == "Option Button")                                                      // 만약 "Option Button"이라는 UI를 터치했다면
             {
-                return true; // 터치가 UI를 누른 것임
+                return true;                                                                                    // 터치가 UI를 누른 것임
             }
         }
 
-        return false; // 터치가 UI가 아님
+        return false;                                                                                           // 터치가 UI가 아님
     }
 
     // 터치 위치에 맞춰 조이스틱의 배경 위치를 설정하는 함수
     void SetJoystickPosition(Vector2 screenPosition)
     {
-        if (GameManager.instance.isLive) // 게임이 진행 중일 때만 조이스틱 설정
+        if (GameManager.instance.isLive)                                                                // 게임이 진행 중일 때만 조이스틱 설정
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 canvas.transform as RectTransform, screenPosition, null, out Vector2 anchoredPosition); // 화면의 터치 좌표를 로컬 좌표로 변환
 
-            joystickBackground.anchoredPosition = anchoredPosition; // 변환된 좌표를 조이스틱 배경에 적용
-            joystickHandle.anchoredPosition = Vector2.zero; // 핸들을 배경의 중앙에 위치
+            joystickBackground.anchoredPosition = anchoredPosition;                                     // 변환된 좌표를 조이스틱 배경에 적용
+            joystickHandle.anchoredPosition = Vector2.zero;                                             // 핸들을 배경의 중앙에 위치
         }
     }
 

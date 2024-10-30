@@ -10,15 +10,17 @@ public class Weapon : MonoBehaviour
     public float speed;     // 무기의 회전 속도
     public float rate;      // 무기의 연사 속도
     public int count;       // 회전하는 무기 갯수
-    
+
     float timer;
     Player player;
     ItemData data;
     Item item;
+    JoystickController joystickController;
 
     void Awake()
     {
         player = GameManager.instance.player;
+        joystickController = GameManager.instance.joystickController;
     }
 
     void Update()
@@ -28,16 +30,28 @@ public class Weapon : MonoBehaviour
 
         switch (id)
         {
+            // 쌍검의 공격 방식
             case 0:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime);
                 break;
-            default:
+            // 활의 공격 방식
+            case 1 :
                 timer += Time.deltaTime;
                 
                 if (timer > rate)
                 {
                     timer = 0f;
                     BowShoot();
+                }
+                break;
+            // 저격용탄 헤비보우건의 공격 방식
+            case 2 :
+                timer += Time.deltaTime;
+
+                if (timer > rate)
+                {
+                    timer = 0f;
+                    Sniper();
                 }
                 break;
         }
@@ -91,6 +105,7 @@ public class Weapon : MonoBehaviour
         player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
+    // 쌍검 공격 로직
     void Batch()
     {
         for (int index=0; index < count; index++)
@@ -117,7 +132,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    // 적을 추적하여 총알을 발사하는 로직
+    // 적을 추적하여 자동으로 총알을 발사하는 로직
     void BowShoot()
     {
         if (!player.scanner.nearestTarget)
@@ -133,5 +148,23 @@ public class Weapon : MonoBehaviour
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
 
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+    }
+
+    // 조이스틱의 최종 방향을 받아오고, 총알을 일직선으로 발사하는 로직
+    void Sniper()
+    {
+        Vector2 dir = joystickController.GetInputVector();  // Joystick 방향 벡터 받아옴                                              
+        if (dir == Vector2.zero)                            // 정지상태에서는 무작위로 발사
+        {
+            float randomAngle = Random.Range(0f, 360f);
+            dir = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
+        }
+
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = transform.position;
+        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+        bullet.GetComponent<Bullet>().Init(damage, count, dir);
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Sniper);  // 발사 소리
     }
 }
