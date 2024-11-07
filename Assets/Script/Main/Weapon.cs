@@ -54,6 +54,10 @@ public class Weapon : MonoBehaviour
                     Sniper();
                 }
                 break;
+            // 대검의 공격 방식
+            case 3:
+                transform.Rotate(Vector3.back * speed * Time.deltaTime);
+                break;
         }
     }
 
@@ -96,8 +100,8 @@ public class Weapon : MonoBehaviour
             }
         }
 
-        // 만약 Case 0 무기라면, 바로 Batch()를 호출하여 자식 오브젝트 생성
-        if (id == 0)
+        // 만약 Case 0 또는 3번 무기라면, 바로 Batch()를 호출하여 자식 오브젝트 생성
+        if (id == 0 || id == 3)
         {
             Batch();  // 무기 초기화 시점에서 Batch 호출
         }

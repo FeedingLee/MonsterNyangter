@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.InputManagerEntry;
+using UnityEngine.InputSystem;
 
 public class Option : MonoBehaviour
 {

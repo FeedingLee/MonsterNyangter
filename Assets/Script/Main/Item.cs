@@ -41,7 +41,10 @@ public class Item : MonoBehaviour
                     textDesc.text = string.Format("백발백중!\n반드시 맞춘다냥!");
                     break;
                 case ItemData.ItemType.SniperHBG:
-                    textDesc.text = string.Format("엄청강한 한발!\n로망있지않냥?");
+                    textDesc.text = string.Format("내 앞에 서 있으면\n큰코다칠 거다냥?");
+                    break;
+                case ItemData.ItemType.GreatSword:
+                    textDesc.text = string.Format("참 모아베기라고\n알고있냥?");
                     break;
                 case ItemData.ItemType.Glove:
                 case ItemData.ItemType.Shoe:
@@ -58,6 +61,7 @@ public class Item : MonoBehaviour
             switch (data.itemType)                                     // 레벨업에 따른 무기 설명
             {
                 case ItemData.ItemType.DualBlades:
+                case ItemData.ItemType.GreatSword :
                     textDesc.text = string.Format(data.itemDesc,
                         data.baseDamage,                               // 기본 데미지 [0]
                         data.baseSpeed,                                // 기본 회전속도 [1]
@@ -101,6 +105,7 @@ public class Item : MonoBehaviour
             case ItemData.ItemType.DualBlades:
             case ItemData.ItemType.HuntingBow:
             case ItemData.ItemType.SniperHBG:
+            case ItemData.ItemType.GreatSword:
                 if (level == 0)
                 {
                     GameObject newWeapon = new GameObject();

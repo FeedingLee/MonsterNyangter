@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
-  m_Name: '[MainWp] Dual_Blades'
+  m_Name: '[MainWp] GreatSword'
   m_EditorClassIdentifier: 
-  itemType: 0
-  itemId: 0
-  itemName: "\uC30D\uAC80"
+  itemType: 3
+  itemId: 3
+  itemName: "\uB300\uAC80"
   itemDesc: "\uACF5\uACA9\uB825   : {6} ({0}+{3})\n\uACF5\uACA9\uC18D\uB3C4 : {7}
     ({1}+{4})\n\uC30D\uAC80\uAC2F\uC218 : {8} ({2}+{5})"
-  itemIcon: {fileID: 1151449329, guid: c9dbade04f8fea64da5f4e76f0402c8d, type: 3}
-  baseDamage: 10
+  itemIcon: {fileID: 1787623071, guid: c9dbade04f8fea64da5f4e76f0402c8d, type: 3}
+  baseDamage: 30
   baseSpeed: 120
   baseRate: 0
-  baseCount: 2
+  baseCount: 1
   damages:
   - 0
   - 0.2
@@ -30,15 +30,15 @@ MonoBehaviour:
   - 0.5
   W_Speeds:
   - 0
-  - 0.8
-  - 0.1
-  - 0.1
-  - 0.8
+  - 0.5
+  - 0.7
+  - 0.9
+  - 1.5
   W_Rates:
   - 0
   - 0
   - 0
   - 0
   - 0
-  counts: 0000000000000000000000000000000001000000
-  projectile: {fileID: 5975959092659265913, guid: aaa9264b8339d984c87e0272b57a6a30, type: 3}
+  counts: 0000000000000000000000000000000000000000
+  projectile: {fileID: 5975959092659265913, guid: f0306916988a40348971c8422f9b3da2, type: 3}
