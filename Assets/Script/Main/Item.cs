@@ -46,6 +46,9 @@ public class Item : MonoBehaviour
                 case ItemData.ItemType.GreatSword:
                     textDesc.text = string.Format("참 모아베기라고\n알고있냥?");
                     break;
+                case ItemData.ItemType.Lance:
+                    textDesc.text = string.Format("찌르면 아프다냥.\n이쑤시개 아니다냥.");
+                    break;
                 case ItemData.ItemType.Glove:
                 case ItemData.ItemType.Shoe:
                     textDesc.text = string.Format(data.itemDesc,
@@ -62,6 +65,7 @@ public class Item : MonoBehaviour
             {
                 case ItemData.ItemType.DualBlades:
                 case ItemData.ItemType.GreatSword :
+                case ItemData.ItemType.Lance :
                     textDesc.text = string.Format(data.itemDesc,
                         data.baseDamage,                               // 기본 데미지 [0]
                         data.baseSpeed,                                // 기본 회전속도 [1]
@@ -106,6 +110,7 @@ public class Item : MonoBehaviour
             case ItemData.ItemType.HuntingBow:
             case ItemData.ItemType.SniperHBG:
             case ItemData.ItemType.GreatSword:
+            case ItemData.ItemType.Lance:
                 if (level == 0)
                 {
                     GameObject newWeapon = new GameObject();

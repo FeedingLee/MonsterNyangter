@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
-  m_Name: '[MainWp] GreatSword'
+  m_Name: '[MainWp] (3) GreatSword'
   m_EditorClassIdentifier: 
   itemType: 3
   itemId: 3
@@ -29,11 +29,11 @@ MonoBehaviour:
   - 0.4
   - 0.5
   W_Speeds:
-  - 1
-  - 0.1
-  - 0.7
-  - 0.9
-  - 1.5
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   W_Rates:
   - -0.1
   - -0.2

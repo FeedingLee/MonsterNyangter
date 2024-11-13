@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     Item item;
     JoystickController joystickController;
 
+    Vector3 lastDirection;  // 조이스틱이 마지막으로 향한 방향값
+
     void Awake()
     {
         player = GameManager.instance.player;
@@ -43,7 +45,7 @@ public class Weapon : MonoBehaviour
                 if (timer > rate)
                 {
                     timer = 0f;
-                    BowShoot();
+                    HuntingBow();
                 }
                 break;
             // 저격용탄 헤비보우건의 공격 방식
@@ -64,6 +66,10 @@ public class Weapon : MonoBehaviour
                     StartCoroutine(GreatSwordRotate());
                 }
                 break;
+            // 랜스의 공격 방식
+            case 4:
+                LanceRotate();
+                break;
         }
     }
 
@@ -81,6 +87,10 @@ public class Weapon : MonoBehaviour
         if (id == 3)
         {
             GreatSword();
+        }
+        if (id == 4)
+        {
+            Lance();
         }
     }
 
@@ -117,9 +127,13 @@ public class Weapon : MonoBehaviour
         {
             GreatSword();
         }
+        else if (id == 4)
+        {
+            Lance();
+        }
     }
 
-    // 쌍검 공격 로직
+    // 쌍검 공격, 배치 로직
     void DualBlades()
     {
         for (int index = 0; index < count; index++)                         // 무기 갯수(count) 만큼 루프를 돌림
@@ -147,7 +161,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    // 대검 공격 함수
+    // 대검 배치 로직
     void GreatSword()
     {
         for (int i = 0; i < 1; i++)                                         
@@ -166,15 +180,37 @@ public class Weapon : MonoBehaviour
             bullet.localPosition = Vector3.zero;
             bullet.localRotation = Quaternion.identity;
 
-            Vector3 rotVec = Vector3.forward * 360;
-            bullet.Rotate(rotVec);
             bullet.Translate(bullet.up * 3.5f, Space.World);
             bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero);
         }
     }
 
-    // 적을 추적하여 자동으로 총알을 발사하는 로직
-    void BowShoot()
+    // 랜스 배치 로직
+    void Lance() // 내 생각에는 조이스틱이 0으로 돌아가는 순간, 초기화됨 즉 이 값을 저장해ㅐ둘 먼가 필요함
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            Transform bullet;
+
+            if (i < transform.childCount)
+            {
+                bullet = transform.GetChild(i);
+            }
+            else
+            {
+                bullet = GameManager.instance.pool.Get(prefabId).transform;
+                bullet.parent = transform;
+            }
+            bullet.localPosition = Vector3.zero;
+            bullet.localRotation = Quaternion.identity;
+
+            bullet.Translate(bullet.up * 0.8f, Space.World);
+            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero);
+        }
+    }
+
+    // 활 배치 + 공격 로직
+    void HuntingBow()
     {
         if (!player.scanner.nearestTarget)
             return;
@@ -191,15 +227,14 @@ public class Weapon : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
     }
 
-    // 저격용탄 헤비보우건 공격 함수
-    // 조이스틱의 최종 방향을 받아오고, 총알을 일직선으로 발사함
+    // 헤비보우건 배치 + 공격 로직
     void Sniper()
     {
-        Vector2 dir = joystickController.GetInputVector();  // Joystick 방향 벡터 받아옴                                              
-        if (dir == Vector2.zero)                            // 정지상태에서는 무작위로 발사
+        Vector3 dir = joystickController.GetInputVector();  // Joystick 방향 벡터 받아옴                                              
+        if (dir == Vector3.zero)                            // 정지상태에서는 무작위로 발사
         {
             float randomAngle = Random.Range(0f, 360f);
-            dir = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
+            dir = new Vector3(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
         }
 
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
@@ -210,7 +245,7 @@ public class Weapon : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Sniper);  // 발사 소리
     }
 
-    // 대검 회전 코루틴
+    // 대검 회전 공격 코루틴
     IEnumerator GreatSwordRotate()
     {
         int rotationCount = 0;                                                          // 회전 횟수를 추적하기 위한 변수
@@ -227,13 +262,29 @@ public class Weapon : MonoBehaviour
                 rotatedAmount += rotationStep;                                          // 누적 회전량 증가
                 yield return null;                                                      // 한 프레임 대기
             }
-            Vector2 dir = joystickController.GetInputVector();                          // Joystick 방향 벡터 받아옴
+            Vector3 dir = joystickController.GetInputVector();                          // Joystick 방향 벡터 받아옴
             transform.localRotation = Quaternion.FromToRotation(Vector3.up, dir);       // 마지막 조이스틱 방향으로, 대검을 위치함
-
-            rotationCount++;                                                            // 한 번의 360도 회전이 끝날 때마다 회전 횟수 증
+        
+            rotationCount++;                                                            // 한 번의 360도 회전이 끝날 때마다 회전 횟수 증가
 
             yield return new WaitForSeconds(rate);                                      // 한 번 회전이 끝난 후 rate만큼 대기
         }
         charm = false;                                                                  // 참모아베기 정지상태로 변경
+    }
+
+    // 랜스 공격 로직
+    void LanceRotate()
+    {
+        Vector3 dir = joystickController.GetInputVector();                              // Joystick 방향 벡터 받아옴
+
+        if (dir != Vector3.zero)                                                        // dir이 (0, 0, 0)이 아닐 때만 lastDirection 업데이트
+        {
+            lastDirection = dir;                                                        // 마지막 방향 업데이트
+        }
+        else
+        {
+            dir = lastDirection;                                                        // dir이 (0, 0, 0)이면 마지막 방향 유지
+        }      
+        transform.localRotation = Quaternion.FromToRotation(Vector3.up, dir);           // 조이스틱 방향 또는 마지막 방향으로 랜스를 배치함
     }
 }
