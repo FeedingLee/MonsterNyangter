@@ -45,7 +45,8 @@ public class AudioManager : MonoBehaviour
         Win,
         NyanEaster = 16,
         Sniper = 17,
-        GreatSword = 20
+        GreatSword = 20,
+        ChargeMod = 23
     }
 
     void Awake()
@@ -119,7 +120,8 @@ public class AudioManager : MonoBehaviour
                 continue;
 
             int ranIndex = 0;
-            if (sfx == Sfx.Dead || sfx == Sfx.Hit || sfx == Sfx.Melee || sfx == Sfx.Range || sfx == Sfx.Sniper || sfx == Sfx.GreatSword)
+            if (sfx == Sfx.Dead || sfx == Sfx.Hit || sfx == Sfx.Melee || sfx == Sfx.Range || sfx == Sfx.Sniper || sfx == Sfx.GreatSword || 
+                sfx == Sfx.ChargeMod)
             {
                 ranIndex = Random.Range(0, 3);
             }

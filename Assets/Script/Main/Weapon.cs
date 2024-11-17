@@ -14,9 +14,10 @@ public class Weapon : MonoBehaviour
     private float memorydamage;     // 데미지 저장
     public float Critical_Damage;   // 크리티컬 데미지
 
-    bool charm = false;             // 참 모아베기상태 (대검) 확인하는 변수
+    bool charm = false;             // [대검] 참 모아베기상태 확인하는 변수
     bool cooldown = false;          // 쿨타임을 확인하는 변수
-    
+    bool lancecharge = false;       // [랜스] 돌진상태 확인하는 변수
+
 
     float timer;
     Player player;
@@ -75,6 +76,12 @@ public class Weapon : MonoBehaviour
             // 랜스의 공격 방식
             case 4:
                 LanceRotate();
+                if (!lancecharge)
+                { 
+                    lancecharge = true;
+                    Lance();
+                    StartCoroutine(LanceAttack());
+                }
                 break;
         }
     }
@@ -98,6 +105,8 @@ public class Weapon : MonoBehaviour
         }
         if (id == 4)
         {
+            Critical_Damage = damage * 2;
+            memorydamage = Critical_Damage / 2;
             Lance();
         }
     }
@@ -139,6 +148,8 @@ public class Weapon : MonoBehaviour
         }
         else if (id == 4)
         {
+            Critical_Damage = damage * 2;
+            memorydamage = Critical_Damage / 2;
             Lance();
         }
     }
@@ -294,7 +305,7 @@ public class Weapon : MonoBehaviour
         charm = false;                                                                  // 참모아베기 정지상태로 변경   
     }
 
-    // 랜스 공격 로직
+    // 랜스 움직이는 로직
     void LanceRotate()
     {
         Vector3 dir = joystickController.GetInputVector();                              // Joystick 방향 벡터 받아옴
@@ -307,6 +318,22 @@ public class Weapon : MonoBehaviour
         {
             dir = lastDirection;                                                        // dir이 (0, 0, 0)이면 마지막 방향 유지
         }      
-        transform.localRotation = Quaternion.FromToRotation(Vector3.up, dir);           // 조이스틱 방향 또는 마지막 방향으로 랜스를 배치함
+        transform.localRotation = Quaternion.FromToRotation(Vector3.up, dir);           // 조이스틱 방향 또는 마지막 방향으로 랜스를 배치함    
+    }
+
+    // 랜스 공격 로직
+    IEnumerator LanceAttack()
+    {
+        yield return new WaitForSeconds(rate);                                          // rate 만큼 쿨타임을 기다려야 돌진모드 활성화
+        if (lancecharge == true)
+        {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.ChargeMod);                  // 무기 사운드
+            damage = Critical_Damage;
+            Lance();
+            yield return new WaitForSeconds(count);                                     // count 만큼 돌진모드 유지
+            lancecharge = false;
+            damage = Critical_Damage / 2;                                               
+            Lance();
+        }
     }
 }
