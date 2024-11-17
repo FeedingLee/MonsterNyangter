@@ -8,10 +8,15 @@ public class Weapon : MonoBehaviour
     public int id;
     public int prefabId;
     public float damage;
-    public float speed;      // 무기의 회전 속도
-    public float rate;       // 무기의 연사 속도
-    public int count;        // 회전하는 무기 갯수
-    bool charm = false;      // 대검의 회전중을 확인하는 변수
+    public float speed;             // 무기의 회전 속도
+    public float rate;              // 무기의 연사 속도
+    public int count;               // 회전하는 무기 갯수
+    private float memorydamage;     // 데미지 저장
+    public float Critical_Damage;   // 크리티컬 데미지
+
+    bool charm = false;             // 참 모아베기상태 (대검) 확인하는 변수
+    bool cooldown = false;          // 쿨타임을 확인하는 변수
+    
 
     float timer;
     Player player;
@@ -19,8 +24,8 @@ public class Weapon : MonoBehaviour
     Item item;
     JoystickController joystickController;
 
-    Vector3 lastDirection;  // 조이스틱이 마지막으로 향한 방향값
-
+    Vector3 lastDirection;          // 조이스틱이 마지막으로 향한 방향값
+    
     void Awake()
     {
         player = GameManager.instance.player;
@@ -63,7 +68,8 @@ public class Weapon : MonoBehaviour
                 if (!charm)       // 회전 중이 아닐 때만 실행
                 {
                     charm = true; // 회전 중으로 설정
-                    StartCoroutine(GreatSwordRotate());
+                    GreatSword();
+                    StartCoroutine(GreatSwordRotate());                  
                 }
                 break;
             // 랜스의 공격 방식
@@ -86,6 +92,8 @@ public class Weapon : MonoBehaviour
         }
         if (id == 3)
         {
+            Critical_Damage = damage * 2;
+            memorydamage = Critical_Damage / 2;
             GreatSword();
         }
         if (id == 4)
@@ -125,6 +133,8 @@ public class Weapon : MonoBehaviour
         }
         else if (id == 3)
         {
+            Critical_Damage = damage * 2;
+            memorydamage = Critical_Damage / 2;
             GreatSword();
         }
         else if (id == 4)
@@ -164,6 +174,16 @@ public class Weapon : MonoBehaviour
     // 대검 배치 로직
     void GreatSword()
     {
+        if (cooldown)                               // 쿨다운 상태 (참모아 베기가 끝난 뒤) 
+        {
+            damage = memorydamage;                  // 데미지를 원래 데미지 값으로 변경
+            cooldown = false;                       // 쿨다운 상태를 해제함
+        }
+        else if (!cooldown)                         // 공격 가능 상태 (참모아 베기 중)
+        {
+            damage = Critical_Damage;               // 카운트만큼 회전하면, 데미지를 크리티컬 데미지로 변경 ex) count가 3이면 3번째 참모아베기에 데미지 증가     
+        }
+
         for (int i = 0; i < 1; i++)                                         
         {
             Transform bullet;
@@ -186,7 +206,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 랜스 배치 로직
-    void Lance() // 내 생각에는 조이스틱이 0으로 돌아가는 순간, 초기화됨 즉 이 값을 저장해ㅐ둘 먼가 필요함
+    void Lance() 
     {
         for (int i = 0; i < 1; i++)
         {
@@ -230,8 +250,8 @@ public class Weapon : MonoBehaviour
     // 헤비보우건 배치 + 공격 로직
     void Sniper()
     {
-        Vector3 dir = joystickController.GetInputVector();  // Joystick 방향 벡터 받아옴                                              
-        if (dir == Vector3.zero)                            // 정지상태에서는 무작위로 발사
+        Vector3 dir = joystickController.GetInputVector();                              // Joystick 방향 벡터 받아옴                                              
+        if (dir == Vector3.zero)                                                        // 정지상태에서는 무작위로 발사
         {
             float randomAngle = Random.Range(0f, 360f);
             dir = new Vector3(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
@@ -242,7 +262,7 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
 
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Sniper);  // 발사 소리
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Sniper);                         // 발사 소리
     }
 
     // 대검 회전 공격 코루틴
@@ -267,9 +287,11 @@ public class Weapon : MonoBehaviour
         
             rotationCount++;                                                            // 한 번의 360도 회전이 끝날 때마다 회전 횟수 증가
 
+            cooldown = true;                                                            // 쿨다운 상태를 true로 만듬 (공격 중지)
+            GreatSword();                                                               // 데미지 조정을 위해 GreatSword 함수를 다시 부름
             yield return new WaitForSeconds(rate);                                      // 한 번 회전이 끝난 후 rate만큼 대기
         }
-        charm = false;                                                                  // 참모아베기 정지상태로 변경
+        charm = false;                                                                  // 참모아베기 정지상태로 변경   
     }
 
     // 랜스 공격 로직
