@@ -38,11 +38,11 @@ public class AudioManager : MonoBehaviour
         Dead = 0,
         Hit = 3, 
         LevelUp = 6, 
-        Lose, 
-        Melee,
+        Lose = 7, 
+        Melee = 8,
         Select = 11,
-        Range, 
-        Win,
+        Range = 12, 
+        Win = 15,
         NyanEaster = 16,
         Sniper = 17,
         GreatSword = 20,
@@ -120,8 +120,7 @@ public class AudioManager : MonoBehaviour
                 continue;
 
             int ranIndex = 0;
-            if (sfx == Sfx.Dead || sfx == Sfx.Hit || sfx == Sfx.Melee || sfx == Sfx.Range || sfx == Sfx.Sniper || sfx == Sfx.GreatSword || 
-                sfx == Sfx.ChargeMod)
+            if (sfx == Sfx.Dead || sfx == Sfx.Hit || sfx == Sfx.Melee || sfx == Sfx.Range || sfx == Sfx.Sniper || sfx == Sfx.GreatSword)
             {
                 ranIndex = Random.Range(0, 3);
             }

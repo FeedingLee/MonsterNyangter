@@ -7,9 +7,12 @@ public class PoolManager : MonoBehaviour
 {
     // .. 프리펩들을 보관할 변수
     public GameObject[] prefabs;
-
+    // .. 보스관련 프리펩들을 보관할 변수
+    public GameObject[] enemyPrefabs;
     // .. 풀 담당을 하는 리스트들
     List<GameObject>[] pools;
+    // .. 보스 관련 풀 담당을 하는 리스트들
+    List<GameObject>[] enemies;
 
     void Awake()
     {
@@ -18,6 +21,13 @@ public class PoolManager : MonoBehaviour
         for (int index = 0; index < pools.Length; index++)
         {
             pools[index] = new List<GameObject>();
+        }
+
+        enemies = new List<GameObject>[enemyPrefabs.Length];
+
+        for (int index = 0; index < enemies.Length; index++)
+        {
+            enemies[index] = new List<GameObject>();
         }
     }
 
@@ -28,7 +38,7 @@ public class PoolManager : MonoBehaviour
         // ... 선택한 풀의 비활성화 된 게임오브젝트 접근 
         foreach (GameObject item in pools[index])
         {
-            if (!item.activeSelf) 
+            if (!item.activeSelf)
             {
                 // ... 그 게임 오브젝트를 발견하면, select 변수에 할당함
                 select = item;
@@ -42,6 +52,31 @@ public class PoolManager : MonoBehaviour
             select = Instantiate(prefabs[index], transform);
             pools[index].Add(select);
         }
-        return select; 
+        return select;
+    }
+
+    public GameObject GetEnemy(int index)
+    {
+        GameObject select = null;
+
+        // ... 선택한 풀의 비활성화 된 게임오브젝트 접근 
+        foreach (GameObject item in enemies[index])
+        {
+            if (!item.activeSelf)
+            {
+                // ... 그 게임 오브젝트를 발견하면, select 변수에 할당함
+                select = item;
+                select.SetActive(true);
+                break;
+            }
+        }
+        // ... 모두 사용되고 있다면, 새롭게 생성하여, Select 변수에 할당
+        if (!select)
+        {
+            select = Instantiate(enemyPrefabs[index], transform);
+            enemies[index].Add(select);
+        }
+
+        return select;
     }
 }

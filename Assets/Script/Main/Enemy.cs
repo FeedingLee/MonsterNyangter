@@ -92,7 +92,16 @@ public class Enemy : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+
+            // 몬스터가 Exp구슬을 드랍하므로 직접 경험치가 증가되는 코드 주석처리
+            //GameManager.instance.GetExp();
+
+
+            // 경험치 구슬 드랍
+            Transform exp;
+            exp = GameManager.instance.pool.GetEnemy(0).transform;
+            exp.parent = GameManager.instance.pool.transform;
+            exp.position = transform.position;
 
             if (GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);

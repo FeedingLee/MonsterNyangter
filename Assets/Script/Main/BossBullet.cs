@@ -44,7 +44,6 @@ public class BossBullet : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("BulletTrigger");
             // 발사체가 플레이어와 접촉 시 데미지 입음
             GameManager.instance.health -= damage;
 

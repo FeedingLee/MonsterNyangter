@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 718085647108338694}
   - component: {fileID: 5799939773554308459}
   - component: {fileID: 6796262528265246002}
-  m_Layer: 0
+  - component: {fileID: -8613727809091077113}
+  m_Layer: 7
   m_Name: Exp
   m_TagString: Exp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2244105656364890226
 Transform:
   m_ObjectHideFlags: 0
@@ -72,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1514022693
-  m_SortingLayer: 3
+  m_SortingLayerID: 617994065
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -1025518953, guid: 8d1f95d3a0b59ac42bb3a223ab869144, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.04
 --- !u!114 &6796262528265246002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +138,30 @@ MonoBehaviour:
   - {fileID: -1025518953, guid: 8d1f95d3a0b59ac42bb3a223ab869144, type: 3}
   - {fileID: -321275140, guid: 8d1f95d3a0b59ac42bb3a223ab869144, type: 3}
   - {fileID: -1116699675, guid: 8d1f95d3a0b59ac42bb3a223ab869144, type: 3}
+--- !u!50 &-8613727809091077113
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7368216090368851147}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

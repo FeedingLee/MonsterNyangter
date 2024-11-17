@@ -18,7 +18,7 @@ MonoBehaviour:
   itemDesc: "\uACF5\uACA9\uB825   : {6} ({0}+{3})\n\uC5F0\uC0AC\uC18D\uB3C4 : {7}
     ({1}-{4}%)\n\uAD00\uD1B5\uB825   : {8} ({2}+{5})"
   itemIcon: {fileID: 194593140, guid: c9dbade04f8fea64da5f4e76f0402c8d, type: 3}
-  baseDamage: 10
+  baseDamage: 40
   baseSpeed: 0
   baseRate: 3
   baseCount: 50

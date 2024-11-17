@@ -103,7 +103,7 @@ public class BossPattern : MonoBehaviour
             int number = Random.Range(0, 3);
 
             //테스트 용도
-            number = 2;
+            number = 1;
 
             Debug.Log("BossPattern: " + number);            
             // 반복할 동작
@@ -175,8 +175,8 @@ public class BossPattern : MonoBehaviour
             // 방향 벡터 계산
             Vector3 dir = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0).normalized;
 
-            // 발사체 생성 및 초기화
-            Transform bullet = GameManager.instance.pool.Get(3).transform;
+            // 발사체 생성 및 초기화          
+            Transform bullet = GameManager.instance.pool.GetEnemy(2).transform;
             bullet.position = transform.position/* + new Vector3(0, 1, 0)*/;  // 총알의 시작 위치
             bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); // 회전 설정
             bullet.GetComponent<BossBullet>().Init(BossBulletDamage, dir * fireSpeed);   // 총알 초기화
@@ -190,7 +190,7 @@ public class BossPattern : MonoBehaviour
         Vector2 nextVec = dirVec.normalized;
 
         // 발사체 생성 및 초기화
-        Transform bullet = GameManager.instance.pool.Get(3).transform;
+        Transform bullet = GameManager.instance.pool.GetEnemy(2).transform;
         bullet.position = transform.position + new Vector3(0, 1, 0);                // 총알의 시작 위치
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, nextVec);           // 회전 설정
         bullet.GetComponent<BossBullet>().Init(BossBulletDamage, nextVec * fireSpeed * 3f);   // 총알 초기화
