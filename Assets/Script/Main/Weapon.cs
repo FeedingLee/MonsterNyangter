@@ -329,10 +329,12 @@ public class Weapon : MonoBehaviour
         {
             AudioManager.instance.PlaySfx(AudioManager.Sfx.ChargeMod);                  // 무기 사운드
             damage = Critical_Damage;
+            player.speed += count;                                                      // count만큼 속도 상승 [ 돌진모드 ] 
             Lance();
-            yield return new WaitForSeconds(count);                                     // count 만큼 돌진모드 유지
+            yield return new WaitForSeconds(speed);                                     // speed 만큼 돌진모드 유지
             lancecharge = false;
-            damage = Critical_Damage / 2;                                               
+            damage = Critical_Damage / 2;
+            player.speed -= count;                                                      // count만큼 속도 감소 [ 돌진종료 ] 
             Lance();
         }
     }

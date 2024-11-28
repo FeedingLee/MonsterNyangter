@@ -26769,11 +26769,11 @@ MonoBehaviour:
   maxGameTime: 100
   playerId: 0
   health: 100
-  maxHealth: 100
+  maxHealth: 500
   level: 0
   kill: 0
   exp: 0
-  nextExp: 0a0000000f00000014000000190000001e00000023000000280000002d0000003200000037000000
+  nextExp: 010000000200000003000000040000000500000006000000070000002d0000003200000037000000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -38265,7 +38265,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   nearestTarget: {fileID: 0}
-  expScanRange: 1
+  expScanRange: 20
   expTargetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -246743,10 +246743,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.5
+  - spawnTime: 0.3
     spriteType: 0
-    health: 60
-    speed: 1
+    health: 10
+    speed: 2
   - spawnTime: 0.25
     spriteType: 1
     health: 100
