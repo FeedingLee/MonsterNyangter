@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     public int count;               // 회전하는 무기 갯수
     private float memorydamage;     // 데미지 저장
     public float Critical_Damage;   // 크리티컬 데미지
+    private float memoryspeed;        // 스피드 저장
 
     bool charm = false;             // [대검] 참 모아베기상태 확인하는 변수
     bool cooldown = false;          // 쿨타임을 확인하는 변수
@@ -115,7 +116,26 @@ public class Weapon : MonoBehaviour
     {
         // Basic Set
         this.data = data;
-        name = "Weapon" + data.itemId;
+        if (data.itemId == 0)
+        {
+            name = "Dual Blades [" + data.itemId + "]";
+        }
+        else if (data.itemId == 1)
+        {
+            name = "Hunting Bow [" + data.itemId + "]";
+        }
+        else if (data.itemId == 2)
+        {
+            name = "Sniper HBG [" + data.itemId + "]";
+        }
+        else if (data.itemId == 3)
+        {
+            name = "GreatSword [" + data.itemId + "]";
+        }
+        else if (data.itemId == 4)
+        {
+            name = "Lance [" + data.itemId + "]";
+        }
         transform.parent = player.transform;
         transform.localPosition = Vector3.zero;
 
@@ -329,12 +349,13 @@ public class Weapon : MonoBehaviour
         {
             AudioManager.instance.PlaySfx(AudioManager.Sfx.ChargeMod);                  // 무기 사운드
             damage = Critical_Damage;
+            memoryspeed = player.speed;
             player.speed += count;                                                      // count만큼 속도 상승 [ 돌진모드 ] 
             Lance();
             yield return new WaitForSeconds(speed);                                     // speed 만큼 돌진모드 유지
             lancecharge = false;
             damage = Critical_Damage / 2;
-            player.speed -= count;                                                      // count만큼 속도 감소 [ 돌진종료 ] 
+            player.speed = memoryspeed;                                                 // 기억해둔 속도로 복구 [ 돌진종료 ] 
             Lance();
         }
     }
