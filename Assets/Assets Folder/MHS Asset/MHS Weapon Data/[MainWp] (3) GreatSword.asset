@@ -15,8 +15,8 @@ MonoBehaviour:
   itemType: 3
   itemId: 3
   itemName: "\uB300\uAC80"
-  itemDesc: "\uACF5\uACA9\uB825   : {6} ({0}+{3}) x 2\n\uCFE8\uB2E4\uC6B4   : {11}
-    ({9}+{10}%)\n\uBCA0\uAE30\uD69F\uC218 : {8} ({2}+{5})"
+  itemDesc: "\uACF5\uACA9\uB825:{6} ({0}+{3}) x 2\n\uCFE8\uB2E4\uC6B4:{11} ({9}+{10}%)\n\uBCA0\uAE30\uD69F\uC218:{8}
+    ({2}+{5})"
   itemIcon: {fileID: 1787623071, guid: c9dbade04f8fea64da5f4e76f0402c8d, type: 3}
   baseDamage: 40
   baseSpeed: 1000

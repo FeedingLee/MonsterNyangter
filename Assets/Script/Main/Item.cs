@@ -35,19 +35,19 @@ public class Item : MonoBehaviour
             switch (data.itemType)                                     // 최초 획득에 따른 무기 설명
             {
                 case ItemData.ItemType.DualBlades:
-                    textDesc.text = string.Format("회전하며 마구 벤다냥!");
+                    textDesc.text = string.Format("회전하며 \n마구 벤다냥!");
                     break;
                 case ItemData.ItemType.HuntingBow:
-                    textDesc.text = string.Format("백발백중!\n반드시 맞춘다냥!");
+                    textDesc.text = string.Format("백발백중!\n반드시\n맞춘다냥!");
                     break;
                 case ItemData.ItemType.SniperHBG:
-                    textDesc.text = string.Format("내 앞에 서 있으면\n큰코다칠 거다냥?");
+                    textDesc.text = string.Format("내 앞에서\n사라져라냥!");
                     break;
                 case ItemData.ItemType.GreatSword:
-                    textDesc.text = string.Format("참 모아베기라고\n알고있냥?");
+                    textDesc.text = string.Format("참 모아..라고\n알고있냥?");
                     break;
                 case ItemData.ItemType.Lance:
-                    textDesc.text = string.Format("찌르면 아프다냥.\n이쑤시개 아니다냥.");
+                    textDesc.text = string.Format("이쑤시개\n아니다냥.");
                     break;
                 case ItemData.ItemType.Glove:
                 case ItemData.ItemType.Shoe:
