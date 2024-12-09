@@ -2011,7 +2011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.8}
+  m_AnchoredPosition: {x: 0, y: -12.600006}
   m_SizeDelta: {x: 35, y: 8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &28218412
@@ -4552,7 +4552,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: -4}
-  m_SizeDelta: {x: 157, y: 90}
+  m_SizeDelta: {x: 158.9, y: 90}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &85595737
 MonoBehaviour:
@@ -24807,7 +24807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 311, y: -58.5}
+  m_AnchoredPosition: {x: 315, y: -58.5}
   m_SizeDelta: {x: 40, y: 73}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &443691073
@@ -26875,7 +26875,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC774\uB3D9\uC18D\uB3C4 10% \uB354 \uC99D\uAC00\n"
+  m_Text: "\uC774\uB3D9\uC18D\uB3C4 10% \uBCF4\uB108\uC2A4\n"
 --- !u!222 &472255976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29620,7 +29620,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 9.857142
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -49775,7 +49775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 73.5, y: -58.5}
+  m_AnchoredPosition: {x: 77.5, y: -58.5}
   m_SizeDelta: {x: 40, y: 73}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &855084142
@@ -200325,7 +200325,7 @@ GameObject:
   - component: {fileID: 1156075007}
   - component: {fileID: 1156075006}
   m_Layer: 5
-  m_Name: '[Buff] RateUp_Glove'
+  m_Name: '[Stat] Rates_Up'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200351,7 +200351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115.16667, y: -58.5}
+  m_AnchoredPosition: {x: 119.16667, y: -58.5}
   m_SizeDelta: {x: 40, y: 73}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1156075006
@@ -201650,10 +201650,10 @@ RectTransform:
   - {fileID: 443691072}
   m_Father: {fileID: 85595736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.099998474, y: -5.1}
-  m_SizeDelta: {x: -5, y: -23.3}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.01, y: -3.7000008}
+  m_SizeDelta: {x: 171.6, y: 76.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1178273756
 MonoBehaviour:
@@ -201672,13 +201672,13 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 7
-  m_Spacing: -29
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildAlignment: 1
+  m_Spacing: 1.75
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 1
+  m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!1 &1178288924
@@ -206761,7 +206761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 31.833334, y: -58.5}
+  m_AnchoredPosition: {x: 35.833336, y: -58.5}
   m_SizeDelta: {x: 40, y: 73}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1274977029
@@ -216522,7 +216522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -41.1, y: -12.8}
+  m_AnchoredPosition: {x: -42, y: -12.6}
   m_SizeDelta: {x: 35, y: 8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1441751660
@@ -221455,7 +221455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 41.3, y: -12.8}
+  m_AnchoredPosition: {x: 42, y: -12.600006}
   m_SizeDelta: {x: 35, y: 8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1534920551
@@ -230452,7 +230452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC5F0\uC0AC\uC18D\uB3C4 10% \uB354 \uC99D\uAC00\n"
+  m_Text: "\uC5F0\uC0AC\uC18D\uB3C4 10% \uBCF4\uB108\uC2A4\n"
 --- !u!222 &1673101266
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -238794,7 +238794,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACF5\uACA9\uB825 20% \uB354 \uC99D\uAC00\n"
+  m_Text: "\uACF5\uACA9\uB825 20% \uBCF4\uB108\uC2A4\n"
 --- !u!222 &1795296679
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -242100,7 +242100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD68C\uC804, \uAD00\uD1B5 \uCD94\uAC00\n"
+  m_Text: "\uD68C\uC804, \uAD00\uD1B5 \uBCF4\uB108\uC2A4\n"
 --- !u!222 &1876733252
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -247048,7 +247048,7 @@ GameObject:
   - component: {fileID: 1960654133}
   - component: {fileID: 1960654132}
   m_Layer: 5
-  m_Name: '[Buff] SpeedUp_Shoes'
+  m_Name: '[Stat] SpeedUp_Shoes'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247074,7 +247074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 271, y: -58.5}
+  m_AnchoredPosition: {x: 275, y: -58.5}
   m_SizeDelta: {x: 40, y: 73}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1960654132

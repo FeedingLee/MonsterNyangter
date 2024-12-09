@@ -49,7 +49,7 @@ public class Item : MonoBehaviour
                 case ItemData.ItemType.Lance:
                     textDesc.text = string.Format("이쑤시개\n아니다냥.");
                     break;
-                case ItemData.ItemType.Glove:
+                case ItemData.ItemType.Rate_Up:
                 case ItemData.ItemType.Shoe:
                     textDesc.text = string.Format(data.itemDesc,
                         data.damages[level] * 100);
@@ -93,7 +93,7 @@ public class Item : MonoBehaviour
                         data.baseRate + (data.baseRate * data.W_Rates[level]),      // 최종 연사속도 [7]
                         data.baseCount + (data.counts[level]));                     // 최종 관통력 [8]
                     break;
-                case ItemData.ItemType.Glove:
+                case ItemData.ItemType.Rate_Up:
                 case ItemData.ItemType.Shoe:
                     textDesc.text = string.Format(data.itemDesc,
                         data.damages[level] * 100);
@@ -136,7 +136,7 @@ public class Item : MonoBehaviour
                 }
                 level++;
                 break;
-            case ItemData.ItemType.Glove:
+            case ItemData.ItemType.Rate_Up:
             case ItemData.ItemType.Shoe:
                 if (level == 0)
                 {

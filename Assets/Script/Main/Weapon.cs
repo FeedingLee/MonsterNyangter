@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     public int count;               // 회전하는 무기 갯수
     private float memorydamage;     // 데미지 저장
     public float Critical_Damage;   // 크리티컬 데미지
-    private float memoryspeed;        // 스피드 저장
+    private float memoryspeed;      // 플레이어의 스피드 저장
 
     bool charm = false;             // [대검] 참 모아베기상태 확인하는 변수
     bool cooldown = false;          // 쿨타임을 확인하는 변수

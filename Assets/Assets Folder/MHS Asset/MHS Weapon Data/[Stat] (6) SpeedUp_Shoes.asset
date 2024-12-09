@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
-  m_Name: '[Buff] (5) RateUp_Glove'
+  m_Name: '[Stat] (6) SpeedUp_Shoes'
   m_EditorClassIdentifier: 
-  itemType: 5
-  itemId: 5
-  itemName: "\uD14C\uD06C\uB2C8\uCEEC \uC7A5\uAC11"
-  itemDesc: "\uC5F0\uC0AC\uC18D\uB3C4 {0}% \uC99D\uAC00"
-  itemIcon: {fileID: -201829820, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  itemType: 6
+  itemId: 6
+  itemName: "\uC804\uD22C \uC7A5\uD654"
+  itemDesc: "\uC774\uB3D9\uC18D\uB3C4 {0}% \uC99D\uAC00"
+  itemIcon: {fileID: -966295699, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   baseDamage: 0
   baseSpeed: 0
   baseRate: 0
@@ -24,9 +24,9 @@ MonoBehaviour:
   damages:
   - 0.1
   - 0.2
-  - 0.35
+  - 0.3
+  - 0.4
   - 0.5
-  - 0.75
   W_Speeds: []
   W_Rates: []
   counts: 0000000000000000000000000000000000000000

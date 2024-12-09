@@ -31,7 +31,7 @@ public class Gear : MonoBehaviour
     {
         switch (type)
         {
-            case ItemData.ItemType.Glove:
+            case ItemData.ItemType.Rate_Up:
                 RateUp();
                 break;
             case ItemData.ItemType.Shoe:
@@ -40,7 +40,7 @@ public class Gear : MonoBehaviour
         }
     }
 
-    // 장갑의 연사력 증가 로직 [ 근데 이거 클릭하면 초기화 됨 그래서 안쓰거나 바꾸거나 해야함 ]
+    // 연사속도 스텟 증가 로직
     void RateUp()
     {
         Weapon[] weapons = transform.parent.GetComponentsInChildren<Weapon>();
@@ -49,26 +49,19 @@ public class Gear : MonoBehaviour
         {
             switch (weapon.id)
             {
-                case 0:     // 0번 = 쌍검
-                    //float speed = weapon.speed + (150 - (150 * Character.WeaponSpeed)) + (150 * rate);
-                    //weapon.speed = speed;
-                    break;
-                case 3:     // 3번 = 대검
-                    //speed = 1000 * Character.WeaponRate;
-                    //weapon.rate = rate * 0.5f * (1f - rate);
+                case 0:     // 쌍검은 Rate의 영향이 없음
                     break;
                 default:    // 0번 이외 = 원거리무기
-                    //speed = 0.9f * Character.WeaponRate;
-                    //weapon.rate = weapon.rate * (0.9f - rate);
+                    weapon.rate = weapon.rate * (1.0f - rate);
                     break;
             }
         }
     }
 
-    // 신발의 이동속도 증가 로직
+    // 이동속도 스텟 증가 로직
     void SpeedUp()
     {
-        float speed = 3 * Character.Speed;
-        GameManager.instance.player.speed = speed + speed * rate;
+        float speed = 4 * Character.Speed; // 숫자는 플레이어의 기본속도를 의미함
+        GameManager.instance.player.speed = speed + (speed * rate);
     }
 }
