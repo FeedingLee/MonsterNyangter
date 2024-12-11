@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
 
         if (per > -1)
         {
-            rigid.velocity = dir * 15f;
+            rigid.velocity = dir * 20f; // 화살, 헤보건 탄환의 속도
         }
     }
 
