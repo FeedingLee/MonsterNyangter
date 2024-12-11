@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float damage;
     public int per;
+    public int Weapon_num; // 무기의 번호 받기 (활, 헤보건 구별)
 
     Rigidbody2D rigid;
 
@@ -19,9 +20,13 @@ public class Bullet : MonoBehaviour
         this.damage = damage;
         this.per = per;
 
-        if (per > -1)
+        if (per > -1 && Weapon_num == 1)        // 화살 속도
         {
-            rigid.velocity = dir * 20f; // 화살, 헤보건 탄환의 속도
+            rigid.velocity = dir * 15f; 
+        }
+        else if (per > -1 && Weapon_num == 2)   // 헤보건 탄환 속도
+        {
+            rigid.velocity = dir * 25f; 
         }
     }
 
