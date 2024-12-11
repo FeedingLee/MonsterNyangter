@@ -17,7 +17,7 @@ MonoBehaviour:
   itemName: "\uB79C\uC2A4"
   itemDesc: "\uACF5\uACA9\uB825:{6} ({0}+{3}) x 2\n\uCFE8\uB2E4\uC6B4:{11} ({9}+{10}%)\n\uB3CC\uC9C4\uC18D\uB3C4:{8}
     ({2}+{5})"
-  itemIcon: {fileID: -703694536, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
+  itemIcon: {fileID: 1730978164, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 50
   baseSpeed: 3
   baseRate: 5

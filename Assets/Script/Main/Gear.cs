@@ -52,7 +52,7 @@ public class Gear : MonoBehaviour
                 case 0:     // 쌍검은 Rate의 영향이 없음
                     break;
                 default:    // 0번 이외 = 원거리무기
-                    weapon.rate = weapon.rate * (1.0f - rate);
+                    weapon.rate = weapon.rate * (1.0f - rate); 
                     break;
             }
         }
