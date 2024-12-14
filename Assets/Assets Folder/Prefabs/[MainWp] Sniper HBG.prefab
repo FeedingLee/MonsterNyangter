@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9162468901237697539}
   - component: {fileID: 5974295812556240455}
   - component: {fileID: 3351686655420307633}
-  - component: {fileID: 194411366873071601}
   m_Layer: 0
   m_Name: '[MainWp] Sniper HBG'
   m_TagString: Bullet
@@ -77,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 793431829
   m_SortingLayer: 14
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1861946559, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
+  m_Sprite: {fileID: 367171878, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.55, y: 1}
+  m_Size: {x: 0.55, y: 2.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -165,24 +164,3 @@ MonoBehaviour:
   damage: 0
   per: 0
   Weapon_num: 2
---- !u!95 &194411366873071601
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3358505908942346658}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 28af83a9ced9e4d4cb28873802e001d3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

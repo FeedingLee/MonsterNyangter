@@ -325,27 +325,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet_OnField_0
-      rect:
-        serializedVersion: 2
-        x: 635
-        y: 920
-        width: 55
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed82d26451e9d3846a4b9cc02e8c4f7a
-      internalID: 1861946559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Frog_Icon
       rect:
         serializedVersion: 2
@@ -955,28 +934,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet_OnField_1
-      rect:
-        serializedVersion: 2
-        x: 635
-        y: 745
-        width: 55
-        height: 275
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 803dc574beaaaad488b3eb222278e84e
-      internalID: 1019832641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bullet_OnField_2
+      name: Bullet_OnField
       rect:
         serializedVersion: 2
         x: 700
@@ -984,7 +942,7 @@ TextureImporter:
         width: 55
         height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -992,111 +950,6 @@ TextureImporter:
       bones: []
       spriteID: b42b2d83322e79742b06974505f828df
       internalID: 367171878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bullet_OnField_3
-      rect:
-        serializedVersion: 2
-        x: 765
-        y: 745
-        width: 55
-        height: 275
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82b4f61069858344ba1269e7f55bcdc7
-      internalID: -22777322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bullet_OnField_4
-      rect:
-        serializedVersion: 2
-        x: 635
-        y: 425
-        width: 55
-        height: 275
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b5f9e18a63fc6546a53249705e14556
-      internalID: 138344926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bullet_OnField_5
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 425
-        width: 55
-        height: 275
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3676dd1870086847b3dfb3d17d79804
-      internalID: -839286848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Object_Weapon&Icon_2
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 616
-        width: 25
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9b582cfa3c4a72499475dffa4797bbb
-      internalID: 1868061526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bullet_OnField_6
-      rect:
-        serializedVersion: 2
-        x: 765
-        y: 425
-        width: 55
-        height: 275
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e480b368c07d2a9459ad084ec87c674f
-      internalID: 293111799
       vertices: []
       indices: 
       edges: []
@@ -1115,9 +968,9 @@ TextureImporter:
       Arrow_OnField: 1286309122
       Bomb_Field: 1897018479
       Bomb_Icon: 1527808146
+      Bullet_OnField: 367171878
       Bullet_OnField_0: 1861946559
       Bullet_OnField_1: 1019832641
-      Bullet_OnField_2: 367171878
       Bullet_OnField_3: -22777322
       Bullet_OnField_4: 138344926
       Bullet_OnField_5: -839286848

@@ -38049,7 +38049,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   nearestTarget: {fileID: 0}
-  expScanRange: 20
+  expScanRange: 1
   expTargetLayer:
     serializedVersion: 2
     m_Bits: 128
