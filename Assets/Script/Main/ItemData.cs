@@ -31,4 +31,7 @@ public class ItemData : ScriptableObject
 
     [Header("Weapon Data [/MHS Wepaon Data]")]
     public GameObject projectile;
+
+    [Header("Weapon Another Image")]
+    public Sprite[] weaponimage;
 }

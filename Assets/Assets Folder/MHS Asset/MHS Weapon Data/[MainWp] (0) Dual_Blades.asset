@@ -19,15 +19,15 @@ MonoBehaviour:
     ({2}+{5})"
   itemIcon: {fileID: 1461900761, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 10
-  baseSpeed: 150
+  baseSpeed: 100
   baseRate: 0
   baseCount: 2
   damages:
   - 0
-  - 0.2
-  - 0.3
-  - 0.4
   - 0.5
+  - 1
+  - 1.5
+  - 2
   W_Speeds:
   - 0.1
   - 0.2

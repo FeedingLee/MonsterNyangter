@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     public float speed;             // 무기의 회전 속도
     public float rate;              // 무기의 연사 속도
     public int count;               // 회전하는 무기 갯수
+
     private float memorydamage;     // 데미지 저장
     public float Critical_Damage;   // 크리티컬 데미지
     private float memoryspeed;      // 플레이어의 스피드 저장
@@ -19,15 +20,16 @@ public class Weapon : MonoBehaviour
     bool cooldown = false;          // 쿨타임을 확인하는 변수
     bool lancecharge = false;       // [랜스] 돌진상태 확인하는 변수
 
-
     float timer;
     Player player;
     ItemData data;
     Item item;
     JoystickController joystickController;
 
+    SpriteRenderer spriteRenderer;
+
     Vector3 lastDirection;          // 조이스틱이 마지막으로 향한 방향값
-    
+
     void Awake()
     {
         player = GameManager.instance.player;
@@ -71,14 +73,14 @@ public class Weapon : MonoBehaviour
                 {
                     charm = true; // 회전 중으로 설정
                     GreatSword();
-                    StartCoroutine(GreatSwordRotate());                  
+                    StartCoroutine(GreatSwordRotate());
                 }
                 break;
             // 랜스의 공격 방식
             case 4:
-                LanceRotate();
+                LanceShieldMod();
                 if (!lancecharge)
-                { 
+                {
                     lancecharge = true;
                     Lance();
                     StartCoroutine(LanceAttack());
@@ -106,8 +108,8 @@ public class Weapon : MonoBehaviour
         }
         if (id == 4)
         {
-            Critical_Damage = damage * 2;
-            memorydamage = Critical_Damage / 2;
+            Critical_Damage = damage * 3;
+            memorydamage = Critical_Damage / 3;
             Lance();
         }
     }
@@ -168,8 +170,8 @@ public class Weapon : MonoBehaviour
         }
         else if (id == 4)
         {
-            Critical_Damage = damage * 2;
-            memorydamage = Critical_Damage / 2;
+            Critical_Damage = damage * 3;
+            memorydamage = Critical_Damage / 3;
             Lance();
         }
     }
@@ -215,7 +217,7 @@ public class Weapon : MonoBehaviour
             damage = Critical_Damage;               // 카운트만큼 회전하면, 데미지를 크리티컬 데미지로 변경 ex) count가 3이면 3번째 참모아베기에 데미지 증가     
         }
 
-        for (int i = 0; i < 1; i++)                                         
+        for (int i = 0; i < 1; i++)
         {
             Transform bullet;
 
@@ -237,7 +239,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 랜스 배치 로직
-    void Lance() 
+    void Lance()
     {
         for (int i = 0; i < 1; i++)
         {
@@ -255,7 +257,7 @@ public class Weapon : MonoBehaviour
             bullet.localPosition = Vector3.zero;
             bullet.localRotation = Quaternion.identity;
 
-            bullet.Translate(bullet.up * 0.8f, Space.World);
+            bullet.Translate(bullet.up * 0f, Space.World);
             bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero);
         }
     }
@@ -315,7 +317,7 @@ public class Weapon : MonoBehaviour
             }
             Vector3 dir = joystickController.GetInputVector();                          // Joystick 방향 벡터 받아옴
             transform.localRotation = Quaternion.FromToRotation(Vector3.up, dir);       // 마지막 조이스틱 방향으로, 대검을 위치함
-        
+
             rotationCount++;                                                            // 한 번의 360도 회전이 끝날 때마다 회전 횟수 증가
 
             cooldown = true;                                                            // 쿨다운 상태를 true로 만듬 (공격 중지)
@@ -337,7 +339,7 @@ public class Weapon : MonoBehaviour
         else
         {
             dir = lastDirection;                                                        // dir이 (0, 0, 0)이면 마지막 방향 유지
-        }      
+        }
         transform.localRotation = Quaternion.FromToRotation(Vector3.up, dir);           // 조이스틱 방향 또는 마지막 방향으로 랜스를 배치함    
     }
 
@@ -345,18 +347,53 @@ public class Weapon : MonoBehaviour
     IEnumerator LanceAttack()
     {
         yield return new WaitForSeconds(rate);                                          // rate 만큼 쿨타임을 기다려야 돌진모드 활성화
+
         if (lancecharge == true)
         {
+            LanceShieldMod();
             AudioManager.instance.PlaySfx(AudioManager.Sfx.ChargeMod);                  // 무기 사운드
             damage = Critical_Damage;
             memoryspeed = player.speed;
             player.speed += count;                                                      // count만큼 속도 상승 [ 돌진모드 ] 
             Lance();
+
             yield return new WaitForSeconds(speed);                                     // speed 만큼 돌진모드 유지
+
             lancecharge = false;
-            damage = Critical_Damage / 2;
+            damage = Critical_Damage / 3;
             player.speed = memoryspeed;                                                 // 기억해둔 속도로 복구 [ 돌진종료 ] 
             Lance();
+        }
+    }
+
+    // 랜스 무기 변경 로직
+    void LanceShieldMod()
+    {
+        Transform childTransform = transform.GetChild(0);                               // 자식오브젝트를 가져옴
+        BoxCollider2D childCollider = childTransform.GetComponent<BoxCollider2D>();     // 자식오브젝트의, BoxCollider2D를 가져옴
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();                      // 자식오브젝트의 스프라이트를 초기화
+
+        if (damage == Critical_Damage)                                                  // 데미지 == 크리티컬 데미지라는 뜻은 돌진모드 라는 뜻
+        {
+            spriteRenderer.sprite = data.weaponimage[0];                                // 이미지를 랜스로 변경
+
+            childCollider.offset = new Vector2(0f, 0.47f);                              // 포지션과, 사이즈를 창에 맞게 변경함
+            childCollider.size = new Vector2(0.5f, 1.8f);
+            childTransform.transform.localPosition = new Vector3(0f, 0.8f, 0f);
+            
+            LanceRotate();
+        }
+        else if (lancecharge == false)                                                  // 돌진모드가 끝나면
+        {
+            spriteRenderer.sprite = data.weaponimage[1];                                // 이미지를 방패로 바꾸고
+
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);                          // 방패에 맞게 사이즈, 포지션, 피격범위 등을 수정함
+
+            childCollider.offset = new Vector2(0f, 0f);
+            childCollider.size = new Vector2(1.3f, 1.3f);
+
+            childTransform.transform.localPosition = new Vector3(0f, 0f, 0f);
         }
     }
 }

@@ -26658,14 +26658,14 @@ MonoBehaviour:
   joystickController: {fileID: 745926493}
   isLive: 0
   gameTime: 0
-  maxGameTime: 100
+  maxGameTime: 200
   playerId: 0
-  health: 100
-  maxHealth: 500
+  health: 200
+  maxHealth: 200
   level: 0
   kill: 0
   exp: 0
-  nextExp: 010000000200000003000000040000000500000006000000070000002d0000003200000037000000
+  nextExp: 010000000a0000000f00000014000000190000001e000000230000002d0000003700000041000000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -38024,7 +38024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 8
+  speed: 3
   scanner: {fileID: 0}
   animCon:
   - {fileID: 9100000, guid: 638267c0df993ff4fa6d856b487c5305, type: 2}
@@ -38049,7 +38049,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   nearestTarget: {fileID: 0}
-  expScanRange: 1
+  expScanRange: 1.5
   expTargetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -248038,11 +248038,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.4
+  - spawnTime: 0.3
     spriteType: 0
-    health: 20
+    health: 30
     speed: 1.5
-  - spawnTime: 0.25
+  - spawnTime: 0.9
     spriteType: 1
     health: 100
     speed: 2.5

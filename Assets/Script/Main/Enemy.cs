@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
-        spriter = GetComponent<SpriteRenderer>();   
+        spriter = GetComponent<SpriteRenderer>();
         wait = new WaitForFixedUpdate();
     }
 
@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
 
         health -= collision.GetComponent<Bullet>().damage;
         StartCoroutine(KnockBack());
-        
+
         if (health > 0)
         {
             anim.SetTrigger("Hit");
@@ -110,10 +110,10 @@ public class Enemy : MonoBehaviour
 
     IEnumerator KnockBack()
     {
-        yield return wait; 
+        yield return wait;
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
-        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse); 
+        rigid.AddForce(dirVec.normalized * 2, ForceMode2D.Impulse);
     }
 
     void Dead()
