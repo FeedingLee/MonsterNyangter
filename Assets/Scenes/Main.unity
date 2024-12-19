@@ -26661,11 +26661,11 @@ MonoBehaviour:
   maxGameTime: 200
   playerId: 0
   health: 200
-  maxHealth: 200
+  maxHealth: 9999
   level: 0
   kill: 0
   exp: 0
-  nextExp: 010000000a0000000f00000014000000190000001e000000230000002d0000003700000041000000
+  nextExp: 01000000020000000f2700000f270000190000001e000000230000002d0000003700000041000000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -38049,7 +38049,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   nearestTarget: {fileID: 0}
-  expScanRange: 1.5
+  expScanRange: 9
   expTargetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -248041,7 +248041,7 @@ MonoBehaviour:
   - spawnTime: 0.3
     spriteType: 0
     health: 30
-    speed: 1.5
+    speed: 3
   - spawnTime: 0.9
     spriteType: 1
     health: 100

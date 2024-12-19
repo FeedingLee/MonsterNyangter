@@ -24,10 +24,11 @@ MonoBehaviour:
   damages:
   - 0.1
   - 0.2
-  - 0.1
-  - 0.1
-  - 0.1
+  - 0.3
+  - 0.4
+  - 0.5
   W_Speeds: []
   W_Rates: []
   counts: 0000000000000000000000000000000000000000
   projectile: {fileID: 0}
+  weaponimage: []

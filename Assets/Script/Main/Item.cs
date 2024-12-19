@@ -118,7 +118,7 @@ public class Item : MonoBehaviour
                 {
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
-                    weapon.Init(data);  
+                    weapon.Init(data);
                 }
                 else
                 {

@@ -57,6 +57,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GameOverRoutine()
     {
+        // È¹µæÇß´ø ½ºÅİ °ª ÃÊ±âÈ­
+        Gear.rate_stat = 0.0f;
+        Gear.speed_stat = 0.0f;
+
         isLive = false;
 
         yield return new WaitForSeconds(1f);
@@ -76,6 +80,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GameVictoryRoutine()
     {
+        // È¹µæÇß´ø ½ºÅİ °ª ÃÊ±âÈ­
+        Gear.rate_stat = 0.0f;
+        Gear.speed_stat = 0.0f;
+
         isLive = false;
         enemyCleaner.SetActive(true);
 

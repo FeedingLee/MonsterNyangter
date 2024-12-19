@@ -25,7 +25,6 @@ public class Weapon : MonoBehaviour
     ItemData data;
     Item item;
     JoystickController joystickController;
-
     SpriteRenderer spriteRenderer;
 
     Vector3 lastDirection;          // 조이스틱이 마지막으로 향한 방향값
@@ -145,7 +144,7 @@ public class Weapon : MonoBehaviour
         id = data.itemId;
         damage = data.baseDamage * Character.Damage;
         speed = data.baseSpeed * Character.WeaponSpeed;
-        rate = data.baseRate * Character.WeaponRate;
+        rate = data.baseRate * Character.WeaponRate * (1 - Gear.rate_stat);
         count = (int)(data.baseCount + Character.Count);
 
         for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)

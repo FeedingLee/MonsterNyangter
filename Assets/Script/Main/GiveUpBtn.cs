@@ -21,6 +21,10 @@ public class GiveUpBtn : MonoBehaviour
         // Player 오브젝트가 활성화된 상태일 때만 작동
         if (player != null && player.activeInHierarchy)
         {
+            // 획득했던 스텟 값 초기화
+            Gear.rate_stat = 0.0f;
+            Gear.speed_stat = 0.0f;
+
             SceneManager.LoadScene("Main");
         }
         else

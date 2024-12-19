@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     public enum ItemType {  DualBlades, HuntingBow, SniperHBG , GreatSword, Lance, Rate_Up, Shoe, Heal }
-
+    
     [Header("Main Info")]
     public ItemType itemType;
     public int itemId;
