@@ -50,7 +50,8 @@ public class Item : MonoBehaviour
                     textDesc.text = string.Format("이쑤시개\n아니다냥.");
                     break;
                 case ItemData.ItemType.Rate_Up:
-                case ItemData.ItemType.Shoe:
+                case ItemData.ItemType.Speed_Up:
+                case ItemData.ItemType.Damage_Up:
                     textDesc.text = string.Format(data.itemDesc,
                         data.damages[level] * 100);
                     break;
@@ -94,7 +95,8 @@ public class Item : MonoBehaviour
                         data.baseCount + (data.counts[level]));                     // 최종 관통력 [8]
                     break;
                 case ItemData.ItemType.Rate_Up:
-                case ItemData.ItemType.Shoe:
+                case ItemData.ItemType.Speed_Up:
+                case ItemData.ItemType.Damage_Up:
                     textDesc.text = string.Format(data.itemDesc,
                         data.damages[level] * 100);
                     break;
@@ -125,19 +127,20 @@ public class Item : MonoBehaviour
                     float nextDamage = data.baseDamage;     // 무기 데미지
                     float nextSpeed = data.baseSpeed;       // 무기 회전 속도
                     float nextRate = data.baseRate;         // 무기 연사 속도
-                    int nextCount = data.baseCount;                      
+                    int nextCount = data.baseCount;                   
 
                     nextDamage += data.baseDamage * data.damages[level];
                     nextSpeed += data.baseSpeed * data.W_Speeds[level];
                     nextRate += data.baseRate * data.W_Rates[level];
                     nextCount += data.counts[level];
-
+                    
                     weapon.LevelUp(nextDamage, nextSpeed, nextRate, nextCount);
                 }
                 level++;
                 break;
             case ItemData.ItemType.Rate_Up:
-            case ItemData.ItemType.Shoe:
+            case ItemData.ItemType.Speed_Up:
+            case ItemData.ItemType.Damage_Up:
                 if (level == 0)
                 {
                     GameObject newGear = new GameObject();

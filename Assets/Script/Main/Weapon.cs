@@ -12,9 +12,9 @@ public class Weapon : MonoBehaviour
     public float rate;              // 무기의 연사 속도
     public int count;               // 회전하는 무기 갯수
 
-    private float memorydamage;     // 데미지 저장
+    public float memorydamage;      // 데미지 저장
     public float Critical_Damage;   // 크리티컬 데미지
-    private float memoryspeed;      // 플레이어의 스피드 저장
+    public float Chargespeed;       // 랜스 돌진 스피드 저장
 
     bool charm = false;             // [대검] 참 모아베기상태 확인하는 변수
     bool cooldown = false;          // 쿨타임을 확인하는 변수
@@ -84,15 +84,19 @@ public class Weapon : MonoBehaviour
                     Lance();
                     StartCoroutine(LanceAttack());
                 }
+                if (damage == Critical_Damage && player.speed != Chargespeed)       // 돌진모드인데, 속도가 Up되지 않으면
+                {
+                    player.speed = GameManager.instance.player.memoryspeed + count; // 플레이어의 속도를 count만큼 올린다
+                }
                 break;
         }
     }
 
     public void LevelUp(float damage, float speed, float rate, int count)
     {
-        this.damage = damage * Character.Damage;
+        this.damage = damage * Character.Damage * (1 + Gear.damage_stat);
         this.speed = speed * Character.WeaponSpeed;
-        this.rate = rate * Character.WeaponRate;
+        this.rate = rate * Character.WeaponRate * (1 - Gear.rate_stat);
         this.count = count;
 
         if (id == 0)
@@ -101,13 +105,13 @@ public class Weapon : MonoBehaviour
         }
         if (id == 3)
         {
-            Critical_Damage = damage * 2;
+            Critical_Damage = damage * 2 * (1 + Gear.damage_stat);
             memorydamage = Critical_Damage / 2;
             GreatSword();
         }
         if (id == 4)
         {
-            Critical_Damage = damage * 3;
+            Critical_Damage = damage * 3 * (1 + Gear.damage_stat);
             memorydamage = Critical_Damage / 3;
             Lance();
         }
@@ -142,7 +146,7 @@ public class Weapon : MonoBehaviour
 
         // 무기 능력치 셋팅
         id = data.itemId;
-        damage = data.baseDamage * Character.Damage;
+        damage = data.baseDamage * Character.Damage * (1 + Gear.damage_stat);
         speed = data.baseSpeed * Character.WeaponSpeed;
         rate = data.baseRate * Character.WeaponRate * (1 - Gear.rate_stat);
         count = (int)(data.baseCount + Character.Count);
@@ -206,14 +210,15 @@ public class Weapon : MonoBehaviour
     // 대검 배치 로직
     void GreatSword()
     {
-        if (cooldown)                               // 쿨다운 상태 (참모아 베기가 끝난 뒤) 
+        if (cooldown)                                          // 쿨다운 상태 (참모아 베기가 끝난 뒤) 
         {
-            damage = memorydamage;                  // 데미지를 원래 데미지 값으로 변경
-            cooldown = false;                       // 쿨다운 상태를 해제함
+            damage = memorydamage;                             // 데미지를 원래 데미지 값으로 변경
+            Critical_Damage = damage * 2;
+            cooldown = false;                                  // 쿨다운 상태를 해제함
         }
-        else if (!cooldown)                         // 공격 가능 상태 (참모아 베기 중)
+        else if (!cooldown)                                    // 공격 가능 상태 (참모아 베기 중)
         {
-            damage = Critical_Damage;               // 카운트만큼 회전하면, 데미지를 크리티컬 데미지로 변경 ex) count가 3이면 3번째 참모아베기에 데미지 증가     
+            damage = Critical_Damage;                          // 카운트만큼 회전하면, 데미지를 크리티컬 데미지로 변경 ex) count가 3이면 3번째 참모아베기에 데미지 증가     
         }
 
         for (int i = 0; i < 1; i++)
@@ -239,7 +244,7 @@ public class Weapon : MonoBehaviour
 
     // 랜스 배치 로직
     void Lance()
-    {
+    {       
         for (int i = 0; i < 1; i++)
         {
             Transform bullet;
@@ -352,15 +357,15 @@ public class Weapon : MonoBehaviour
             LanceShieldMod();
             AudioManager.instance.PlaySfx(AudioManager.Sfx.ChargeMod);                  // 무기 사운드
             damage = Critical_Damage;
-            memoryspeed = player.speed;
+            Chargespeed = player.speed + count;                                         // 돌진모드의 속도 저장
             player.speed += count;                                                      // count만큼 속도 상승 [ 돌진모드 ] 
             Lance();
 
             yield return new WaitForSeconds(speed);                                     // speed 만큼 돌진모드 유지
 
             lancecharge = false;
-            damage = Critical_Damage / 3;
-            player.speed = memoryspeed;                                                 // 기억해둔 속도로 복구 [ 돌진종료 ] 
+            damage = memorydamage;
+            player.speed = GameManager.instance.player.memoryspeed;                     // 그 후, 기억해둔 속도로 복구 [ 돌진종료 ]
             Lance();
         }
     }

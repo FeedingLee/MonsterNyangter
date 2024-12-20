@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
     public float speed;
+    public float memoryspeed; //Å×½ºÆ®
     public Scanner scanner;
     public RuntimeAnimatorController[] animCon;
 
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     void OnEnable()
     {
         speed *= Character.Speed;
+        memoryspeed = speed;
         anim.runtimeAnimatorController = animCon[GameManager.instance.playerId];
     }
 

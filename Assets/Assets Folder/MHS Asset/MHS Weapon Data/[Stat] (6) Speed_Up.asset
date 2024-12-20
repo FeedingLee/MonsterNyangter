@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
-  m_Name: '[Stat] (6) SpeedUp_Shoes'
+  m_Name: '[Stat] (6) Speed_Up'
   m_EditorClassIdentifier: 
   itemType: 6
   itemId: 6
@@ -31,3 +31,4 @@ MonoBehaviour:
   W_Rates: []
   counts: 0000000000000000000000000000000000000000
   projectile: {fileID: 0}
+  weaponimage: []
