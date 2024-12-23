@@ -52,6 +52,8 @@ public class Item : MonoBehaviour
                 case ItemData.ItemType.Rate_Up:
                 case ItemData.ItemType.Speed_Up:
                 case ItemData.ItemType.Damage_Up:
+                case ItemData.ItemType.Stamina_Up:
+                case ItemData.ItemType.Weapon_Upgrade:
                     textDesc.text = string.Format(data.itemDesc,
                         data.damages[level] * 100);
                     break;
@@ -97,6 +99,8 @@ public class Item : MonoBehaviour
                 case ItemData.ItemType.Rate_Up:
                 case ItemData.ItemType.Speed_Up:
                 case ItemData.ItemType.Damage_Up:
+                case ItemData.ItemType.Stamina_Up:
+                case ItemData.ItemType.Weapon_Upgrade:
                     textDesc.text = string.Format(data.itemDesc,
                         data.damages[level] * 100);
                     break;
@@ -141,6 +145,8 @@ public class Item : MonoBehaviour
             case ItemData.ItemType.Rate_Up:
             case ItemData.ItemType.Speed_Up:
             case ItemData.ItemType.Damage_Up:
+            case ItemData.ItemType.Stamina_Up:
+            case ItemData.ItemType.Weapon_Upgrade:
                 if (level == 0)
                 {
                     GameObject newGear = new GameObject();

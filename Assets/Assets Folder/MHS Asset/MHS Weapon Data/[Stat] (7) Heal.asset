@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
-  m_Name: '[Consumable] (7) Heal'
+  m_Name: '[Stat] (7) Heal'
   m_EditorClassIdentifier: 
   itemType: 7
   itemId: 7
-  itemName: "\uADF8\uB808\uC774\uD2B8 \uD68C\uBCF5\uC57D"
-  itemDesc: "\uC0DD\uBA85\uB825 \uC804\uCCB4 \uD68C\uBCF5"
+  itemName: "\uC751\uAE09\uC57D G"
+  itemDesc: "\uC0DD\uBA85\uB825\uC744 \uC804\uBD80\n\uD68C\uBCF5\uD569\uB2C8\uB2E4."
   itemIcon: {fileID: 652791601, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 0
   baseSpeed: 0
@@ -31,3 +31,4 @@ MonoBehaviour:
   W_Rates: []
   counts: 0000000000000000000000000000000000000000
   projectile: {fileID: 0}
+  weaponimage: []

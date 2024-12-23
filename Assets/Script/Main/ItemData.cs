@@ -6,7 +6,10 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     public enum ItemType 
-    {  DualBlades, HuntingBow, SniperHBG , GreatSword, Lance, Rate_Up, Speed_Up, Heal, Damage_Up }
+    {  
+        DualBlades, HuntingBow, SniperHBG , GreatSword, Lance,          // 메인무기
+        Rate_Up, Speed_Up, Heal, Damage_Up, Stamina_Up, Weapon_Upgrade  // 스텟 관련
+    }
     
     [Header("Main Info")]
     public ItemType itemType;

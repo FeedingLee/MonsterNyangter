@@ -24,6 +24,7 @@ public class GiveUpBtn : MonoBehaviour
             // È¹µæÇß´ø ½ºÅİ °ª ÃÊ±âÈ­
             Gear.rate_stat = 0.0f;
             Gear.damage_stat = 0.0f;
+            Gear.stamina_stat = 0.0f;
 
             SceneManager.LoadScene("Main");
         }

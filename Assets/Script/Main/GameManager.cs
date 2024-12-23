@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
         // È¹µæÇß´ø ½ºÅİ °ª ÃÊ±âÈ­
         Gear.rate_stat = 0.0f;
         Gear.damage_stat = 0.0f;
+        Gear.stamina_stat = 0.0f;
 
         isLive = false;
 
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
         // È¹µæÇß´ø ½ºÅİ °ª ÃÊ±âÈ­
         Gear.rate_stat = 0.0f;
         Gear.damage_stat = 0.0f;
+        Gear.stamina_stat = 0.0f;
 
         isLive = false;
         enemyCleaner.SetActive(true);

@@ -44,7 +44,7 @@ public class Weapon : MonoBehaviour
         {
             // 쌍검의 공격 방식
             case 0:
-                transform.Rotate(Vector3.back * speed * Time.deltaTime);
+                transform.Rotate(Vector3.back * speed * Time.deltaTime * (1 + Gear.stamina_stat));
                 break;
             // 활의 공격 방식
             case 1:
@@ -95,9 +95,9 @@ public class Weapon : MonoBehaviour
     public void LevelUp(float damage, float speed, float rate, int count)
     {
         this.damage = damage * Character.Damage * (1 + Gear.damage_stat);
-        this.speed = speed * Character.WeaponSpeed;
+        this.speed = speed * Character.WeaponSpeed * (1 + Gear.stamina_stat); 
         this.rate = rate * Character.WeaponRate * (1 - Gear.rate_stat);
-        this.count = count;
+        this.count = count + Gear.upgrade_stat;
 
         if (id == 0)
         {
@@ -147,9 +147,9 @@ public class Weapon : MonoBehaviour
         // 무기 능력치 셋팅
         id = data.itemId;
         damage = data.baseDamage * Character.Damage * (1 + Gear.damage_stat);
-        speed = data.baseSpeed * Character.WeaponSpeed;
+        speed = data.baseSpeed * Character.WeaponSpeed * (1 + Gear.stamina_stat);
         rate = data.baseRate * Character.WeaponRate * (1 - Gear.rate_stat);
-        count = (int)(data.baseCount + Character.Count);
+        count = (int)(data.baseCount + Character.Count + Gear.upgrade_stat);
 
         for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
         {
@@ -163,7 +163,7 @@ public class Weapon : MonoBehaviour
         // 각 근접무기 함수 호출하여 자식 오브젝트 생성
         if (id == 0)
         {
-            DualBlades();  // 무기 초기화 시점에서 DualBlades 호출
+            DualBlades();  // 무기 초기화 시점에서 DualBlades 호출  
         }
         else if (id == 3)
         {
@@ -395,7 +395,7 @@ public class Weapon : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);                          // 방패에 맞게 사이즈, 포지션, 피격범위 등을 수정함
 
             childCollider.offset = new Vector2(0f, 0f);
-            childCollider.size = new Vector2(1.3f, 1.3f);
+            childCollider.size = new Vector2(0.8f, 0.8f);
 
             childTransform.transform.localPosition = new Vector3(0f, 0f, 0f);
         }
