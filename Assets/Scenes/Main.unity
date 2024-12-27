@@ -27485,7 +27485,7 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 01000000020000000300000004000000190000001e000000230000002d0000003700000041000000
+  nextExp: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000007f969800
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -229125,7 +229125,7 @@ RectTransform:
   m_GameObject: {fileID: 1596467445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 85595736}
@@ -229187,6 +229187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c96bb0426f44b4f82feae980013f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM_Objcet: {fileID: 468579769}
   Joy: {fileID: 797907738}
   Stick: {fileID: 6831410397342843233}
   LevelUpFinish: 1
@@ -251805,10 +251806,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.3
+  - spawnTime: 0.1
     spriteType: 0
     health: 30
-    speed: 3
+    speed: 5
   - spawnTime: 0.9
     spriteType: 1
     health: 100
