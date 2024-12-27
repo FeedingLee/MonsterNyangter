@@ -15,8 +15,8 @@ MonoBehaviour:
   itemType: 3
   itemId: 3
   itemName: "\uB300\uAC80"
-  itemDesc: "\uACF5\uACA9\uB825:{6} ({0}+{3}) x 2\n\uCFE8\uB2E4\uC6B4:{11} ({9}+{10}%)\n\uBCA0\uAE30\uD69F\uC218:{8}
-    ({2}+{5})"
+  itemDesc: "\uACF5\uACA9\uB825 : {1} \n\uACF5\uACA9\uC18D\uB3C4 : {2} \n\uBCA0\uAE30\uD69F\uC218
+    : {3}\n\uCFE8\uD0C0\uC784 : {4}\uCD08"
   itemIcon: {fileID: 433959214, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 15
   baseSpeed: 500
@@ -29,17 +29,17 @@ MonoBehaviour:
   - 0.4
   - 0.5
   W_Speeds:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  - 0.6
   W_Rates:
   - -0.1
   - -0.2
   - -0.3
   - -0.4
   - -0.5
-  counts: 0200000002000000020000000200000002000000
+  counts: 0000000000000000000000000000000001000000
   projectile: {fileID: 5975959092659265913, guid: f0306916988a40348971c8422f9b3da2, type: 3}
   weaponimage: []

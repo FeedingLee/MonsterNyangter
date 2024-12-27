@@ -41,7 +41,7 @@ public class Item : MonoBehaviour
                     textDesc.text = string.Format("백발백중!\n반드시\n맞춘다냥!");
                     break;
                 case ItemData.ItemType.SniperHBG:
-                    textDesc.text = string.Format("내 앞에서\n사라져라냥!");
+                    textDesc.text = string.Format("내 앞에서\n사라지라냥!");
                     break;
                 case ItemData.ItemType.GreatSword:
                     textDesc.text = string.Format("참 모아..라고\n알고있냥?");
@@ -71,30 +71,19 @@ public class Item : MonoBehaviour
                 case ItemData.ItemType.Lance :
                     textDesc.text = string.Format(data.itemDesc,
                         data.baseDamage,                                            // 기본 데미지 [0]
-                        data.baseSpeed,                                             // 기본 회전속도 [1]
-                        data.baseCount,                                             // 기본 회전체 갯수 [2]
-                        data.baseDamage * data.damages[level],                      // 레벨당 데미지 상승량 [3]
-                        data.W_Speeds[level] * 100,                                 // 레벨당 회전속도 상승량 [4]
-                        data.counts[level],                                         // 레벨당 회전체 갯수 상승량 [5]
-                        data.baseDamage + (data.baseDamage * data.damages[level]),  // 최종 데미지 [6]
-                        data.baseSpeed + (data.W_Speeds[level] * 100),              // 최종 회전 속도 [7]
-                        data.baseCount + (data.counts[level]),                      // 최종 회전체 갯수 [8]
-                        data.baseRate,                                              // 기본 쿨타임 [9]
-                        data.W_Rates[level] * -100,                                 // 레벨당 쿨타임 감소량 [10]
-                        data.baseRate + (data.baseRate * data.W_Rates[level]));     // 최종 쿨타임 [11]
+                        data.baseDamage + (data.baseDamage * data.damages[level]),  // 최종 데미지 [1]
+                        data.baseSpeed + (data.W_Speeds[level] * 100),              // 최종 회전 속도 [2]
+                        data.baseCount + (data.counts[level]),                      // 최종 회전체 갯수 [3]
+                        data.baseRate + (data.baseRate * data.W_Rates[level]),      // 최종 쿨타임 [4]
+                        data.baseSpeed + (data.baseSpeed * data.W_Speeds[level]));  // 돌진유지 시간 [5]
                     break;
                 case ItemData.ItemType.HuntingBow:
                 case ItemData.ItemType.SniperHBG:
                     textDesc.text = string.Format(data.itemDesc,
                         data.baseDamage,                                            // 기본 데미지 [0]
-                        data.baseRate,                                              // 기본 연사속도 [1]
-                        data.baseCount,                                             // 기본 회전체 갯수 [2]
-                        data.baseDamage * data.damages[level],                      // 레벨당 데미지 상승량 [3]
-                        data.W_Rates[level] * -100,                                 // 레벨당 연사속도 상승량 [4]
-                        data.counts[level],                                         // 레벨당 관통력 상승량 [5]
-                        data.baseDamage + (data.baseDamage * data.damages[level]),  // 최종 데미지 [6]
-                        data.baseRate + (data.baseRate * data.W_Rates[level]),      // 최종 연사속도 [7]
-                        data.baseCount + (data.counts[level]));                     // 최종 관통력 [8]
+                        data.baseDamage + (data.baseDamage * data.damages[level]),  // 최종 데미지 [1]
+                        data.baseRate + (data.baseRate * data.W_Rates[level]),      // 최종 연사속도 [2]
+                        data.baseCount + (data.counts[level]));                     // 최종 관통력 [3]
                     break;
                 case ItemData.ItemType.Rate_Up:
                 case ItemData.ItemType.Speed_Up:

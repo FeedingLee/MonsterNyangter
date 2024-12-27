@@ -15,8 +15,8 @@ MonoBehaviour:
   itemType: 1
   itemId: 1
   itemName: " \uD65C "
-  itemDesc: "\uACF5\uACA9\uB825:{6} ({0}+{3})\n\uC5F0\uC0AC\uC18D\uB3C4:{7} ({1}-{4}%)\n\uAD00\uD1B5\uB825:{8}
-    ({2}+{5})"
+  itemDesc: "\uACF5\uACA9\uB825 : {1} \n\uC5F0\uC0AC\uC18D\uB3C4 : {2}\n\uAD00\uD1B5\uB825
+    : {3} "
   itemIcon: {fileID: -1926493157, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 10
   baseSpeed: 0
