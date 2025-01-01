@@ -203,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 1055
+        y: 1056
         width: 140
         height: 140
       alignment: 0
@@ -223,8 +223,8 @@ TextureImporter:
       name: SniperHBG_Icon
       rect:
         serializedVersion: 2
-        x: 635
-        y: 1050
+        x: 650
+        y: 1051
         width: 135
         height: 135
       alignment: 0
@@ -954,6 +954,237 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GreatSword_Icon_2
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1050
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b5aa373755d58439ba215ebe474883
+      internalID: -355552833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lance_Icon_2
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1050
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a77678f3ef3dcc45ab736c5db0a7bc0
+      internalID: -1425460191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DualBlades_Icon_2
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1050
+        width: 140
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ef6fbe9e0f1804f8d2226bf8435da8
+      internalID: 1636758308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreatSword_OnField_2
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 750
+        width: 110
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e32d35995cf544ba20d7b58ae8b957
+      internalID: -1153236328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DualBlades_OnField_2
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 761
+        width: 90
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c104dd152abe24f8c04db899c31e98
+      internalID: -320634725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lance_OnField_2
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 750
+        width: 65
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6df9e01e1ca8745b8c91adea34044d
+      internalID: -2006180225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HuntingBow_Icon_2
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 555
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61c67e6e458159418de100c738bc4d3
+      internalID: 826363621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperHBG_Icon_2
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 555
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3272f2c2117489b4ea6740a4cc5f9307
+      internalID: 22417660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_OnField_2
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 265
+        width: 45
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4783b68709a9a524ab8680a3688cb5da
+      internalID: 1780900160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullet_OnField_2
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 260
+        width: 56
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ef6df46ff08d74f99bf76d2e841f30
+      internalID: 1303528653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lance_Shield
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 30
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9d50677b15f41439d741331d6ec829
+      internalID: -397397001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -966,11 +1197,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Arrow_OnField: 1286309122
+      Arrow_OnField_2: 1780900160
       Bomb_Field: 1897018479
       Bomb_Icon: 1527808146
       Bullet_OnField: 367171878
       Bullet_OnField_0: 1861946559
       Bullet_OnField_1: 1019832641
+      Bullet_OnField_2: 1303528653
       Bullet_OnField_3: -22777322
       Bullet_OnField_4: 138344926
       Bullet_OnField_5: -839286848
@@ -978,19 +1211,27 @@ TextureImporter:
       Decoy_Field: 1467981374
       Decoy_Icon: 78289702
       DualBlades_Icon: 1461900761
+      DualBlades_Icon_2: 1868061526
       DualBlades_OnField: 1641548738
+      DualBlades_OnField_2: -320634725
       Exp_01: 1214291224
       Exp_02: 1081478282
       Exp_03: 1867550603
       Frog_Field: 1426768971
       Frog_Icon: 427436744
       GreatSword_Icon: 433959214
+      GreatSword_Icon_2: -355552833
       GreatSword_OnField: -364897833
+      GreatSword_OnField_2: -1153236328
       HoneyBee_Field: 1224714490
       HoneyBee_Icon: 1956009034
       HuntingBow_Icon: -1926493157
+      HuntingBow_Icon_2: 826363621
       Lance_Icon: 1730978164
+      Lance_Icon_2: -1425460191
       Lance_OnField: 909941104
+      Lance_OnField_2: -2006180225
+      Lance_Shield: -397397001
       Object_Boooo: -1247728328
       Object_Coin: -1885131113
       Object_Food: 831620145
@@ -1003,8 +1244,8 @@ TextureImporter:
       Object_Jewel_06: -315117584
       Object_Jewel_07: 1552886506
       Object_Net: 1455898271
-      Object_Weapon&Icon_2: 1868061526
       SniperHBG_Icon: -1161023184
+      SniperHBG_Icon_2: 22417660
       Stat_Icon_01: -305523233
       Stat_Icon_02: 279870727
       Stat_Icon_03: 924130445

@@ -18,8 +18,8 @@ MonoBehaviour:
   itemDesc: "\uACF5\uACA9\uB825 : {1} \n\uB3CC\uC9C4\uC720\uC9C0 : {5}\n\uB3CC\uC9C4\uC18D\uB3C4
     : +{3} \n\uCFE8\uD0C0\uC784 : {4}\uCD08"
   itemIcon: {fileID: 1730978164, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
-  baseDamage: 20
-  baseSpeed: 4
+  baseDamage: 30
+  baseSpeed: 5
   baseRate: 10
   baseCount: 1
   damages:
@@ -44,4 +44,5 @@ MonoBehaviour:
   projectile: {fileID: 5975959092659265913, guid: 2d2d3bc09b09ba246a4bbba50a81558c, type: 3}
   weaponimage:
   - {fileID: 909941104, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
-  - {fileID: 1455898271, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
+  - {fileID: -397397001, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
+  - {fileID: -2006180225, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}

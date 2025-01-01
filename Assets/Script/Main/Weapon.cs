@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class Weapon : MonoBehaviour
 {
+    [Header("# Weapon Data")]
     public int id;
     public int prefabId;
     public float damage;
@@ -12,14 +14,18 @@ public class Weapon : MonoBehaviour
     public float rate;              // 무기의 연사 속도
     public int count;               // 회전하는 무기 갯수
 
+    [Header("# Etc Data")]
     public float memorydamage;      // 데미지 저장
     public float Critical_Damage;   // 크리티컬 데미지
     public float Chargespeed;       // 랜스 돌진 스피드 저장
+    Vector3 lastDirection;          // 조이스틱이 마지막으로 향한 방향값
 
+    /* [ 무기 상태 확인 변수 ] */
     bool charm = false;             // [대검] 참 모아베기상태 확인하는 변수
     bool cooldown = false;          // 쿨타임을 확인하는 변수
     bool lancecharge = false;       // [랜스] 돌진상태 확인하는 변수
 
+    /* [ 스크립트 연결 ] */
     float timer;
     Player player;
     ItemData data;
@@ -27,7 +33,12 @@ public class Weapon : MonoBehaviour
     JoystickController joystickController;
     SpriteRenderer spriteRenderer;
 
-    Vector3 lastDirection;          // 조이스틱이 마지막으로 향한 방향값
+    [Header("# Weapon Level")]
+    public int DB_level;            // 쌍검
+    public int HB_level;            // 활
+    public int SH_level;            // 헤보건
+    public int GS_level;            // 대검
+    public int LC_level;            // 랜스
 
     void Awake()
     {
@@ -45,25 +56,35 @@ public class Weapon : MonoBehaviour
             // 쌍검의 공격 방식
             case 0:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime * (1 + Gear.stamina_stat));
+                if (DB_level == 5)
+                {
+                    changesprite();
+                }
                 break;
             // 활의 공격 방식
             case 1:
                 timer += Time.deltaTime;
-
                 if (timer > rate)
                 {
                     timer = 0f;
                     HuntingBow();
                 }
+                if (HB_level == 5)
+                {
+                    changesprite();
+                }
                 break;
             // 저격용탄 헤비보우건의 공격 방식
             case 2:
                 timer += Time.deltaTime;
-
                 if (timer > rate)
                 {
                     timer = 0f;
                     Sniper();
+                }
+                if (SH_level == 5)
+                {
+                    changesprite();
                 }
                 break;
             // 대검의 공격 방식 - 회전 중이 아닐 때만 호출
@@ -73,6 +94,10 @@ public class Weapon : MonoBehaviour
                     charm = true; // 회전 중으로 설정
                     GreatSword();
                     StartCoroutine(GreatSwordRotate());
+                }
+                if (GS_level == 5)
+                {
+                    changesprite();
                 }
                 break;
             // 랜스의 공격 방식
@@ -84,18 +109,40 @@ public class Weapon : MonoBehaviour
                     Lance();
                     StartCoroutine(LanceAttack());
                 }
+
                 if (damage == Critical_Damage && player.speed != Chargespeed)       // 돌진모드인데, 속도가 Up되지 않으면
                 {
                     player.speed = GameManager.instance.player.memoryspeed + count; // 플레이어의 속도를 count만큼 올린다
                 }
+
+                if (LC_level == 5 && damage == Critical_Damage)         //테스트
+                {
+                    spriteRenderer.sprite = data.weaponimage[2];
+                }
+                else if (LC_level != 5 && damage == Critical_Damage)         
+                {
+                    spriteRenderer.sprite = data.weaponimage[0];
+                }
                 break;
+        }
+    }
+
+    public void changesprite()  
+    {
+        // 모든 자식 오브젝트의 SpriteRenderer 컴포넌트 가져오기
+        SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers)
+        {
+            // 각 SpriteRenderer의 스프라이트를 변경
+            spriteRenderer.sprite = data.weaponimage[0];
         }
     }
 
     public void LevelUp(float damage, float speed, float rate, int count)
     {
         this.damage = damage * Character.Damage * (1 + Gear.damage_stat);
-        this.speed = speed * Character.WeaponSpeed * (1 + Gear.stamina_stat); 
+        this.speed = speed * Character.WeaponSpeed * (1 + Gear.stamina_stat);
         this.rate = rate * Character.WeaponRate * (1 - Gear.rate_stat);
         this.count = count + Gear.upgrade_stat;
 
@@ -103,17 +150,36 @@ public class Weapon : MonoBehaviour
         {
             DualBlades();
         }
-        if (id == 3)
+        else if (id == 3)
         {
             Critical_Damage = damage * 2 * (1 + Gear.damage_stat);
             memorydamage = Critical_Damage / 2;
             GreatSword();
         }
-        if (id == 4)
+        else if (id == 4)
         {
             Critical_Damage = damage * 3 * (1 + Gear.damage_stat);
-            memorydamage = Critical_Damage / 3;
+            memorydamage = Critical_Damage / 4;
             Lance();
+        }
+
+        switch(id)  // 무기
+        {
+            case 0: 
+                DB_level++;
+                break;
+            case 1:
+                HB_level++;
+                break;
+            case 2:
+                SH_level++;
+                break;
+            case 3:
+                GS_level++;
+                break;
+            case 4:
+                LC_level++;
+                break;
         }
     }
 
@@ -124,22 +190,27 @@ public class Weapon : MonoBehaviour
         if (data.itemId == 0)
         {
             name = "Dual Blades [" + data.itemId + "]";
+            DB_level++;
         }
         else if (data.itemId == 1)
         {
             name = "Hunting Bow [" + data.itemId + "]";
+            HB_level++;
         }
         else if (data.itemId == 2)
         {
             name = "Sniper HBG [" + data.itemId + "]";
+            SH_level++;
         }
         else if (data.itemId == 3)
         {
             name = "GreatSword [" + data.itemId + "]";
+            GS_level++;
         }
         else if (data.itemId == 4)
         {
             name = "Lance [" + data.itemId + "]";
+            LC_level++;
         }
         transform.parent = player.transform;
         transform.localPosition = Vector3.zero;
@@ -173,8 +244,8 @@ public class Weapon : MonoBehaviour
         }
         else if (id == 4)
         {
-            Critical_Damage = damage * 3;
-            memorydamage = Critical_Damage / 3;
+            Critical_Damage = damage * 4;
+            memorydamage = Critical_Damage / 4;
             Lance();
         }
     }
@@ -244,7 +315,7 @@ public class Weapon : MonoBehaviour
 
     // 랜스 배치 로직
     void Lance()
-    {       
+    {
         for (int i = 0; i < 1; i++)
         {
             Transform bullet;
@@ -357,6 +428,7 @@ public class Weapon : MonoBehaviour
             LanceShieldMod();
             AudioManager.instance.PlaySfx(AudioManager.Sfx.ChargeMod);                  // 무기 사운드
             damage = Critical_Damage;
+
             Chargespeed = player.speed + count;                                         // 돌진모드의 속도 저장
             player.speed += count;                                                      // count만큼 속도 상승 [ 돌진모드 ] 
             Lance();
@@ -380,12 +452,12 @@ public class Weapon : MonoBehaviour
 
         if (damage == Critical_Damage)                                                  // 데미지 == 크리티컬 데미지라는 뜻은 돌진모드 라는 뜻
         {
-            spriteRenderer.sprite = data.weaponimage[0];                                // 이미지를 랜스로 변경
+            //spriteRenderer.sprite = data.weaponimage[0];
 
             childCollider.offset = new Vector2(0f, 0.47f);                              // 포지션과, 사이즈를 창에 맞게 변경함
             childCollider.size = new Vector2(0.5f, 1.8f);
             childTransform.transform.localPosition = new Vector3(0f, 0.8f, 0f);
-            
+
             LanceRotate();
         }
         else if (lancecharge == false)                                                  // 돌진모드가 끝나면
@@ -395,7 +467,7 @@ public class Weapon : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);                          // 방패에 맞게 사이즈, 포지션, 피격범위 등을 수정함
 
             childCollider.offset = new Vector2(0f, 0f);
-            childCollider.size = new Vector2(0.8f, 0.8f);
+            childCollider.size = new Vector2(1.0f, 1.0f);
 
             childTransform.transform.localPosition = new Vector3(0f, 0f, 0f);
         }

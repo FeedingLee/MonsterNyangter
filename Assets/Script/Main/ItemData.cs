@@ -25,9 +25,7 @@ public class ItemData : ScriptableObject
     public float baseRate;    // 연사 속도
     public int baseCount;
 
-    [Header("Weapon LevelUp Data")]
-    [Header("* Speeds = 무기 회전 속도")]
-    [Header("* Rates = 무기 연사 속도")]
+    [Header("Weapon LevelUp Data")]   
     public float[] damages;
     public float[] W_Speeds;
     public float[] W_Rates;

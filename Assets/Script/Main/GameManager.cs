@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public Result uiResult;
     public GameObject uiJoyStick;
     public GameObject enemyCleaner;
-
+    
     void Awake()
     {
         instance = this;

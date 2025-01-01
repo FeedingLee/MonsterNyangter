@@ -42,4 +42,5 @@ MonoBehaviour:
   - 0
   counts: 0000000000000000000000000000000000000000
   projectile: {fileID: 5975959092659265913, guid: aaa9264b8339d984c87e0272b57a6a30, type: 3}
-  weaponimage: []
+  weaponimage:
+  - {fileID: -320634725, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}

@@ -3,7 +3,9 @@ guid: 0696dbe93c4c97b4ebdbff331f47bda4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - melee: {instanceID: 0}
+  - Melee: {fileID: 11500000, guid: daa5dd90f8afd9c469273c0817809d94, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
