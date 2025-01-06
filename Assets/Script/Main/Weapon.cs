@@ -34,11 +34,11 @@ public class Weapon : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [Header("# Weapon Level")]
-    public int DB_level;            // 쌍검
-    public int HB_level;            // 활
-    public int SH_level;            // 헤보건
-    public int GS_level;            // 대검
-    public int LC_level;            // 랜스
+    public static int DB_level;            // 쌍검
+    public static int HB_level;            // 활
+    public static int SH_level;            // 헤보건
+    public static int GS_level;            // 대검
+    public static int LC_level;            // 랜스
 
     void Awake()
     {
@@ -115,7 +115,7 @@ public class Weapon : MonoBehaviour
                     player.speed = GameManager.instance.player.memoryspeed + count; // 플레이어의 속도를 count만큼 올린다
                 }
 
-                if (LC_level == 5 && damage == Critical_Damage)         //테스트
+                if (LC_level == 5 && damage == Critical_Damage)        
                 {
                     spriteRenderer.sprite = data.weaponimage[2];
                 }

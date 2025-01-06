@@ -61,6 +61,13 @@ public class GameManager : MonoBehaviour
         Gear.rate_stat = 0.0f;
         Gear.damage_stat = 0.0f;
         Gear.stamina_stat = 0.0f;
+        Gear.upgrade_stat = 0;
+        // 무기 레벨 초기화
+        Weapon.DB_level = 0;
+        Weapon.HB_level = 0;
+        Weapon.SH_level = 0;
+        Weapon.GS_level = 0;
+        Weapon.LC_level = 0;
 
         isLive = false;
 
@@ -81,10 +88,17 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GameVictoryRoutine()
     {
-        // 획득했던 스텟 값 초기화
+        // 이전 게임에서 얻었던 값 초기화
         Gear.rate_stat = 0.0f;
         Gear.damage_stat = 0.0f;
         Gear.stamina_stat = 0.0f;
+        Gear.upgrade_stat = 0;
+        // 무기 레벨 초기화
+        Weapon.DB_level = 0;
+        Weapon.HB_level = 0;
+        Weapon.SH_level = 0;
+        Weapon.GS_level = 0;
+        Weapon.LC_level = 0;
 
         isLive = false;
         enemyCleaner.SetActive(true);

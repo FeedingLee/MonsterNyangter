@@ -12,7 +12,7 @@ public class Gear : MonoBehaviour
     public static float rate_stat;      // 연사속도 능력치
     public static float damage_stat;    // 데미지 능력치
     public static float stamina_stat;   // 스테미나 능력치
-    public static int upgrade_stat;     // 스테미나 능력치
+    public static int upgrade_stat;     // 무기 강화
 
     public void Init(ItemData data)
     {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9162468901237697539}
   - component: {fileID: 5974295812556240455}
   - component: {fileID: 3351686655420307633}
+  - component: {fileID: -7106324169959905066}
   m_Layer: 0
   m_Name: '[MainWp] Sniper HBG'
   m_TagString: Bullet
@@ -164,3 +165,20 @@ MonoBehaviour:
   damage: 0
   per: 0
   Weapon_num: 2
+--- !u!114 &-7106324169959905066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358505908942346658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c9a531c0585a443aaa0ee1cf1e37ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  weapon_num: 2
+  arrow:
+  - {fileID: 367171878, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
+  - {fileID: 1303528653, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
