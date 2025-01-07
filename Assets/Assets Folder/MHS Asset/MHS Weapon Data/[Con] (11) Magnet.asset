@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
-  m_Name: '[Stat] (7) Heal'
+  m_Name: '[Con] (11) Magnet'
   m_EditorClassIdentifier: 
-  itemType: 7
-  itemId: 7
-  itemName: "\uC751\uAE09\uC57D G"
-  itemDesc: "\uC0DD\uBA85\uB825\uC744 \uC804\uBD80\n\uD68C\uBCF5\uD569\uB2C8\uB2E4."
-  itemIcon: {fileID: 652791601, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
+  itemType: 11
+  itemId: 11
+  itemName: "\uD3EC\uD68D\uC6A9 \uADF8\uBB3C"
+  itemDesc: "\uACBD\uD5D8\uCE58 \n\uD68D\uB4DD \uBC94\uC704\uAC00\n\uC18C\uD3ED \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  itemIcon: {fileID: 1455898271, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 0
   baseSpeed: 0
   baseRate: 0

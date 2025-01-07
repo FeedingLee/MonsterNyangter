@@ -147,11 +147,13 @@ public class Item : MonoBehaviour
                     float nextRate = data.damages[level];
                     gear.LevelUp(nextRate);
                 }
-
                 level++;
                 break;
             case ItemData.ItemType.Heal:
                 GameManager.instance.health = GameManager.instance.maxHealth;
+                break;
+            case ItemData.ItemType.Magnet:
+                GameManager.instance.player.scanner.expScanRange ++;
                 break;
         }
 

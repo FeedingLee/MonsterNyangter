@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ecd33f8da88eb4ab9d64d8a499d0b6, type: 3}
+  m_Name: '[Con] (7) Heal'
+  m_EditorClassIdentifier: 
+  itemType: 7
+  itemId: 7
+  itemName: "\uC751\uAE09\uC57D G"
+  itemDesc: "\uC0DD\uBA85\uB825\uC744 \uC804\uBD80\n\uD68C\uBCF5\uD569\uB2C8\uB2E4."
+  itemIcon: {fileID: 652791601, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
+  baseDamage: 0
+  baseSpeed: 0
+  baseRate: 0
+  baseCount: 0
+  damages:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  W_Speeds: []
+  W_Rates: []
+  counts: 0000000000000000000000000000000000000000
+  projectile: {fileID: 0}
+  weaponimage: []
