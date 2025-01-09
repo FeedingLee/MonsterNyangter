@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float maxGameTime = 2 * 10f;
     [Header("# Player Info")]
     public int playerId;
+    public int weaponcode;
     public float health;
     public float maxHealth = 100;
     public int level;
@@ -41,9 +42,25 @@ public class GameManager : MonoBehaviour
         playerId = id;
         health = maxHealth;
 
+        switch (playerId)
+        {
+            case 0:
+                weaponcode = 0;
+                break;
+            case 1:
+                weaponcode = 1;
+                break;
+            case 2:
+                weaponcode = 4;
+                break;
+            case 3:
+                weaponcode = 2;
+                break;
+        }        
+
         player.gameObject.SetActive(true);
         uiJoyStick.SetActive(true);
-        uiLevelUp.Select(playerId % 2); 
+        uiLevelUp.Select(weaponcode); 
         Resume();
 
         AudioManager.instance.PlayBgm(true);

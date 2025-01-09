@@ -1,32 +1,68 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Character : MonoBehaviour
 {    
-    public static float Speed
+    public static float Speed           // 이동속도 증가 : 이동속도 관련 옵션
     {
-        get { return GameManager.instance.playerId == 0 ? 1.1f : 1f; }
+        get
+        {
+            switch (GameManager.instance.playerId)
+            {
+                case 0: return 1.0f;
+                case 1: return 1.3f;
+                case 2: return 0.75f;
+                case 3: return 1.5f;
+                default: return 1.0f;
+            }
+        }
     }
 
-    public static float WeaponSpeed     // 무기 회전 속도 
+    public static float WeaponSpeed     // 스테미나 증가 : 공격속도와 랜스의 돌진유지 시간 관련
     {
-        get { return GameManager.instance.playerId == 1 ? 1.1f : 1f; }
+        get
+        {
+            switch (GameManager.instance.playerId)
+            {
+                case 0: return 1.0f;
+                case 1: return 0.8f;
+                case 2: return 1.0f;
+                case 3: return 0.3f;
+                default: return 1.0f;
+            }
+        }
     }
 
-    public static float WeaponRate      // 발사체 연사 속도
+    public static float WeaponRate      // 쿨타임 감소 : 투사체 발사 속도, 공격 딜레이 감소
     {
-        get { return GameManager.instance.playerId == 1 ? 0.9f : 1f; }
+        get
+        {
+            switch (GameManager.instance.playerId)
+            {
+                case 0: return 1.0f;
+                case 1: return 0.8f;
+                case 2: return 1.0f;
+                case 3: return 1.0f;
+                default: return 1.0f;
+            }
+        }
     }
 
-    public static float Damage
+    public static float Damage          // 공격력 증가 : 전체적인 데미지 관련
     {
-        get { return GameManager.instance.playerId == 2 ? 1.2f : 1f; }
-    }
-
-    public static float Count
-    {
-        get { return GameManager.instance.playerId == 3 ? 1f : 0f; }
+        get
+        {
+            switch (GameManager.instance.playerId)
+            {
+                case 0: return 1.0f;
+                case 1: return 0.8f;
+                case 2: return 1.3f;
+                case 3: return 0.6f;
+                default: return 1.0f;
+            }
+        }
     }
 }

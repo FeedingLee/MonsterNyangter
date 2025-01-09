@@ -220,7 +220,7 @@ public class Weapon : MonoBehaviour
         damage = data.baseDamage * Character.Damage * (1 + Gear.damage_stat);
         speed = data.baseSpeed * Character.WeaponSpeed * (1 + Gear.stamina_stat);
         rate = data.baseRate * Character.WeaponRate * (1 - Gear.rate_stat);
-        count = (int)(data.baseCount + Character.Count + Gear.upgrade_stat);
+        count = (int)(data.baseCount + Gear.upgrade_stat);
 
         for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
         {

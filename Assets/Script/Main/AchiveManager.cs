@@ -9,7 +9,7 @@ public class AchiveManager : MonoBehaviour
     public GameObject[] unlockCharacter;
     public GameObject uiNotice;
 
-    enum Achive { UnlockPotato, UnlockBean }
+    enum Achive { UnlockGaza, UnlockBowa, UnlockWigller }
     Achive[] achives;
     WaitForSecondsRealtime wait;
 
@@ -56,18 +56,21 @@ public class AchiveManager : MonoBehaviour
             CheckAchive(achive);
         }
     }
-
+    // 캐릭터 해금 조건
     void CheckAchive(Achive achive)
     {
         bool isAchive = false;
 
         switch (achive)
         {
-            case Achive.UnlockPotato:
-                isAchive = GameManager.instance.kill >= 10;
+            case Achive.UnlockGaza:     // 0. 가쟈부 = 500킬 달성
+                isAchive = GameManager.instance.kill >= 500;    
                 break;
-            case Achive.UnlockBean:
+            case Achive.UnlockBowa:     // 1. 보와보와 = 생존 시 
                 isAchive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
+                break;
+            case Achive.UnlockWigller:   // 2. 흔들흔들 = 22레벨 달성시
+                isAchive = GameManager.instance.level >= 22;                
                 break;
         }
 
