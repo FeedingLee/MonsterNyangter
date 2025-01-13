@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
     public SpawnData[] spawnData;
+    public BossSpawnData[] bossSpawnData;
     public float levelTime;
 
     int level;
@@ -30,7 +31,7 @@ public class Spawner : MonoBehaviour
         if (timer > spawnData[level].spawnTime)
         {
             timer = 0;
-            Spawn();
+            //Spawn(); 
         }
     }
     void Spawn()
@@ -38,6 +39,14 @@ public class Spawner : MonoBehaviour
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
         enemy.GetComponent<Enemy>().Init(spawnData[level]);
+    }
+
+    public void BossSpawn()
+    {
+        GameObject Boss = GameManager.instance.pool.GetEnemy(1);
+        Boss.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+        Boss.GetComponent<BossPattern>().Init(bossSpawnData[0]);
+        Debug.Log("BossSpawn in spawner");
     }
 }
 
@@ -49,4 +58,11 @@ public class SpawnData
     public int spriteType;
     public int health;
     public float speed;
+}
+
+[System.Serializable]
+public class BossSpawnData
+{
+    public float speed;
+    public float health;
 }

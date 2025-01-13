@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public float gameTime;
     // 최대 게임 시간 
     public float maxGameTime = 2 * 10f;
+    // 보스 스폰시 추가 생성을 막기위한 변수
+    public bool isBossSpawn = false;
     [Header("# Player Info")]
     public int playerId;
     public int weaponcode;
@@ -30,7 +32,8 @@ public class GameManager : MonoBehaviour
     public Result uiResult;
     public GameObject uiJoyStick;
     public GameObject enemyCleaner;
-    
+    public BossPattern boss;
+
     void Awake()
     {
         instance = this;
@@ -56,7 +59,7 @@ public class GameManager : MonoBehaviour
             case 3:
                 weaponcode = 2;
                 break;
-        }        
+        }
 
         player.gameObject.SetActive(true);
         uiJoyStick.SetActive(true);
@@ -147,10 +150,14 @@ public class GameManager : MonoBehaviour
 
         gameTime += Time.deltaTime;
 
-        if (gameTime > maxGameTime)
+        if (gameTime > maxGameTime && !isBossSpawn)
         {
+            isBossSpawn = true;
             gameTime = maxGameTime;
-            GameVictory();
+            Debug.Log("BossSpawn");
+            // 보스 스폰
+            player.GetComponentInChildren<Spawner>().BossSpawn();
+            //GameVictory();
         }
     }
 

@@ -5437,6 +5437,7 @@ MonoBehaviour:
   - {fileID: 7368216090368851147, guid: 87e625a267387df4f8e280dc60cb4847, type: 3}
   - {fileID: 5800947392654503384, guid: fd646ffd91823a244acd4d7b8d8b7037, type: 3}
   - {fileID: 9015770431737552673, guid: 824ddb02508a8da4aba108fcbcb6578c, type: 3}
+  - {fileID: 726381502447926956, guid: 040f2d480e67e1d408c5613451f82333, type: 3}
 --- !u!1 &102718357
 GameObject:
   m_ObjectHideFlags: 0
@@ -26081,7 +26082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02eb88c46d153f43a6eb9e38a4a16b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 8c7bd55e9325d0c429ccf9f678496c9f, type: 2}
+  data: {fileID: 11400000, guid: 284a60370d83ff84e884bd36cd8c26d1, type: 2}
   level: 0
   weapon: {fileID: 0}
   gear: {fileID: 0}
@@ -27841,14 +27842,15 @@ MonoBehaviour:
   joystickController: {fileID: 745926493}
   isLive: 0
   gameTime: 0
-  maxGameTime: 300
+  maxGameTime: 5
+  isBossSpawn: 0
   playerId: 0
   weaponcode: 0
-  health: 200
-  maxHealth: 200
+  health: 99999
+  maxHealth: 99999
   level: 0
   kill: 0
-  exp: 0
+  exp: 9999
   nextExp: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000009f860100
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
@@ -27856,6 +27858,7 @@ MonoBehaviour:
   uiResult: {fileID: 363634906}
   uiJoyStick: {fileID: 745926492}
   enemyCleaner: {fileID: 1839842740}
+  boss: {fileID: 0}
 --- !u!4 &468579771
 Transform:
   m_ObjectHideFlags: 0
@@ -31030,7 +31033,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.857142
+  orthographic size: 9.757143
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -39493,6 +39496,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 806ee33b95ac45442b2e8240ef1d9400, type: 2}
   - {fileID: 9100000, guid: 6c3aebda17f83eb49960fd9f16e3d977, type: 2}
   - {fileID: 9100000, guid: 260b57a2c7e0e1143983e79c6e6fb5e5, type: 2}
+  ismove: 0
   joystick: {fileID: 745926493}
 --- !u!114 &672580347
 MonoBehaviour:
@@ -254242,7 +254246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 1.2
+  - spawnTime: 0.9
     spriteType: 0
     health: 50
     speed: 0.8
@@ -254262,6 +254266,9 @@ MonoBehaviour:
     spriteType: 4
     health: 100
     speed: 3
+  bossSpawnData:
+  - speed: 2
+    health: 1000
   levelTime: 0
 --- !u!1 &1966386764
 GameObject:

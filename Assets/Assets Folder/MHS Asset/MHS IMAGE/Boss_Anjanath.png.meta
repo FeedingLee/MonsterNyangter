@@ -1,0 +1,1561 @@
+fileFormatVersion: 2
+guid: 228fe585d56770644903f16900ec7c2d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Anjanath_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 3811
+        width: 683
+        height: 1071
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebce2ac90b43b34f82131b7beeadaca
+      internalID: -2128999610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_1
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 3825
+        width: 646
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656338370d2c49d42aa5534743bfb4ca
+      internalID: -1600682064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_2
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 3837
+        width: 625
+        height: 1030
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a99fd332cace3a4f94bcb899a1a0088
+      internalID: -87165148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_3
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 3848
+        width: 617
+        height: 1026
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3148efeb3e312854fbabdc8c0d0cd3a0
+      internalID: 1780866223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_4
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 3859
+        width: 606
+        height: 1023
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61118c8a1c74223458c5a7b6c820ffd9
+      internalID: 905743570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_5
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 3811
+        width: 683
+        height: 1071
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85422538debd7444be7eff353d07727
+      internalID: -927218673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_6
+      rect:
+        serializedVersion: 2
+        x: 4621
+        y: 3825
+        width: 646
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae842319f908b09489b2fca753280391
+      internalID: 974972664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_7
+      rect:
+        serializedVersion: 2
+        x: 5356
+        y: 3837
+        width: 628
+        height: 1030
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531f35e3c9bb8a54b8649f88b06c9f19
+      internalID: 421653713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_8
+      rect:
+        serializedVersion: 2
+        x: 6102
+        y: 3848
+        width: 617
+        height: 1026
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e0497625964cb4caf7ffca36cab52e
+      internalID: -136059497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_9
+      rect:
+        serializedVersion: 2
+        x: 6852
+        y: 3859
+        width: 606
+        height: 1023
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05d25c43895dc64fbc468da2d3aee05
+      internalID: 810918677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_10
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2729
+        width: 683
+        height: 1071
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: debd901f8bb4ce44789f812f9908f861
+      internalID: 501870251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_11
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 2744
+        width: 646
+        height: 1045
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a72ccfd8ed6a54490ee1e6a457b802
+      internalID: -2131418535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_12
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 2751
+        width: 625
+        height: 1034
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10c2d42ee7c59041a3d706d1da88169
+      internalID: -184214504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_13
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 2762
+        width: 617
+        height: 1027
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bc0751f51cc4145ac6d9aa57093dc7
+      internalID: -1958350296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_14
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 2773
+        width: 606
+        height: 1027
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328dc9802ef466e4e95c48d2ceca7a7a
+      internalID: -1192397537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_15
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 2729
+        width: 683
+        height: 1071
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eeedf3aab37ee14b94d598d2b0a8c5a
+      internalID: -770458195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_16
+      rect:
+        serializedVersion: 2
+        x: 4621
+        y: 2744
+        width: 646
+        height: 1045
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2693562e305342b4ab6051ee9d97646f
+      internalID: 985762378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_17
+      rect:
+        serializedVersion: 2
+        x: 5356
+        y: 2751
+        width: 628
+        height: 1034
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535ce489d14e5e44389983d52798fa61
+      internalID: 929156929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_18
+      rect:
+        serializedVersion: 2
+        x: 6102
+        y: 2762
+        width: 617
+        height: 1027
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed60da949b9480a4fb092e0f26bb3815
+      internalID: -387491522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_19
+      rect:
+        serializedVersion: 2
+        x: 6852
+        y: 2773
+        width: 606
+        height: 1027
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3653aee9bafe234990782e83b72bd76
+      internalID: 516535149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_20
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1381
+        width: 735
+        height: 1318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca330888cc30e874c915b31d619a127f
+      internalID: -2110411990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_21
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1396
+        width: 738
+        height: 1292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62af852ef91137d41bbea25739492bca
+      internalID: 1842181263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_22
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 1407
+        width: 735
+        height: 1277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca7923aa2cf3274f91975e6a627217d
+      internalID: 2079235627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_23
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 1418
+        width: 739
+        height: 1270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6060245d73590894f88f8a04e986ed9a
+      internalID: 1682645692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_24
+      rect:
+        serializedVersion: 2
+        x: 3047
+        y: 1425
+        width: 736
+        height: 1274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3500987583470df458b1d71ba70dc820
+      internalID: -1321980172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_25
+      rect:
+        serializedVersion: 2
+        x: 3797
+        y: 1381
+        width: 735
+        height: 1318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11618ba4ffdd6fe41ac3b36fb506348d
+      internalID: 930279428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_26
+      rect:
+        serializedVersion: 2
+        x: 4558
+        y: 1396
+        width: 735
+        height: 1292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a304069383675f74b930ea40ea1755bf
+      internalID: 1513837099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_27
+      rect:
+        serializedVersion: 2
+        x: 5301
+        y: 1407
+        width: 738
+        height: 1277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4af1c0e0a649184b825a5309905a850
+      internalID: -2138356060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_28
+      rect:
+        serializedVersion: 2
+        x: 6058
+        y: 1418
+        width: 735
+        height: 1270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb36bbc7f3151d9499e27b3df12fb6f3
+      internalID: -1695901670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_29
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 1425
+        width: 735
+        height: 1274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eee86fe3b982af4ea4294abc011db11
+      internalID: 1309359433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Dash_4
+      rect:
+        serializedVersion: 2
+        x: 3047
+        y: 81
+        width: 736
+        height: 1248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f768dced19b7cc4a93af16c0a73ab65
+      internalID: -1354944168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Dash_5
+      rect:
+        serializedVersion: 2
+        x: 3797
+        y: 81
+        width: 735
+        height: 1293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0197549142247e54e873183cd236c38a
+      internalID: -431415345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_32
+      rect:
+        serializedVersion: 2
+        x: 5397
+        y: 1182
+        width: 181
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2064586148ac254ebaf46d7d7b310a3
+      internalID: 1699850531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_33
+      rect:
+        serializedVersion: 2
+        x: 5596
+        y: 1167
+        width: 192
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d774fe7eb2ad348b32ded92880ebd8
+      internalID: -1549303669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_34
+      rect:
+        serializedVersion: 2
+        x: 5810
+        y: 1171
+        width: 163
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1267e498c9674c7459d59a68c2bb0f1d
+      internalID: 1204333796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_35
+      rect:
+        serializedVersion: 2
+        x: 5995
+        y: 1167
+        width: 189
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d717bbe8feeaf4847befaced86d3a39b
+      internalID: 1837153181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_36
+      rect:
+        serializedVersion: 2
+        x: 6202
+        y: 1182
+        width: 181
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6baeeffee046e254c9384db9649eab89
+      internalID: 1818399674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_37
+      rect:
+        serializedVersion: 2
+        x: 6401
+        y: 1171
+        width: 193
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d4c550e0be9f743891ec4d1579318f
+      internalID: 1706580085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_38
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 1171
+        width: 163
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45dcce0d2bf57fb4a8c67cd671100884
+      internalID: -2101026189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_39
+      rect:
+        serializedVersion: 2
+        x: 6793
+        y: 1167
+        width: 185
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ec7ddd109c40f41bd5bdef3c403a7f
+      internalID: 434885927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_40
+      rect:
+        serializedVersion: 2
+        x: 7033
+        y: 1204
+        width: 310
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd41b5cd3772cb4cbd81985e1aa2bd5
+      internalID: 777772872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Dash_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 81
+        width: 683
+        height: 1064
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a41e2fddd94bfb4889212a85e60d425
+      internalID: 474817739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Dash_1
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 81
+        width: 646
+        height: 1064
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b205cf3c4b3f634a9fcb077ad2d4c71
+      internalID: 2052100976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Dash_2
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 81
+        width: 647
+        height: 1064
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9aacef44ff7b64baa0383540a922d8
+      internalID: 1160717849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Dash_3
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 81
+        width: 632
+        height: 1064
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18449e825e8d2ac4980cd1851cf795f0
+      internalID: -256861172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_
+      rect:
+        serializedVersion: 2
+        x: 4573
+        y: 81
+        width: 706
+        height: 942
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25d8e1c02e98e3498444273cef51121
+      internalID: -900318784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_46
+      rect:
+        serializedVersion: 2
+        x: 5437
+        y: 1001
+        width: 107
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f614b18db198e4c8dd31b19a8dc399
+      internalID: 1446639900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_47
+      rect:
+        serializedVersion: 2
+        x: 5641
+        y: 997
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220e7a63402302f4badd7c4f2ca4f611
+      internalID: 1466106859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_48
+      rect:
+        serializedVersion: 2
+        x: 5844
+        y: 997
+        width: 96
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7da122a55d3ba04ab4413ffebf38813
+      internalID: 127074246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_49
+      rect:
+        serializedVersion: 2
+        x: 6047
+        y: 997
+        width: 100
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe7036f41a5ef546bf475357774422c
+      internalID: 438590116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_50
+      rect:
+        serializedVersion: 2
+        x: 6243
+        y: 1001
+        width: 107
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685b3d0b2430adc44b912c5fed7821ad
+      internalID: 1339117142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_51
+      rect:
+        serializedVersion: 2
+        x: 6446
+        y: 1001
+        width: 107
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac532d0be946e6418315d6244d8d8c0
+      internalID: -465544221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_52
+      rect:
+        serializedVersion: 2
+        x: 6645
+        y: 997
+        width: 96
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41957e3efc26da148a0fef0e50425f9a
+      internalID: -1538042946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_53
+      rect:
+        serializedVersion: 2
+        x: 6834
+        y: 1001
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e4890968da573439eba47b3bea33fd
+      internalID: 1024599754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_54
+      rect:
+        serializedVersion: 2
+        x: 5437
+        y: 783
+        width: 100
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb91e99bd5c5f794da23b2d0d4979d55
+      internalID: 31954226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_55
+      rect:
+        serializedVersion: 2
+        x: 5648
+        y: 783
+        width: 100
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea910bd0eeb1ac4d974ffe9f7862243
+      internalID: 263778775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_56
+      rect:
+        serializedVersion: 2
+        x: 5836
+        y: 783
+        width: 104
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c1aa2365384df4597b31cef2fe1256
+      internalID: 1876367598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_57
+      rect:
+        serializedVersion: 2
+        x: 6047
+        y: 783
+        width: 100
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79db49b41d1d3f4baf141802101406a
+      internalID: 542018687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_58
+      rect:
+        serializedVersion: 2
+        x: 6246
+        y: 783
+        width: 104
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b99f6ce441dca4297c24c4cefea5e5
+      internalID: -919337502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_59
+      rect:
+        serializedVersion: 2
+        x: 6453
+        y: 783
+        width: 100
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbab8da14cc6f20438b0c185d359dd5e
+      internalID: 1602175122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_60
+      rect:
+        serializedVersion: 2
+        x: 6653
+        y: 783
+        width: 99
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b8bd9fa0935ef4a980fed147507272
+      internalID: 1285907526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_61
+      rect:
+        serializedVersion: 2
+        x: 6834
+        y: 783
+        width: 99
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cd4d532155d27439700e0edb30b124
+      internalID: -1254052721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_62
+      rect:
+        serializedVersion: 2
+        x: 6848
+        y: 931
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087876cafc56b444d8f3c40af8c2139c
+      internalID: -487449031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Anjanath_63
+      rect:
+        serializedVersion: 2
+        x: 5349
+        y: 118
+        width: 1385
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d7302c905dbff43a0163c36eb48b78
+      internalID: 1961952317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boss_Anjanath_: -900318784
+      Boss_Anjanath_0: -2128999610
+      Boss_Anjanath_1: -1600682064
+      Boss_Anjanath_10: 501870251
+      Boss_Anjanath_11: -2131418535
+      Boss_Anjanath_12: -184214504
+      Boss_Anjanath_13: -1958350296
+      Boss_Anjanath_14: -1192397537
+      Boss_Anjanath_15: -770458195
+      Boss_Anjanath_16: 985762378
+      Boss_Anjanath_17: 929156929
+      Boss_Anjanath_18: -387491522
+      Boss_Anjanath_19: 516535149
+      Boss_Anjanath_2: -87165148
+      Boss_Anjanath_20: -2110411990
+      Boss_Anjanath_21: 1842181263
+      Boss_Anjanath_22: 2079235627
+      Boss_Anjanath_23: 1682645692
+      Boss_Anjanath_24: -1321980172
+      Boss_Anjanath_25: 930279428
+      Boss_Anjanath_26: 1513837099
+      Boss_Anjanath_27: -2138356060
+      Boss_Anjanath_28: -1695901670
+      Boss_Anjanath_29: 1309359433
+      Boss_Anjanath_3: 1780866223
+      Boss_Anjanath_32: 1699850531
+      Boss_Anjanath_33: -1549303669
+      Boss_Anjanath_34: 1204333796
+      Boss_Anjanath_35: 1837153181
+      Boss_Anjanath_36: 1818399674
+      Boss_Anjanath_37: 1706580085
+      Boss_Anjanath_38: -2101026189
+      Boss_Anjanath_39: 434885927
+      Boss_Anjanath_4: 905743570
+      Boss_Anjanath_40: 777772872
+      Boss_Anjanath_46: 1446639900
+      Boss_Anjanath_47: 1466106859
+      Boss_Anjanath_48: 127074246
+      Boss_Anjanath_49: 438590116
+      Boss_Anjanath_5: -927218673
+      Boss_Anjanath_50: 1339117142
+      Boss_Anjanath_51: -465544221
+      Boss_Anjanath_52: -1538042946
+      Boss_Anjanath_53: 1024599754
+      Boss_Anjanath_54: 31954226
+      Boss_Anjanath_55: 263778775
+      Boss_Anjanath_56: 1876367598
+      Boss_Anjanath_57: 542018687
+      Boss_Anjanath_58: -919337502
+      Boss_Anjanath_59: 1602175122
+      Boss_Anjanath_6: 974972664
+      Boss_Anjanath_60: 1285907526
+      Boss_Anjanath_61: -1254052721
+      Boss_Anjanath_62: -487449031
+      Boss_Anjanath_63: 1961952317
+      Boss_Anjanath_7: 421653713
+      Boss_Anjanath_8: -136059497
+      Boss_Anjanath_9: 810918677
+      Boss_Dash_0: 474817739
+      Boss_Dash_1: 2052100976
+      Boss_Dash_2: 1160717849
+      Boss_Dash_3: -256861172
+      Boss_Dash_4: -1354944168
+      Boss_Dash_5: -431415345
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
