@@ -31,7 +31,7 @@ public class Spawner : MonoBehaviour
         if (timer > spawnData[level].spawnTime)
         {
             timer = 0;
-            //Spawn(); 
+            Spawn(); 
         }
     }
     void Spawn()
@@ -45,7 +45,6 @@ public class Spawner : MonoBehaviour
     {
         GameObject Boss = GameManager.instance.pool.GetEnemy(1);
         Boss.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
-        Boss.GetComponent<BossPattern>().Init(bossSpawnData[0]);
         Debug.Log("BossSpawn in spawner");
     }
 }

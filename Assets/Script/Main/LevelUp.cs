@@ -96,7 +96,7 @@ public class LevelUp : MonoBehaviour
             if (ranItem.level == ranItem.data.damages.Length)
             {
                 // 랜덤아이템이 많다면 (4~7번까지) 강의 12 [39:42] 참고
-                items[Random.Range(10, 11)].gameObject.SetActive(true);
+                items[Random.Range(10, 12)].gameObject.SetActive(true);
             }
             else
             {

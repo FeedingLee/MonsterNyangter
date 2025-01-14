@@ -12,7 +12,7 @@ public class BossPattern : MonoBehaviour
     public Spawner spawner;                  // 보스스폰을 위해 선언
 
     [Header("# BossBullet")]
-    public float interval;                   // 발사 반복 간격
+    public float interval;                   // 다음 발사까지의 쿨타임
     public int bulletCount;                  // 발사 갯수
     public GameObject bullet;                // 발사 오브젝트
     public float BossBulletDamage;           // 발사 데미지
@@ -33,11 +33,11 @@ public class BossPattern : MonoBehaviour
     public float BossSpeed;                  // 보스 이동 속도
     public float currentHp;                  // 보스 현재 체력
     public float maxHp;                      // 보스 최대 체력
-    public bool isBossLive;                         // 보스 생존 확인
+    public bool isBossLive;                  // 보스 생존 확인
     bool isBossTired;                        // 보스 지침 상태 확인
     public bool isBossAttacking;             // 보스 공격 상태 확인
 
-    public Coroutine repeatActionCoroutine; // 실행 중인 코루틴을 저장할 변수
+    public Coroutine repeatActionCoroutine;  // 실행 중인 코루틴을 저장할 변수
 
     void Awake()
     {
@@ -63,14 +63,6 @@ public class BossPattern : MonoBehaviour
         anim.SetBool("isBossDash", false);
         anim.SetBool("isBossDashReady", false);
         anim.SetBool("isBossTired", false);
-    }
-
-    public void Init(BossSpawnData data)
-    {
-        //anim.runtimeAnimatorController = animCon[data.spriteType];
-        BossSpeed = data.speed;
-        maxHp = data.health;
-        currentHp = data.health;
     }
 
     private void Start()
@@ -109,9 +101,6 @@ public class BossPattern : MonoBehaviour
             // 패턴을 랜덤으로 선택
             int number = Random.Range(0, 3);
 
-            //테스트 용도
-            //number = 1;
-
             if (gameObject.GetComponent<BossReposition>().isBossFalling)
             {
                 // 보스가 텔포중일 때 공격기능 막음
@@ -149,19 +138,13 @@ public class BossPattern : MonoBehaviour
                     anim.SetBool("isBossDashReady", true);
                     // BossDashDelay 만큼 시간이 지난후 Setbool false
 
-                    anim.speed = 0.15f;
-                    Debug.Log("animator speed : " + anim.speed);
-
-                    yield return new WaitForSeconds(2f);
-
-                    anim.speed = 1.0f;
-                    Debug.Log("animator speed : " + anim.speed);
+                    yield return new WaitForSeconds(BossDashDelay);
 
                     Debug.Log("BossDash in Pattern up BossDash()");
                     BossDash(); 
                     
                     // 2초동안 플레이어와 충돌하지 않으면 멈춤
-                    yield return new WaitForSeconds(2f);
+                    yield return new WaitForSeconds(3.0f);
 
                     // 보스가 2초가 지나기 전에 플레이어와 충돌하면 아래 코드를 스킵
                     if (IsBossDashing)

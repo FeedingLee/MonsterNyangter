@@ -126,7 +126,7 @@ public class Player : MonoBehaviour
         
         // 보스와 충돌 시 플레이어가 일정한 힘으로 밀려남
         rigid.velocity = Vector2.zero;
-        rigid.velocity = nextVec * 15f;
+        rigid.velocity = nextVec * 15.0f;
         //rigid.AddForce(nextVec * 5f, ForceMode2D.Impulse);
         
         // 보스 돌진패턴에 피격당할 시 1.5초간 이동불가        

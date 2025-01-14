@@ -88,6 +88,8 @@ public class GameManager : MonoBehaviour
         Weapon.SH_level = 0;
         Weapon.GS_level = 0;
         Weapon.LC_level = 0;
+        // 경험치 보너스 상태 초기화
+        Item.Exp_Bonus = 0;
 
         isLive = false;
 
@@ -119,6 +121,8 @@ public class GameManager : MonoBehaviour
         Weapon.SH_level = 0;
         Weapon.GS_level = 0;
         Weapon.LC_level = 0;
+        // 경험치 보너스 상태 초기화
+        Item.Exp_Bonus = 0;
 
         isLive = false;
         enemyCleaner.SetActive(true);
@@ -168,7 +172,7 @@ public class GameManager : MonoBehaviour
 
         exp++;
 
-        if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)])
+        if (exp >= nextExp[Mathf.Min(level, nextExp.Length-1)])
         {
             level++;
             exp = 0;

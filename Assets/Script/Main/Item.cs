@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class Item : MonoBehaviour
     public int level;
     public Weapon weapon;
     public Gear gear;
+    public static int Exp_Bonus;
 
     Image icon;
     Text textLevel;
@@ -155,11 +157,23 @@ public class Item : MonoBehaviour
             case ItemData.ItemType.Magnet:
                 GameManager.instance.player.scanner.expScanRange ++;
                 break;
+            case ItemData.ItemType.Exp_Coupon:
+                Exp_Bonus = 1;
+                StopAllCoroutines();
+                StartCoroutine(CouponTime());
+                break;
         }
 
         if (level == data.damages.Length) 
         {
             GetComponent<Button>().interactable = false;
         }
+    }
+
+    IEnumerator CouponTime()
+    {        
+        yield return new WaitForSeconds(1.0f);
+        Exp_Bonus = 0;
+        StopAllCoroutines();
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BossShadow : MonoBehaviour
 {
-    public bool IsTraceTarget;         // 플레이어 추적 허용
+    public bool IsTraceTarget;          // 플레이어 추적 허용
     public Rigidbody2D targetRigid;     // 플레이어 Rigidbody2D
     public float speed;                 // 그림자 이동 속도
     Rigidbody2D rig;                    // 그림자 Rigidbody2D
 
     private void Awake()
     {
-        speed = GameManager.instance.player.speed - 1;
+        speed = GameManager.instance.player.speed - 1.0f;
         IsTraceTarget = false;
         rig = GetComponent<Rigidbody2D>();
         targetRigid = GameManager.instance.player.GetComponent<Rigidbody2D>();

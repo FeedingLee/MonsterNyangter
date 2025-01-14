@@ -186,18 +186,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRigid: {fileID: 0}
   spawner: {fileID: 0}
-  interval: 1
-  bulletCount: 20
+  interval: 2
+  bulletCount: 15
   bullet: {fileID: 9015770431737552673, guid: 824ddb02508a8da4aba108fcbcb6578c, type: 3}
   BossBulletDamage: 10
-  fireSpeed: 5
-  DashSpeed: 15
+  fireSpeed: 3
+  DashSpeed: 16
   IsBossDashing: 0
   BossDashDamage: 20
-  BossDashDelay: 3
-  BossSpeed: 5
+  BossDashDelay: 4
+  BossSpeed: 3
   currentHp: 0
-  maxHp: 1000
+  maxHp: 3000
   isBossLive: 0
   isBossAttacking: 0
 --- !u!114 &-6791970273465413145
@@ -213,10 +213,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallingWaitTime: 2
-  fallingDistance: 13
-  fallingSpeed: 100
+  fallingDistance: 12
+  fallingSpeed: 80
   targetTransform: {fileID: 0}
   isBossMove: 0
   isBossFalling: 0
-  WaitReposition: 10
+  WaitReposition: 5
   bossPattern: {fileID: 0}
