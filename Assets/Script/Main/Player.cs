@@ -92,7 +92,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Boss"))
         {
@@ -107,7 +108,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator PlayerKnockBack(Collision2D collision)
+    IEnumerator PlayerKnockBack(Collider2D collision)
     {
         // 피격 애니메이션 재생
         anim.SetTrigger("Damage");

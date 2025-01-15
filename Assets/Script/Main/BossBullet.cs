@@ -5,20 +5,22 @@ using UnityEngine;
 public class BossBullet : MonoBehaviour
 {
     
-    public float launchForce;       // 발사할 힘의 크기
-    public float damage;            // 발사체 데미지
+    public float launchForce;                       // 발사할 힘의 크기
+    public float damage;                            // 발사체 데미지
+    public RuntimeAnimatorController[] animCon;     // 애니메이터 배열
+
     //public int count;
     //public int per;
 
-    // Rigidbody 컴포넌트를 가져오기 위한 변수
-    Rigidbody2D rb;
-    
+    Rigidbody2D rb;                                 // Rigidbody 컴포넌트를 가져오기 위한 변수
+    Animator anim;                                  // 발사체의 애니메이터
 
     // 오브젝트가 생성되면 자동으로 실행되는 메서드
     void Awake()
     {
         // Rigidbody 컴포넌트를 가져옴
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Start()
@@ -27,16 +29,12 @@ public class BossBullet : MonoBehaviour
     }
 
     // 발사체 초기화 함수
-    public void Init(float damage, /*int per,*/ Vector3 dir)
+    public void Init(float damage, /*int per,*/ Vector3 dir, int index)
     {
         this.damage = damage;
-        //this.per = per;
-        rb.velocity = dir;// * launchForce;
+        rb.velocity = dir;
 
-        //if (per > -1)
-        //{
-        //    rb.velocity = dir * launchForce;
-        //}
+        anim.runtimeAnimatorController = animCon[index];
     }
 
     // 벽이나 기타 오브젝트에 부딪힐 경우 파괴되는 코드

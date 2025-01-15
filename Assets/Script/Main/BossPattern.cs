@@ -46,7 +46,6 @@ public class BossPattern : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         BossRigid = GetComponent<Rigidbody2D>();
         targetRigid = GameManager.instance.player.GetComponent<Rigidbody2D>();
-        Debug.Log("targetRigid: " + targetRigid);
     }
 
     void OnEnable()
@@ -70,7 +69,7 @@ public class BossPattern : MonoBehaviour
         // 오브젝트가 활성화 된 후 코루틴 시작
         // 1220: 보스 패턴 진행중에 텔포 막기 & 텔포중 보스 패턴 막기
         // 코루틴 시작 시 반환값을 저장
-        repeatActionCoroutine = StartCoroutine(RepeatAction());
+        //repeatActionCoroutine = StartCoroutine(RepeatAction());
     }
 
     void FixedUpdate()
@@ -91,8 +90,6 @@ public class BossPattern : MonoBehaviour
 
     public IEnumerator RepeatAction()
     {
-        Debug.Log("BossPattern Start in " + this);
-
         while (isBossLive)
         {
             // 소환되자마자 발사하는것을 막음, 보스패턴 대기시간 / 2 초 대기
@@ -108,7 +105,9 @@ public class BossPattern : MonoBehaviour
                 StopCoroutine(repeatActionCoroutine);
             }
 
-            Debug.Log("BossPattern: " + number);            
+            // 테스트
+            //number = 0;
+
             // 반복할 동작
             switch (number)
             {
@@ -117,7 +116,7 @@ public class BossPattern : MonoBehaviour
                     // 사방으로 발사
                     Fire();
                     isBossAttacking = false;
-                    break; 
+                    break;
                 case 1:
                     isBossAttacking = true;
                     // 일직선으로 연속 발사
@@ -140,9 +139,8 @@ public class BossPattern : MonoBehaviour
 
                     yield return new WaitForSeconds(BossDashDelay);
 
-                    Debug.Log("BossDash in Pattern up BossDash()");
-                    BossDash(); 
-                    
+                    BossDash();
+
                     // 2초동안 플레이어와 충돌하지 않으면 멈춤
                     yield return new WaitForSeconds(3.0f);
 
@@ -157,20 +155,43 @@ public class BossPattern : MonoBehaviour
 
             // 보스패턴 대기시간 / 2초 대기
             //yield return new WaitForSeconds(interval / 2f);
-            Debug.Log("BossPaettern End in " + this);
+        }
+    }
+
+    public void StartAttack()
+    {
+        if (repeatActionCoroutine == null) // 이미 실행 중인 경우 중복 실행 방지
+        {
+            repeatActionCoroutine = StartCoroutine(RepeatAction());
+            Debug.Log("Start Attack : " + repeatActionCoroutine.ToString());
+        }
+    }
+
+    public void StopAttack()
+    {
+        if (repeatActionCoroutine != null) // 실행 중인 코루틴이 있는 경우에만 종료
+        {
+            StopCoroutine(repeatActionCoroutine);
+            repeatActionCoroutine = null;
+            Debug.Log("Stop Attack : " + repeatActionCoroutine);
         }
     }
 
     // 보스 사망 모션 후 1초동안 대기, 이후 보스 오브젝트 비활성화
-    IEnumerator BossDead1sec()
+    IEnumerator BossDead1sec(float time)
     {
-        Debug.Log("BossDeadCorutine");
-        yield return new WaitForSeconds(1.0f);        
+        yield return new WaitForSeconds(time);
         Dead();
     }
 
+    IEnumerator WaitHitChange(float time)
+    {
+        yield return new WaitForSeconds(time);
+        spriter.color = Color.white;
+    }
+
     // 발사체 생성 함수
-    void Fire()
+    public void Fire()
     {
         anim.SetTrigger("BossFire");
 
@@ -186,32 +207,42 @@ public class BossPattern : MonoBehaviour
             Vector3 dir = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0).normalized;
 
             // 발사체 생성 및 초기화          
-            Transform bullet = GameManager.instance.pool.GetEnemy(2).transform;
-            bullet.position = transform.position/* + new Vector3(0, 1, 0)*/;  // 총알의 시작 위치
-            bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); // 회전 설정
-            bullet.GetComponent<BossBullet>().Init(BossBulletDamage, dir * fireSpeed);   // 총알 초기화
+            SpawnFireActor(3, new Vector3(0, -2.5f, 0), dir, 1f, true);
         }
     }
 
-    void Fires()
+    public void Fires()
     {
         anim.SetTrigger("BossFire");
 
         // 발사체 발사 방향 계산
-        Vector2 dirVec = targetRigid.position - BossRigid.position;
-        Vector2 nextVec = dirVec.normalized;
+        Vector2 dir = (targetRigid.position - BossRigid.position).normalized;
 
         // 발사체 생성 및 초기화
-        Transform bullet = GameManager.instance.pool.GetEnemy(2).transform;
-        bullet.position = transform.position + new Vector3(0, 1, 0);                // 총알의 시작 위치
-        bullet.rotation = Quaternion.FromToRotation(Vector3.up, nextVec);           // 회전 설정
-        bullet.GetComponent<BossBullet>().Init(BossBulletDamage, nextVec * fireSpeed * 3f);   // 총알 초기화
-        // 연속발사와 사방발사 속도가 동일할 시 연속발사 속도가 너무 느려보여서 임시로 3배 빠르게 설정
+        SpawnFireActor(2, new Vector3(0, -2.5f, 0), dir, 3f, false);
+    }
 
+    public void SpawnFireActor(int index, Vector3 spawnPosition, Vector3 dir, float addspeed, bool isFlip)
+    {
+        // 발사체 생성 및 초기화          
+        Transform bullet = GameManager.instance.pool.GetEnemy(2).transform;
+        bullet.position = transform.position + spawnPosition;  // 총알의 시작 위치
+        if (!isFlip)
+        {
+            bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); // 회전 설정
+        }
+        else
+        {
+            bullet.rotation = Quaternion.FromToRotation(Vector3.up, -dir); // 회전 설정
+        }
+        bullet.GetComponent<BossBullet>().Init(BossBulletDamage, dir * fireSpeed * addspeed, index);   // 총알 초기화
     }
 
     void BossDash()
     {
+        // 돌진 시작시 플레이어 외 다른 오브젝트와의 충돌을 막기위해 isTrigger 활성화
+        gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
+
         // 보스 돌진 애니메이션 재생
         anim.SetBool("isBossDashReady", false);
         anim.SetBool("isBossDash", true);
@@ -228,11 +259,13 @@ public class BossPattern : MonoBehaviour
     }
 
     public void BossStop()
-    {        
+    {
         // Player 충돌 부분에서 선언하기위해 public으로 설정
         if (IsBossDashing)
         {
-            Debug.Log("BossStop");
+            // 돌진이 종료되었을 때 isTrigger 비활성화
+            gameObject.GetComponent<CapsuleCollider2D>().isTrigger = false;
+
             BossRigid.velocity = Vector3.zero;
             isBossAttacking = false;
             IsBossDashing = false;
@@ -244,58 +277,72 @@ public class BossPattern : MonoBehaviour
     void Dead()
     {
         // 보스 사망 시 비활성화
-        Debug.Log("BossDeadFuntion!");
         gameObject.SetActive(false);
 
         // 승리 이벤트 시작
         GameManager.instance.GameVictory();
     }
 
+    void HitColorChange()
+    {
+        // 피격색상(빨간색)으로 변경
+        spriter.color = new Color(1f, 0.54f, 0.54f, 1f);
+
+        // 1초 후 원래색상으로 변경
+        StartCoroutine(WaitHitChange(0.5f));
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
-    {        
-        // 접촉한 오브젝트가 bullet이 아니면 리턴
-        if (!collision.CompareTag("Bullet"))
-            return;
-        //Debug.Log("TriggerEnterCollisionName: " + collision.name);
-
-        currentHp -= collision.GetComponent<Bullet>().damage;
-        /* 
-         * 넉백 구현 부분
-        */
-
-        if (currentHp > 0)
+    {
+        // 접촉한 오브젝트가 bullet일 경우
+        if (collision.CompareTag("Bullet"))
         {
-            // 체력이 남은 경우 피격 애니메이션, 사운드 재생
-            // 보스는 피격 애니메이션 X
-            //AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
 
-            if (!isBossTired && currentHp <= maxHp / 2)
+            //Debug.Log("TriggerEnterCollisionName: " + collision.name);
+
+            currentHp -= collision.GetComponent<Bullet>().damage;
+            HitColorChange();
+            /* 
+             * 넉백 구현 부분
+            */
+
+            if (currentHp > 0)
             {
-                Debug.Log("BossHp is half");
+                // 체력이 남은 경우 피격 애니메이션, 사운드 재생
+                // 보스는 피격 애니메이션 X
+                //AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
 
-                // 보스 지침상태로 전환
-                isBossTired = true;
-                anim.SetBool("isBossTired", true);
+                if (!isBossTired && currentHp <= maxHp / 2)
+                {
+                    Debug.Log("BossHp is half");
 
-                // 이동속도 반으로 감소
-                BossSpeed /= BossSpeed;
+                    // 보스 지침상태로 전환
+                    isBossTired = true;
+                    anim.SetBool("isBossTired", true);
+
+                    // 이동속도 반으로 감소
+                    BossSpeed /= BossSpeed;
+                }
             }
-        } 
-        else
+            else
+            {
+                isBossLive = false;
+                coll.enabled = false;
+                BossRigid.simulated = false;
+                spriter.sortingOrder = 1;
+                isBossTired = false;
+                anim.SetBool("Dead", true);
+                StartCoroutine(BossDead1sec(1.0f));
+                //GameManager.instance.kill++;
+                //GameManager.instance.GetExp();
+                //spawner.bossSpawn = false;
+                //if (GameManager.instance.isLive)
+                //    AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+            }
+        }
+        // 접촉한 오브젝트가 Player인 경우
+        else if (collision.CompareTag("Player"))
         {
-            isBossLive = false;
-            Debug.Log("BossDead!");
-            coll.enabled = false;
-            BossRigid.simulated = false;
-            spriter.sortingOrder = 1;
-            anim.SetBool("Dead", true);
-            isBossTired = false;
-            StartCoroutine(BossDead1sec());
-            GameManager.instance.kill++;
-            GameManager.instance.GetExp();
-            //spawner.bossSpawn = false;
-            //if (GameManager.instance.isLive)
-            //    AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
         }
     }
 }

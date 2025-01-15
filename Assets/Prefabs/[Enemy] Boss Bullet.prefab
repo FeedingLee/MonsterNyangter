@@ -102,6 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchForce: 5
   damage: 100
+  animCon:
+  - {fileID: 9100000, guid: b1dcae99e18120542b5ff58a39311ef7, type: 2}
+  - {fileID: 22100000, guid: 5b85949b5ce82c14691106ec252dadfe, type: 2}
+  - {fileID: 22100000, guid: 656ade510e077d64b811a73097b81cef, type: 2}
+  - {fileID: 22100000, guid: 551f8161407ecc64788796b36bb466a9, type: 2}
 --- !u!50 &4984552824589416198
 Rigidbody2D:
   serializedVersion: 4

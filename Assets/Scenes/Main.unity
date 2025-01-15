@@ -27842,7 +27842,7 @@ MonoBehaviour:
   joystickController: {fileID: 745926493}
   isLive: 0
   gameTime: 0
-  maxGameTime: 240
+  maxGameTime: 2
   isBossSpawn: 0
   playerId: 0
   weaponcode: 0

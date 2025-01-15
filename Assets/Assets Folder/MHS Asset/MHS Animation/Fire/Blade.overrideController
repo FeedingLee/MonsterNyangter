@@ -6,8 +6,8 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BigRock
+  m_Name: Blade
   m_Controller: {fileID: 9100000, guid: b1dcae99e18120542b5ff58a39311ef7, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 2c2b6d50f74870b46baea692e74cb23e, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 6a011a0fd0ed079428d1b094bfeafa18, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1e683a4c433168941add4d8fed0e1df6, type: 2}

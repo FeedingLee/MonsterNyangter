@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
@@ -8,7 +9,7 @@ using UnityEngine.UIElements.Experimental;
 public class BossReposition : MonoBehaviour
 {
     [Header("#BossReposion")]
-    public float fallingWaitTime;      // 낙하하기 전 대기 시간
+    public float fallingWaitTime;       // 낙하하기 전 대기 시간
     public float fallingDistance;       // 이 이상 플레이어와 멀어지면 낙하 시작
     public float fallingSpeed;          // 낙하 속도
     public Transform targetTransform;   // 플레이어 트랜스폼
@@ -22,6 +23,7 @@ public class BossReposition : MonoBehaviour
     Vector2 dirVec;                     // 이동 방향
     GameObject bossShadow;              // 그림자를 저장할 오브젝트
     Animator anim;                      // 보스 애니메이터 
+    Coroutine test;
 
     void Awake()
     {
@@ -34,6 +36,7 @@ public class BossReposition : MonoBehaviour
         targetTransform = GameManager.instance.player.transform;
         bossPattern = gameObject.GetComponent<BossPattern>();
         anim = GetComponent<Animator>();
+        StartCoroutine(StartBossReposition());
     }
 
     void FixedUpdate()
@@ -61,9 +64,8 @@ public class BossReposition : MonoBehaviour
             !isBossFalling &&
             !bossPattern.isBossAttacking)
         {
-            Debug.Log("isBossAttacking: " + bossPattern.isBossAttacking + " in " + this);
             // Reposition 시작
-            StartCoroutine("StartBossReposition");
+            StartCoroutine(StartBossReposition());
         }
 
         // 보스의 목표 방향이 존재할 경우
@@ -77,8 +79,7 @@ public class BossReposition : MonoBehaviour
     IEnumerator StartBossReposition()
     {
         // 보스 공격 패턴 중지
-        Debug.Log("Stop Coroutine Boss Pattern in " + this);
-        StopCoroutine(bossPattern.repeatActionCoroutine);
+        bossPattern.StopAttack();
 
         // 보스 이동 제한
         isBossMove = false;
@@ -98,7 +99,7 @@ public class BossReposition : MonoBehaviour
         bossShadow.GetComponent<BossShadow>().IsTraceTarget = true;
 
         // Boss 위치 하늘로 설정
-        bossTransform.position += new Vector3(0, 500, 0);
+        bossTransform.position += new Vector3(0, 5000, 0);
 
         // 하늘에서 떨어지는 시간 대기
         yield return new WaitForSeconds(fallingWaitTime - 0.5f);
@@ -122,18 +123,33 @@ public class BossReposition : MonoBehaviour
     {
         // 착지 애니메이션이 재생중인 동안 대기
         yield return new WaitForSeconds(waitTime);
-        Debug.Log("wiatTime : " + waitTime);
 
         // 보스 이동 제한 해제
         isBossMove = true;
         isBossFalling = false;
 
         //보스 패턴 재시작
-        Debug.Log("Boss Pattern ReStart");
-        bossPattern.repeatActionCoroutine =
-            StartCoroutine(bossPattern.RepeatAction());
+        bossPattern.StartAttack();
 
         time = 0;
+    }
+
+    void Fire()
+    {
+        // 사방으로 발사하는 패턴
+        float angleStep = 360f / 20;  // 각 발사체 사이의 각도 차이
+
+        for (int i = 0; i < 20; i++)
+        {
+            float angle = i * angleStep;  // 각 발사체의 각도
+            float rad = angle * Mathf.Deg2Rad;  // 각도를 라디안으로 변환
+
+            // 방향 벡터 계산
+            Vector3 dir = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0).normalized;
+
+            // 발사체 생성 및 초기화          
+            bossPattern.SpawnFireActor(0, new Vector3(0, -1.5f, 0), dir, 0.5f, false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -151,6 +167,9 @@ public class BossReposition : MonoBehaviour
 
             // 그림자 비활성화
             bossShadow.SetActive(false);
+
+            // 사방으로 돌맹이 발사
+            Fire();
 
             StartCoroutine(WaitAnim(0.5f));
         }

@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1514022693
-  m_SortingLayer: 3
+  m_SortingLayerID: -651554007
+  m_SortingLayer: 13
   m_SortingOrder: 2
   m_Sprite: {fileID: -2128999610, guid: 228fe585d56770644903f16900ec7c2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -190,7 +190,7 @@ MonoBehaviour:
   bulletCount: 15
   bullet: {fileID: 9015770431737552673, guid: 824ddb02508a8da4aba108fcbcb6578c, type: 3}
   BossBulletDamage: 10
-  fireSpeed: 3
+  fireSpeed: 5
   DashSpeed: 16
   IsBossDashing: 0
   BossDashDamage: 20

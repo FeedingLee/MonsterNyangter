@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_Anjanath_0
+      name: Anjanath_move_00
       rect:
         serializedVersion: 2
         x: 41
-        y: 3811
+        y: 3807
         width: 683
-        height: 1071
+        height: 1075
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,13 +157,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_1
+      name: Anjanath_move_01
       rect:
         serializedVersion: 2
         x: 798
-        y: 3825
-        width: 646
-        height: 1049
+        y: 3807
+        width: 661
+        height: 1067
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,13 +178,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_2
+      name: Anjanath_move_02
       rect:
         serializedVersion: 2
         x: 1588
-        y: 3837
+        y: 3807
         width: 625
-        height: 1030
+        height: 1060
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,13 +199,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_3
+      name: Anjanath_move_03
       rect:
         serializedVersion: 2
-        x: 2368
-        y: 3848
-        width: 617
-        height: 1026
+        x: 2346
+        y: 3807
+        width: 639
+        height: 1067
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,13 +220,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_4
+      name: Anjanath_move_04
       rect:
         serializedVersion: 2
-        x: 3132
-        y: 3859
-        width: 606
-        height: 1023
+        x: 3103
+        y: 3807
+        width: 635
+        height: 1075
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,13 +241,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_5
+      name: Anjanath_move_05
       rect:
         serializedVersion: 2
         x: 3831
-        y: 3811
+        y: 3807
         width: 683
-        height: 1071
+        height: 1075
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,13 +262,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_6
+      name: Anjanath_move_06
       rect:
         serializedVersion: 2
-        x: 4621
-        y: 3825
-        width: 646
-        height: 1049
+        x: 4614
+        y: 3807
+        width: 653
+        height: 1067
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,13 +283,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_7
+      name: Anjanath_move_07
       rect:
         serializedVersion: 2
         x: 5356
-        y: 3837
+        y: 3807
         width: 628
-        height: 1030
+        height: 1060
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,13 +304,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_8
+      name: Anjanath_move_08
       rect:
         serializedVersion: 2
         x: 6102
-        y: 3848
-        width: 617
-        height: 1026
+        y: 3807
+        width: 636
+        height: 1067
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,13 +325,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_9
+      name: Anjanath_move_09
       rect:
         serializedVersion: 2
         x: 6852
-        y: 3859
-        width: 606
-        height: 1023
+        y: 3807
+        width: 635
+        height: 1075
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,13 +346,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_10
+      name: Anjanath_tired_00
       rect:
         serializedVersion: 2
         x: 41
-        y: 2729
+        y: 2721
         width: 683
-        height: 1071
+        height: 1079
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,13 +367,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_11
+      name: Anjanath_tired_01
       rect:
         serializedVersion: 2
         x: 798
-        y: 2744
-        width: 646
-        height: 1045
+        y: 2721
+        width: 661
+        height: 1068
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,13 +388,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_12
+      name: Anjanath_tired_02
       rect:
         serializedVersion: 2
         x: 1588
-        y: 2751
+        y: 2721
         width: 625
-        height: 1034
+        height: 1064
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,13 +409,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_13
+      name: Anjanath_tired_03
       rect:
         serializedVersion: 2
-        x: 2368
-        y: 2762
-        width: 617
-        height: 1027
+        x: 2346
+        y: 2721
+        width: 639
+        height: 1068
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,13 +430,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_14
+      name: Anjanath_tired_04
       rect:
         serializedVersion: 2
-        x: 3132
-        y: 2773
-        width: 606
-        height: 1027
+        x: 3103
+        y: 2721
+        width: 635
+        height: 1079
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,13 +451,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_15
+      name: Anjanath_tired_05
       rect:
         serializedVersion: 2
         x: 3831
-        y: 2729
+        y: 2721
         width: 683
-        height: 1071
+        height: 1079
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,13 +472,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_16
+      name: Anjanath_tired_06
       rect:
         serializedVersion: 2
-        x: 4621
-        y: 2744
-        width: 646
-        height: 1045
+        x: 4614
+        y: 2725
+        width: 653
+        height: 1068
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,13 +493,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_17
+      name: Anjanath_tired_07
       rect:
         serializedVersion: 2
         x: 5356
-        y: 2751
+        y: 2721
         width: 628
-        height: 1034
+        height: 1064
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,13 +514,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_18
+      name: Anjanath_tired_08
       rect:
         serializedVersion: 2
         x: 6102
-        y: 2762
-        width: 617
-        height: 1027
+        y: 2721
+        width: 636
+        height: 1068
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,13 +535,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_19
+      name: Anjanath_tired_09
       rect:
         serializedVersion: 2
         x: 6852
-        y: 2773
-        width: 606
-        height: 1027
+        y: 2721
+        width: 635
+        height: 1079
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,13 +556,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_20
+      name: Anjanath_dash_00
       rect:
         serializedVersion: 2
         x: 22
-        y: 1381
+        y: 1377
         width: 735
-        height: 1318
+        height: 1322
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,13 +577,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_21
+      name: Anjanath_dash_01
       rect:
         serializedVersion: 2
         x: 776
-        y: 1396
+        y: 1377
         width: 738
-        height: 1292
+        height: 1311
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,13 +598,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_22
+      name: Anjanath_dash_02
       rect:
         serializedVersion: 2
         x: 1533
-        y: 1407
+        y: 1377
         width: 735
-        height: 1277
+        height: 1307
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -619,13 +619,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_23
+      name: Anjanath_dash_03
       rect:
         serializedVersion: 2
         x: 2290
-        y: 1418
+        y: 1377
         width: 739
-        height: 1270
+        height: 1311
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,13 +640,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_24
+      name: Anjanath_dash_04
       rect:
         serializedVersion: 2
         x: 3047
-        y: 1425
+        y: 1377
         width: 736
-        height: 1274
+        height: 1322
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -661,13 +661,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_25
+      name: Anjanath_dash_05
       rect:
         serializedVersion: 2
         x: 3797
-        y: 1381
+        y: 1377
         width: 735
-        height: 1318
+        height: 1322
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,13 +682,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_26
+      name: Anjanath_dash_06
       rect:
         serializedVersion: 2
         x: 4558
-        y: 1396
+        y: 1377
         width: 735
-        height: 1292
+        height: 1311
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,13 +703,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_27
+      name: Anjanath_dash_07
       rect:
         serializedVersion: 2
         x: 5301
-        y: 1407
+        y: 1377
         width: 738
-        height: 1277
+        height: 1307
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,13 +724,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_28
+      name: Anjanath_dash_08
       rect:
         serializedVersion: 2
         x: 6058
-        y: 1418
+        y: 1377
         width: 735
-        height: 1270
+        height: 1311
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,13 +745,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_29
+      name: Anjanath_dash_09
       rect:
         serializedVersion: 2
         x: 6808
-        y: 1425
+        y: 1377
         width: 735
-        height: 1274
+        height: 1322
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -766,49 +766,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Dash_4
-      rect:
-        serializedVersion: 2
-        x: 3047
-        y: 81
-        width: 736
-        height: 1248
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f768dced19b7cc4a93af16c0a73ab65
-      internalID: -1354944168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Dash_5
-      rect:
-        serializedVersion: 2
-        x: 3797
-        y: 81
-        width: 735
-        height: 1293
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0197549142247e54e873183cd236c38a
-      internalID: -431415345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Anjanath_32
+      name: Anjanath_bigrock_00
       rect:
         serializedVersion: 2
         x: 5397
@@ -829,7 +787,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_33
+      name: Anjanath_bigrock_01
       rect:
         serializedVersion: 2
         x: 5596
@@ -850,7 +808,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_34
+      name: Anjanath_bigrock_02
       rect:
         serializedVersion: 2
         x: 5810
@@ -871,7 +829,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_35
+      name: Anjanath_bigrock_03
       rect:
         serializedVersion: 2
         x: 5995
@@ -892,7 +850,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_36
+      name: Anjanath_bigrock_04
       rect:
         serializedVersion: 2
         x: 6202
@@ -913,7 +871,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_37
+      name: Anjanath_bigrock_05
       rect:
         serializedVersion: 2
         x: 6401
@@ -934,7 +892,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_38
+      name: Anjanath_bigrock_06
       rect:
         serializedVersion: 2
         x: 6612
@@ -955,7 +913,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_39
+      name: Anjanath_bigrock_07
       rect:
         serializedVersion: 2
         x: 6793
@@ -976,7 +934,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_40
+      name: Anjanath_blade
       rect:
         serializedVersion: 2
         x: 7033
@@ -997,112 +955,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Dash_0
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 81
-        width: 683
-        height: 1064
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a41e2fddd94bfb4889212a85e60d425
-      internalID: 474817739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Dash_1
-      rect:
-        serializedVersion: 2
-        x: 798
-        y: 81
-        width: 646
-        height: 1064
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b205cf3c4b3f634a9fcb077ad2d4c71
-      internalID: 2052100976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Dash_2
-      rect:
-        serializedVersion: 2
-        x: 1551
-        y: 81
-        width: 647
-        height: 1064
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb9aacef44ff7b64baa0383540a922d8
-      internalID: 1160717849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Dash_3
-      rect:
-        serializedVersion: 2
-        x: 2308
-        y: 81
-        width: 632
-        height: 1064
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18449e825e8d2ac4980cd1851cf795f0
-      internalID: -256861172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Anjanath_
-      rect:
-        serializedVersion: 2
-        x: 4573
-        y: 81
-        width: 706
-        height: 942
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d25d8e1c02e98e3498444273cef51121
-      internalID: -900318784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Anjanath_46
+      name: Anjanath_smallrock_00
       rect:
         serializedVersion: 2
         x: 5437
@@ -1123,7 +976,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_47
+      name: Anjanath_smallrock_01
       rect:
         serializedVersion: 2
         x: 5641
@@ -1144,7 +997,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_48
+      name: Anjanath_smallrock_02
       rect:
         serializedVersion: 2
         x: 5844
@@ -1165,7 +1018,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_49
+      name: Anjanath_smallrock_03
       rect:
         serializedVersion: 2
         x: 6047
@@ -1186,7 +1039,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_50
+      name: Anjanath_smallrock_04
       rect:
         serializedVersion: 2
         x: 6243
@@ -1207,7 +1060,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_51
+      name: Anjanath_smallrock_05
       rect:
         serializedVersion: 2
         x: 6446
@@ -1228,7 +1081,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_52
+      name: Anjanath_smallrock_06
       rect:
         serializedVersion: 2
         x: 6645
@@ -1249,7 +1102,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_53
+      name: Anjanath_smallrock_07
       rect:
         serializedVersion: 2
         x: 6834
@@ -1270,7 +1123,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_54
+      name: Anjanath_fire_00
       rect:
         serializedVersion: 2
         x: 5437
@@ -1291,7 +1144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_55
+      name: Anjanath_fire_01
       rect:
         serializedVersion: 2
         x: 5648
@@ -1312,7 +1165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_56
+      name: Anjanath_fire_02
       rect:
         serializedVersion: 2
         x: 5836
@@ -1333,7 +1186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_57
+      name: Anjanath_fire_03
       rect:
         serializedVersion: 2
         x: 6047
@@ -1354,7 +1207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_58
+      name: Anjanath_fire_04
       rect:
         serializedVersion: 2
         x: 6246
@@ -1375,7 +1228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_59
+      name: Anjanath_fire_05
       rect:
         serializedVersion: 2
         x: 6453
@@ -1396,7 +1249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_60
+      name: Anjanath_fire_06
       rect:
         serializedVersion: 2
         x: 6653
@@ -1417,13 +1270,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_61
+      name: Anjanath_fire_07
       rect:
         serializedVersion: 2
         x: 6834
         y: 783
         width: 99
-        height: 151
+        height: 158
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1438,28 +1291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Anjanath_62
-      rect:
-        serializedVersion: 2
-        x: 6848
-        y: 931
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 087876cafc56b444d8f3c40af8c2139c
-      internalID: -487449031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Anjanath_63
+      name: Anjanath_dead
       rect:
         serializedVersion: 2
         x: 5349
@@ -1479,6 +1311,174 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Anjanath_dash_ready_04
+      rect:
+        serializedVersion: 2
+        x: 3047
+        y: 78
+        width: 736
+        height: 1251
+      alignment: 9
+      pivot: {x: 0.51, y: 0.417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ddd7f867607514a961681d73380d6e
+      internalID: 74808052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anjanath_dash_ready_05
+      rect:
+        serializedVersion: 2
+        x: 3797
+        y: 78
+        width: 735
+        height: 1296
+      alignment: 9
+      pivot: {x: 0.501, y: 0.417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9577dd8a2842174989b2cad1142580a
+      internalID: 189636684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anjanath_dash_ready_00
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 78
+        width: 683
+        height: 1067
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2607ef0011b5e24fb880df76d7a13c3
+      internalID: -959359964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anjanath_dash_ready_01
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 78
+        width: 661
+        height: 1067
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0cd69d816c57e408e816828af51144
+      internalID: 6960721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anjanath_dash_ready_02
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 78
+        width: 662
+        height: 1067
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d064a9bae550344b8620d06f73cb784
+      internalID: -958254857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anjanath_dash_ready_03
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 78
+        width: 662
+        height: 1067
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a480470111f62b64cba4da6498833c35
+      internalID: 2090457350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anjanath_dash_ready_06
+      rect:
+        serializedVersion: 2
+        x: 4573
+        y: 81
+        width: 706
+        height: 942
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394395f4bfd1ea44f801dbae77f55dbe
+      internalID: -483598848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anjanath_shadow
+      rect:
+        serializedVersion: 2
+        x: 6863
+        y: 103
+        width: 624
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4f3209902d79f478ad426f02b189d1
+      internalID: 603055112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1490,70 +1490,71 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boss_Anjanath_: -900318784
-      Boss_Anjanath_0: -2128999610
-      Boss_Anjanath_1: -1600682064
-      Boss_Anjanath_10: 501870251
-      Boss_Anjanath_11: -2131418535
-      Boss_Anjanath_12: -184214504
-      Boss_Anjanath_13: -1958350296
-      Boss_Anjanath_14: -1192397537
-      Boss_Anjanath_15: -770458195
-      Boss_Anjanath_16: 985762378
-      Boss_Anjanath_17: 929156929
-      Boss_Anjanath_18: -387491522
-      Boss_Anjanath_19: 516535149
-      Boss_Anjanath_2: -87165148
-      Boss_Anjanath_20: -2110411990
-      Boss_Anjanath_21: 1842181263
-      Boss_Anjanath_22: 2079235627
-      Boss_Anjanath_23: 1682645692
-      Boss_Anjanath_24: -1321980172
-      Boss_Anjanath_25: 930279428
-      Boss_Anjanath_26: 1513837099
-      Boss_Anjanath_27: -2138356060
-      Boss_Anjanath_28: -1695901670
-      Boss_Anjanath_29: 1309359433
-      Boss_Anjanath_3: 1780866223
-      Boss_Anjanath_32: 1699850531
-      Boss_Anjanath_33: -1549303669
-      Boss_Anjanath_34: 1204333796
-      Boss_Anjanath_35: 1837153181
-      Boss_Anjanath_36: 1818399674
-      Boss_Anjanath_37: 1706580085
-      Boss_Anjanath_38: -2101026189
-      Boss_Anjanath_39: 434885927
-      Boss_Anjanath_4: 905743570
-      Boss_Anjanath_40: 777772872
-      Boss_Anjanath_46: 1446639900
-      Boss_Anjanath_47: 1466106859
-      Boss_Anjanath_48: 127074246
-      Boss_Anjanath_49: 438590116
-      Boss_Anjanath_5: -927218673
-      Boss_Anjanath_50: 1339117142
-      Boss_Anjanath_51: -465544221
-      Boss_Anjanath_52: -1538042946
-      Boss_Anjanath_53: 1024599754
-      Boss_Anjanath_54: 31954226
-      Boss_Anjanath_55: 263778775
-      Boss_Anjanath_56: 1876367598
-      Boss_Anjanath_57: 542018687
-      Boss_Anjanath_58: -919337502
-      Boss_Anjanath_59: 1602175122
-      Boss_Anjanath_6: 974972664
-      Boss_Anjanath_60: 1285907526
-      Boss_Anjanath_61: -1254052721
+      Anjanath_bigrock_00: 1699850531
+      Anjanath_bigrock_01: -1549303669
+      Anjanath_bigrock_02: 1204333796
+      Anjanath_bigrock_03: 1837153181
+      Anjanath_bigrock_04: 1818399674
+      Anjanath_bigrock_05: 1706580085
+      Anjanath_bigrock_06: -2101026189
+      Anjanath_bigrock_07: 434885927
+      Anjanath_blade: 777772872
+      Anjanath_dash_00: -2110411990
+      Anjanath_dash_01: 1842181263
+      Anjanath_dash_02: 2079235627
+      Anjanath_dash_03: 1682645692
+      Anjanath_dash_04: -1321980172
+      Anjanath_dash_05: 930279428
+      Anjanath_dash_06: 1513837099
+      Anjanath_dash_07: -2138356060
+      Anjanath_dash_08: -1695901670
+      Anjanath_dash_09: 1309359433
+      Anjanath_dash_ready_00: -959359964
+      Anjanath_dash_ready_01: 6960721
+      Anjanath_dash_ready_02: -958254857
+      Anjanath_dash_ready_03: 2090457350
+      Anjanath_dash_ready_04: 74808052
+      Anjanath_dash_ready_05: 189636684
+      Anjanath_dash_ready_06: -483598848
+      Anjanath_dead: 1961952317
+      Anjanath_fire_00: 31954226
+      Anjanath_fire_01: 263778775
+      Anjanath_fire_02: 1876367598
+      Anjanath_fire_03: 542018687
+      Anjanath_fire_04: -919337502
+      Anjanath_fire_05: 1602175122
+      Anjanath_fire_06: 1285907526
+      Anjanath_fire_07: -1254052721
+      Anjanath_move_00: -2128999610
+      Anjanath_move_01: -1600682064
+      Anjanath_move_02: -87165148
+      Anjanath_move_03: 1780866223
+      Anjanath_move_04: 905743570
+      Anjanath_move_05: -927218673
+      Anjanath_move_06: 974972664
+      Anjanath_move_07: 421653713
+      Anjanath_move_08: -136059497
+      Anjanath_move_09: 810918677
+      Anjanath_shadow: 603055112
+      Anjanath_smallrock_00: 1446639900
+      Anjanath_smallrock_01: 1466106859
+      Anjanath_smallrock_02: 127074246
+      Anjanath_smallrock_03: 438590116
+      Anjanath_smallrock_04: 1339117142
+      Anjanath_smallrock_05: -465544221
+      Anjanath_smallrock_06: -1538042946
+      Anjanath_smallrock_07: 1024599754
+      Anjanath_tired_00: 501870251
+      Anjanath_tired_01: -2131418535
+      Anjanath_tired_02: -184214504
+      Anjanath_tired_03: -1958350296
+      Anjanath_tired_04: -1192397537
+      Anjanath_tired_05: -770458195
+      Anjanath_tired_06: 985762378
+      Anjanath_tired_07: 929156929
+      Anjanath_tired_08: -387491522
+      Anjanath_tired_09: 516535149
       Boss_Anjanath_62: -487449031
-      Boss_Anjanath_63: 1961952317
-      Boss_Anjanath_7: 421653713
-      Boss_Anjanath_8: -136059497
-      Boss_Anjanath_9: 810918677
-      Boss_Dash_0: 474817739
-      Boss_Dash_1: 2052100976
-      Boss_Dash_2: 1160717849
-      Boss_Dash_3: -256861172
-      Boss_Dash_4: -1354944168
-      Boss_Dash_5: -431415345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
