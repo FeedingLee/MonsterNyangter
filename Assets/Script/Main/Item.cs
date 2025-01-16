@@ -158,9 +158,8 @@ public class Item : MonoBehaviour
                 GameManager.instance.player.scanner.expScanRange ++;
                 break;
             case ItemData.ItemType.Exp_Coupon:
-                Exp_Bonus = 1;
-                StopAllCoroutines();
-                StartCoroutine(CouponTime());
+                Exp_Bonus = 1;   
+                GameManager.expbonuscheck = 0;
                 break;
         }
 
@@ -168,12 +167,5 @@ public class Item : MonoBehaviour
         {
             GetComponent<Button>().interactable = false;
         }
-    }
-
-    IEnumerator CouponTime()
-    {        
-        yield return new WaitForSeconds(1.0f);
-        Exp_Bonus = 0;
-        StopAllCoroutines();
     }
 }

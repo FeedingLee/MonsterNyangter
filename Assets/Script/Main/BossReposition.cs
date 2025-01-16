@@ -25,6 +25,11 @@ public class BossReposition : MonoBehaviour
     Animator anim;                      // 보스 애니메이터 
     Coroutine test;
 
+    [Header("# Multi-Directional Firing")]   // 전방향 발사 관련 변수
+    public int MBulletCount;                 // 발사 갯수 20
+    public float MBossBulletDamage;          // 발사 데미지
+    public float MFireSpeed;                 // 발사 속도 0.5
+
     void Awake()
     {
         bossTransform = transform;
@@ -100,6 +105,7 @@ public class BossReposition : MonoBehaviour
 
         // Boss 위치 하늘로 설정
         bossTransform.position += new Vector3(0, 5000, 0);
+        Debug.Log("bossPosition(in reposition) : " +  bossTransform.position);
 
         // 하늘에서 떨어지는 시간 대기
         yield return new WaitForSeconds(fallingWaitTime - 0.5f);
@@ -137,9 +143,9 @@ public class BossReposition : MonoBehaviour
     void Fire()
     {
         // 사방으로 발사하는 패턴
-        float angleStep = 360f / 20;  // 각 발사체 사이의 각도 차이
+        float angleStep = 360f / MBulletCount;  // 각 발사체 사이의 각도 차이
 
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < MBulletCount; i++)
         {
             float angle = i * angleStep;  // 각 발사체의 각도
             float rad = angle * Mathf.Deg2Rad;  // 각도를 라디안으로 변환
@@ -148,7 +154,7 @@ public class BossReposition : MonoBehaviour
             Vector3 dir = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0).normalized;
 
             // 발사체 생성 및 초기화          
-            bossPattern.SpawnFireActor(0, new Vector3(0, -1.5f, 0), dir, 0.5f, false);
+            bossPattern.SpawnFireActor(MBossBulletDamage, 0, new Vector3(0, -1.5f, 0), dir, MFireSpeed, false);
         }
     }
 

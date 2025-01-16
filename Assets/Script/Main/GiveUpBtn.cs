@@ -34,6 +34,7 @@ public class GiveUpBtn : MonoBehaviour
             Weapon.LC_level = 0;
             // 경험치 보너스 상태 초기화
             Item.Exp_Bonus = 0;
+            GameManager.expbonuscheck = 0;
 
             SceneManager.LoadScene("Main");
         }

@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public float maxGameTime = 2 * 10f;
     // 보스 스폰시 추가 생성을 막기위한 변수
     public bool isBossSpawn = false;
+    // 경험치 보너스 코루틴 확인용 변수
+    public static int expbonuscheck = 0;
+    private IEnumerator expcoroutine;
     [Header("# Player Info")]
     public int playerId;
     public int weaponcode;
@@ -36,8 +39,33 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        expcoroutine = CouponTime();
+
         instance = this;
         Application.targetFrameRate = 60;
+    }
+
+    void Update()
+    {
+        if (expbonuscheck == 0 && Item.Exp_Bonus == 1)
+        {
+            Exp_Fever();
+        }        
+
+        if (!isLive)
+            return;
+
+        gameTime += Time.deltaTime;
+
+        if (gameTime > maxGameTime && !isBossSpawn)
+        {
+            isBossSpawn = true;
+            gameTime = maxGameTime;
+            Debug.Log("BossSpawn");
+            // 보스 스폰
+            player.GetComponentInChildren<Spawner>().BossSpawn();
+            //GameVictory();
+        }
     }
 
     public void GameStart(int id)
@@ -90,6 +118,7 @@ public class GameManager : MonoBehaviour
         Weapon.LC_level = 0;
         // 경험치 보너스 상태 초기화
         Item.Exp_Bonus = 0;
+        expbonuscheck = 0;
 
         isLive = false;
 
@@ -123,6 +152,7 @@ public class GameManager : MonoBehaviour
         Weapon.LC_level = 0;
         // 경험치 보너스 상태 초기화
         Item.Exp_Bonus = 0;
+        expbonuscheck = 0;
 
         isLive = false;
         enemyCleaner.SetActive(true);
@@ -146,40 +176,7 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-    void Update()
-    {
-        if (!isLive)
-            return;
-
-        gameTime += Time.deltaTime;
-
-        if (gameTime > maxGameTime && !isBossSpawn)
-        {
-            isBossSpawn = true;
-            gameTime = maxGameTime;
-            Debug.Log("BossSpawn");
-            // 보스 스폰
-            player.GetComponentInChildren<Spawner>().BossSpawn();
-            //GameVictory();
-        }
-    }
-
-    public void GetExp()
-    {
-        if (!isLive)
-            return;
-
-        exp++;
-
-        if (exp >= nextExp[Mathf.Min(level, nextExp.Length-1)])
-        {
-            level++;
-            exp = 0;
-            uiLevelUp.Show();
-        }
-    }
-
+ 
     public void Stop()
     {
         isLive = false;
@@ -199,5 +196,37 @@ public class GameManager : MonoBehaviour
         {
             joystickHandle.ResetJoystick();
         }
+    }
+
+    public void GetExp()
+    {
+        if (!isLive)
+            return;
+
+        exp++;
+
+        if (exp >= nextExp[Mathf.Min(level, nextExp.Length - 1)])
+        {
+            level++;
+            exp = 0;
+            uiLevelUp.Show();
+        }
+    }
+
+    public void Exp_Fever()
+    {        
+        StopCoroutine(expcoroutine);
+        expbonuscheck = 1;
+
+        expcoroutine = CouponTime();
+        StartCoroutine(expcoroutine);
+    }
+
+    IEnumerator CouponTime()
+    {       
+        yield return new WaitForSeconds(5.0f);
+        Item.Exp_Bonus = 0;
+        expbonuscheck = 0;
+        StopCoroutine(expcoroutine);
     }
 }

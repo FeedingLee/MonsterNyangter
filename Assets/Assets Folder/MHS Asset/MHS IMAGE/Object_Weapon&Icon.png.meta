@@ -1173,7 +1173,7 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1181,6 +1181,27 @@ TextureImporter:
       bones: []
       spriteID: ee9d50677b15f41439d741331d6ec829
       internalID: -397397001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Exp_Coupon
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 580
+        width: 120
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e12014dc873e6549b4ec9ebb9813ccb
+      internalID: -1985362282
       vertices: []
       indices: 
       edges: []
@@ -1217,6 +1238,7 @@ TextureImporter:
       Exp_01: 1214291224
       Exp_02: 1081478282
       Exp_03: 1867550603
+      Exp_Coupon: -1985362282
       Frog_Field: 1426768971
       Frog_Icon: 427436744
       GreatSword_Icon: 433959214

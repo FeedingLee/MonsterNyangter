@@ -8,20 +8,28 @@ using UnityEngine;
 
 public class BossPattern : MonoBehaviour
 {
-    public Rigidbody2D targetRigid;          // 플레이어 추적
-    public Spawner spawner;                  // 보스스폰을 위해 선언
-
-    [Header("# BossBullet")]
-    public float interval;                   // 다음 발사까지의 쿨타임
-    public int bulletCount;                  // 발사 갯수
-    public GameObject bullet;                // 발사 오브젝트
-    public float BossBulletDamage;           // 발사 데미지
-    public float fireSpeed;                  // 발사 속도
-    //public int count;                      // 발사 ??? : 필요없는것같아서 일단 주석처리
     Rigidbody2D BossRigid;                   // 발사 오브젝트(Boss) 의 Rigidbody2D
     Animator anim;
     SpriteRenderer spriter;
     Collider2D coll;
+
+    public Rigidbody2D targetRigid;          // 플레이어 추적
+    public Spawner spawner;                  // 보스스폰을 위해 선언
+
+    [Header("# Multi-Directional Firing")]   // 전방향 발사 관련 변수
+    public int MBulletCount;                 // 발사 갯수
+    public float MBossBulletDamage;          // 발사 데미지
+    public float MFireSpeed;                 // 발사 속도
+
+    [Header("# One-Directional Firing")]     // 단일방향 발사 관련 변수
+    public int OBulletCount;                 // 발사 갯수
+    public float OBossBulletDamage;          // 발사 데미지
+    public float OFireSpeed;                 // 발사 속도
+
+/*    [Header("# BossBullet")]
+    public int bulletCount;                  // 발사 갯수
+    public float BossBulletDamage;           // 발사 데미지
+    public float fireSpeed;                  // 발사 속도*/
 
     [Header("# BossDash")]
     public float DashSpeed;                  // 돌진 속도
@@ -30,6 +38,7 @@ public class BossPattern : MonoBehaviour
     public float BossDashDelay;              // 보스 돌진 대기 시간
 
     [Header("# BossState")]
+    public float interval;                   // 다음 패턴까지의 쿨타임
     public float BossSpeed;                  // 보스 이동 속도
     public float currentHp;                  // 보스 현재 체력
     public float maxHp;                      // 보스 최대 체력
@@ -95,7 +104,7 @@ public class BossPattern : MonoBehaviour
             // 소환되자마자 발사하는것을 막음, 보스패턴 대기시간 / 2 초 대기
             yield return new WaitForSeconds(interval);
 
-            // 패턴을 랜덤으로 선택
+            // 패턴을 랜덤으로 선택 @@ 테스트 0~1
             int number = Random.Range(0, 3);
 
             if (gameObject.GetComponent<BossReposition>().isBossFalling)
@@ -105,8 +114,9 @@ public class BossPattern : MonoBehaviour
                 StopCoroutine(repeatActionCoroutine);
             }
 
-            // 테스트
-            //number = 0;
+            // 보스 패턴 테스트용 변수
+            // 0 = 사방으로 쏘기 / 1 = 일직선 / 2 = 돌진
+            number = 2;
 
             // 반복할 동작
             switch (number)
@@ -120,10 +130,10 @@ public class BossPattern : MonoBehaviour
                 case 1:
                     isBossAttacking = true;
                     // 일직선으로 연속 발사
-                    for (int i = 0; i < bulletCount; i++)
+                    for (int i = 0; i < OBulletCount; i++)
                     {
                         // 0.1초(밸런스에 따라 조절) 안에 일정 간격으로 발사횟수만큼 발사
-                        yield return new WaitForSeconds(1.0f / bulletCount);
+                        yield return new WaitForSeconds(1.0f / OBulletCount);
                         Fires();
                     }
                     isBossAttacking = false;
@@ -196,9 +206,9 @@ public class BossPattern : MonoBehaviour
         anim.SetTrigger("BossFire");
 
         // 사방으로 발사하는 패턴
-        float angleStep = 360f / bulletCount;  // 각 발사체 사이의 각도 차이
+        float angleStep = 360f / MBulletCount;  // 각 발사체 사이의 각도 차이
 
-        for (int i = 0; i < bulletCount; i++)
+        for (int i = 0; i < MBulletCount; i++)
         {
             float angle = i * angleStep;  // 각 발사체의 각도
             float rad = angle * Mathf.Deg2Rad;  // 각도를 라디안으로 변환
@@ -207,7 +217,7 @@ public class BossPattern : MonoBehaviour
             Vector3 dir = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0).normalized;
 
             // 발사체 생성 및 초기화          
-            SpawnFireActor(3, new Vector3(0, -2.5f, 0), dir, 1f, true);
+            SpawnFireActor(MBossBulletDamage, 3, new Vector3(0, -2.5f, 0), dir, MFireSpeed, true);
         }
     }
 
@@ -219,11 +229,20 @@ public class BossPattern : MonoBehaviour
         Vector2 dir = (targetRigid.position - BossRigid.position).normalized;
 
         // 발사체 생성 및 초기화
-        SpawnFireActor(2, new Vector3(0, -2.5f, 0), dir, 3f, false);
+        SpawnFireActor(OBossBulletDamage, 2, new Vector3(0, -2.5f, 0), dir, OFireSpeed, false);
     }
 
-    public void SpawnFireActor(int index, Vector3 spawnPosition, Vector3 dir, float addspeed, bool isFlip)
+    public void SpawnFireActor(
+        float bulletDamage, int index, Vector3 spawnPosition, Vector3 dir, float addspeed, bool isFlip)
     {
+        /* 
+         * 매개변수 설명
+         * bulletDamage : 탄환 데미지
+         * spawnmPosition : 탄환 스폰 위치 조절값
+         * dir : 탄환의 발사 방향
+         * addSpeed : 탄환 속도 조절값
+         * isFlip: 탄환 회전(0도 or 180도) 조절값
+         */
         // 발사체 생성 및 초기화          
         Transform bullet = GameManager.instance.pool.GetEnemy(2).transform;
         bullet.position = transform.position + spawnPosition;  // 총알의 시작 위치
@@ -235,7 +254,7 @@ public class BossPattern : MonoBehaviour
         {
             bullet.rotation = Quaternion.FromToRotation(Vector3.up, -dir); // 회전 설정
         }
-        bullet.GetComponent<BossBullet>().Init(BossBulletDamage, dir * fireSpeed * addspeed, index);   // 총알 초기화
+        bullet.GetComponent<BossBullet>().Init(bulletDamage, dir * addspeed, index);   // 총알 초기화
     }
 
     void BossDash()
@@ -289,10 +308,10 @@ public class BossPattern : MonoBehaviour
         spriter.color = new Color(1f, 0.54f, 0.54f, 1f);
 
         // 1초 후 원래색상으로 변경
-        StartCoroutine(WaitHitChange(0.5f));
+        StartCoroutine(WaitHitChange(0.1f));
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         // 접촉한 오브젝트가 bullet일 경우
         if (collision.CompareTag("Bullet"))
@@ -339,10 +358,6 @@ public class BossPattern : MonoBehaviour
                 //if (GameManager.instance.isLive)
                 //    AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
             }
-        }
-        // 접촉한 오브젝트가 Player인 경우
-        else if (collision.CompareTag("Player"))
-        {
         }
     }
 }

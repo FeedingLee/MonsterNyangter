@@ -170,7 +170,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 6.5, y: 10}
+  m_Size: {x: 6, y: 10}
   m_Direction: 0
 --- !u!114 &2448683496518289159
 MonoBehaviour:
@@ -186,15 +186,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRigid: {fileID: 0}
   spawner: {fileID: 0}
-  interval: 2
-  bulletCount: 15
-  bullet: {fileID: 9015770431737552673, guid: 824ddb02508a8da4aba108fcbcb6578c, type: 3}
-  BossBulletDamage: 10
-  fireSpeed: 5
+  MBulletCount: 0
+  MBossBulletDamage: 0
+  MFireSpeed: 0
+  OBulletCount: 0
+  OBossBulletDamage: 0
+  OFireSpeed: 0
   DashSpeed: 16
   IsBossDashing: 0
   BossDashDamage: 20
   BossDashDelay: 4
+  interval: 2
   BossSpeed: 3
   currentHp: 0
   maxHp: 3000
@@ -220,3 +222,6 @@ MonoBehaviour:
   isBossFalling: 0
   WaitReposition: 5
   bossPattern: {fileID: 0}
+  MBulletCount: 0
+  MBossBulletDamage: 0
+  MFireSpeed: 0
