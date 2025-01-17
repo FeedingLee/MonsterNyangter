@@ -137,15 +137,18 @@ public class BossPattern : MonoBehaviour
                     }
                     isBossAttacking = false;
                     break;
-                case 2:
+                case 2:                   
                     // 돌진 대기 n초
                     IsBossDashing = true;
                     isBossAttacking = true;
 
                     // 보스 돌진 애니메이션 재생
                     anim.SetBool("isBossDashReady", true);
-                    // BossDashDelay 만큼 시간이 지난후 Setbool false
 
+                    // 보스 돌진대기 포효 사운드 재생
+                    AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_DashYelling);
+
+                    // BossDashDelay 만큼 시간이 지난후 Setbool false
                     yield return new WaitForSeconds(BossDashDelay);
 
                     BossDash();
@@ -186,8 +189,8 @@ public class BossPattern : MonoBehaviour
         }
     }
 
-    // 보스 사망 모션 후 1초동안 대기, 이후 보스 오브젝트 비활성화
-    IEnumerator BossDead1sec(float time)
+    // 보스 사망 모션 후 n초동안 대기, 이후 보스 오브젝트 비활성화
+    IEnumerator BossDeadsec(float time)
     {
         yield return new WaitForSeconds(time);
         Dead();
@@ -202,6 +205,9 @@ public class BossPattern : MonoBehaviour
     // 발사체 생성 함수
     public void Fire()
     {
+        // 보스 화염 사운드 재생
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_FireShoot);
+
         anim.SetTrigger("BossFire");
 
         // 사방으로 발사하는 패턴
@@ -222,6 +228,9 @@ public class BossPattern : MonoBehaviour
 
     public void Fires()
     {
+        // 보스 칼날 사운드 재생
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Blade);
+
         anim.SetTrigger("BossFire");
 
         // 발사체 발사 방향 계산
@@ -258,6 +267,9 @@ public class BossPattern : MonoBehaviour
 
     void BossDash()
     {
+        // 보스 대쉬중 사운드 재생
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dash);
+
         // 돌진 시작시 플레이어 외 다른 오브젝트와의 충돌을 막기위해 isTrigger 활성화
         gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
 
@@ -294,6 +306,9 @@ public class BossPattern : MonoBehaviour
 
     void Dead()
     {
+        // 보스 사망 사운드 재생
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dead);
+
         // 보스 사망 시 비활성화
         gameObject.SetActive(false);
 
@@ -306,8 +321,8 @@ public class BossPattern : MonoBehaviour
         // 피격색상(빨간색)으로 변경
         spriter.color = new Color(1f, 0.54f, 0.54f, 1f);
 
-        // 1초 후 원래색상으로 변경
-        StartCoroutine(WaitHitChange(0.25f));
+        // 0.4초 후 원래색상으로 변경
+        StartCoroutine(WaitHitChange(0.4f));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -315,21 +330,11 @@ public class BossPattern : MonoBehaviour
         // 접촉한 오브젝트가 bullet일 경우
         if (collision.CompareTag("Bullet"))
         {
-
-            //Debug.Log("TriggerEnterCollisionName: " + collision.name);
-
             currentHp -= collision.GetComponent<Bullet>().damage;
             HitColorChange();
-            /* 
-             * 넉백 구현 부분
-            */
 
             if (currentHp > 0)
             {
-                // 체력이 남은 경우 피격 애니메이션, 사운드 재생
-                // 보스는 피격 애니메이션 X
-                //AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
-
                 if (!isBossTired && currentHp <= maxHp / 2)
                 {
                     Debug.Log("BossHp is half");
@@ -354,7 +359,7 @@ public class BossPattern : MonoBehaviour
                 spriter.sortingOrder = 1;
                 isBossTired = false;
                 anim.SetBool("Dead", true);
-                StartCoroutine(BossDead1sec(1.0f));
+                StartCoroutine(BossDeadsec(5.0f));
                 //GameManager.instance.kill++;
                 //GameManager.instance.GetExp();
                 //spawner.bossSpawn = false;

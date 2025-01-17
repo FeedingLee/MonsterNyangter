@@ -241,13 +241,13 @@ MonoBehaviour:
   MBulletCount: 20
   MBossBulletDamage: 1000
   MFireSpeed: 5
-  OBulletCount: 20
+  OBulletCount: 10
   OBossBulletDamage: 1000
   OFireSpeed: 5
   DashSpeed: 20
   BossDashDamage: 1000
   BossDashDelay: 2
-  interval: 0
+  interval: 1
   LBulletCount: 20
   LBossBulletDamage: 1000
   LFireSpeed: 5

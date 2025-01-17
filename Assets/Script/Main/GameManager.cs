@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
         Stop();
 
         AudioManager.instance.PlayBgm(false);
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Game_Lose);
     }
 
     public void GameVictory()
@@ -164,7 +164,7 @@ public class GameManager : MonoBehaviour
         Stop();
 
         AudioManager.instance.PlayBgm(false);
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Game_Win);
     }
 
     public void GameRetry()

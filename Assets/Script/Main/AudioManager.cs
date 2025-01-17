@@ -15,7 +15,6 @@ public class AudioManager : MonoBehaviour
     [Header("# Checking Is Playing")]
     public GameObject Need_GameResult_Obj;
     public GameObject Need_Player_Obj;
-
     [Header("# Game Playing BGM")]
     public List<AudioClip> bgmClip = new List<AudioClip>();
     [Header("# Waiting Room BGM")]
@@ -35,18 +34,26 @@ public class AudioManager : MonoBehaviour
     int channelIndex;
 
     public enum Sfx { 
-        Dead = 0,
-        Hit = 3, 
-        LevelUp = 6, 
-        Lose = 7, 
-        Melee = 8,
+        Enemy_Dead = 0,
+        Enemy_Hit = 3, 
+        Player_LevelUp = 6, 
+        Game_Lose = 7, 
+        Weapon_Melee = 8,
         Select = 11,
-        Range = 12, 
-        Win = 15,
+        Weapon_Range = 12,
+        Game_Win = 15,
         NyanEaster = 16,
-        Sniper = 17,
-        GreatSword = 20,
-        ChargeMod = 23
+        Weapon_Sniper = 17,
+        Weapon_GreatSword = 20,
+        Weapon_ChargeMod = 23,
+        Anj_FireShoot,
+        Anj_Rock,
+        Anj_Blade,
+        Anj_DashYelling,
+        Anj_Dash,
+        Anj_Jump,
+        Anj_Landing,
+        Anj_Dead
     }
 
     void Awake()
@@ -120,7 +127,8 @@ public class AudioManager : MonoBehaviour
                 continue;
 
             int ranIndex = 0;
-            if (sfx == Sfx.Dead || sfx == Sfx.Hit || sfx == Sfx.Melee || sfx == Sfx.Range || sfx == Sfx.Sniper || sfx == Sfx.GreatSword)
+            if (sfx == Sfx.Enemy_Dead || sfx == Sfx.Enemy_Hit 
+                || sfx == Sfx.Weapon_Melee || sfx == Sfx.Weapon_Range || sfx == Sfx.Weapon_Sniper || sfx == Sfx.Weapon_GreatSword)
             {
                 ranIndex = Random.Range(0, 3);
             }

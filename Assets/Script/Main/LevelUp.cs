@@ -31,7 +31,7 @@ public class LevelUp : MonoBehaviour
         Joy.gameObject.SetActive(false);
         Stick.gameObject.SetActive(false);
         GameManager.instance.Stop();
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.LevelUp);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Player_LevelUp);
         AudioManager.instance.EffectBgm(true);
     }
 

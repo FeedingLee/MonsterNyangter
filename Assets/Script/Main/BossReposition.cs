@@ -83,6 +83,9 @@ public class BossReposition : MonoBehaviour
 
     IEnumerator StartBossReposition()
     {
+        // 보스 점프 사운드 재생
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Jump);
+
         // 하강중에는 충돌 판정을 제거
         gameObject.GetComponent<CapsuleCollider2D>().size = new Vector2(1.2f, 1.2f);
 
@@ -144,6 +147,9 @@ public class BossReposition : MonoBehaviour
 
     void Fire()
     {
+        // 보스 착지 후 돌튀는 사운드 재생
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Rock);
+
         // 사방으로 발사하는 패턴
         float angleStep = 360f / LBulletCount;  // 각 발사체 사이의 각도 차이
 
@@ -164,6 +170,9 @@ public class BossReposition : MonoBehaviour
     {
         if (collision.tag == "BossShadow")
         {
+            // 보스 착지 사운드 재생
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Landing);
+
             // 착지 애니메이션 재생
             anim.SetTrigger("isBossRanding");
 

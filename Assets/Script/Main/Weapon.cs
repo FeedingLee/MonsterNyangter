@@ -352,7 +352,7 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
 
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Weapon_Range);
     }
 
     // 헤비보우건 배치 + 공격 로직
@@ -370,7 +370,7 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
 
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Sniper);                         // 발사 소리
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Weapon_Sniper);                         // 발사 소리
     }
 
     // 대검 회전 공격 코루틴
@@ -380,7 +380,7 @@ public class Weapon : MonoBehaviour
 
         while (rotationCount < count)                                                   // count 횟수만큼 회전을 반복
         {
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.GreatSword);                 // 무기 사운드
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Weapon_GreatSword);                 // 무기 사운드
             float rotatedAmount = 0f;                                                   // 회전 누적값을 초기화         
 
             while (rotatedAmount < (360f * count))                                      // count 수만큼(바퀴) 360도를 회전
@@ -426,7 +426,7 @@ public class Weapon : MonoBehaviour
         if (lancecharge == true)
         {
             LanceShieldMod();
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.ChargeMod);                  // 무기 사운드
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Weapon_ChargeMod);           // 무기 사운드
             damage = Critical_Damage;
 
             Chargespeed = player.speed + count;                                         // 돌진모드의 속도 저장
