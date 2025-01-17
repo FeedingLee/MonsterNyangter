@@ -107,16 +107,15 @@ public class BossPattern : MonoBehaviour
             // 패턴을 랜덤으로 선택 @@ 테스트 0~1
             int number = Random.Range(0, 3);
 
-            if (gameObject.GetComponent<BossReposition>().isBossFalling)
+            if (gameObject.GetComponent<BossReposition>().IsBossFalling)
             {
                 // 보스가 텔포중일 때 공격기능 막음
                 //Debug.Log("isBossFalling, stop attack in " + this);
                 StopCoroutine(repeatActionCoroutine);
             }
 
-            // 보스 패턴 테스트용 변수
-            // 0 = 사방으로 쏘기 / 1 = 일직선 / 2 = 돌진
-            number = 2;
+            // 테스트
+            //number = 2;
 
             // 반복할 동작
             switch (number)
@@ -308,10 +307,10 @@ public class BossPattern : MonoBehaviour
         spriter.color = new Color(1f, 0.54f, 0.54f, 1f);
 
         // 1초 후 원래색상으로 변경
-        StartCoroutine(WaitHitChange(0.1f));
+        StartCoroutine(WaitHitChange(0.25f));
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // 접촉한 오브젝트가 bullet일 경우
         if (collision.CompareTag("Bullet"))
@@ -341,6 +340,10 @@ public class BossPattern : MonoBehaviour
 
                     // 이동속도 반으로 감소
                     BossSpeed /= BossSpeed;
+
+                    // 광폭화
+                    gameObject.GetComponent<BossBerserkMode>().Init();
+                    Debug.Log("BossBerserkMode");
                 }
             }
             else
@@ -358,6 +361,12 @@ public class BossPattern : MonoBehaviour
                 //if (GameManager.instance.isLive)
                 //    AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
             }
+        }
+        // 보스가 돌진중에 벽에 충돌할 경우 멈춤
+        else if (collision.CompareTag("Wall"))
+        {
+            Debug.Log("stop wall");
+            BossStop();
         }
     }
 }

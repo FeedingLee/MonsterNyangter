@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7423158204540949287}
   - component: {fileID: 2448683496518289159}
   - component: {fileID: -6791970273465413145}
+  - component: {fileID: 2185881017450112496}
   m_Layer: 6
   m_Name: '[Enemy] Boss'
   m_TagString: Boss
@@ -170,7 +171,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 6, y: 10}
+  m_Size: {x: 6.5, y: 10}
   m_Direction: 0
 --- !u!114 &2448683496518289159
 MonoBehaviour:
@@ -186,13 +187,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRigid: {fileID: 0}
   spawner: {fileID: 0}
-  MBulletCount: 0
-  MBossBulletDamage: 0
-  MFireSpeed: 0
-  OBulletCount: 0
-  OBossBulletDamage: 0
-  OFireSpeed: 0
-  DashSpeed: 16
+  MBulletCount: 1
+  MBossBulletDamage: 1
+  MFireSpeed: 1
+  OBulletCount: 1
+  OBossBulletDamage: 1
+  OFireSpeed: 1
+  DashSpeed: 5
   IsBossDashing: 0
   BossDashDamage: 20
   BossDashDelay: 4
@@ -219,9 +220,34 @@ MonoBehaviour:
   fallingSpeed: 80
   targetTransform: {fileID: 0}
   isBossMove: 0
-  isBossFalling: 0
+  IsBossFalling: 0
   WaitReposition: 5
   bossPattern: {fileID: 0}
-  MBulletCount: 0
-  MBossBulletDamage: 0
-  MFireSpeed: 0
+  LBulletCount: 1
+  LBossBulletDamage: 1
+  LFireSpeed: 1
+--- !u!114 &2185881017450112496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800947392654503384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e45a7eba6efb5540b7d50c19edb3bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MBulletCount: 20
+  MBossBulletDamage: 1000
+  MFireSpeed: 5
+  OBulletCount: 20
+  OBossBulletDamage: 1000
+  OFireSpeed: 5
+  DashSpeed: 20
+  BossDashDamage: 1000
+  BossDashDelay: 2
+  interval: 0
+  LBulletCount: 20
+  LBossBulletDamage: 1000
+  LFireSpeed: 5

@@ -27842,16 +27842,16 @@ MonoBehaviour:
   joystickController: {fileID: 745926493}
   isLive: 0
   gameTime: 0
-  maxGameTime: 900
+  maxGameTime: 600
   isBossSpawn: 0
   playerId: 0
   weaponcode: 0
-  health: 5000
-  maxHealth: 5000
+  health: 200
+  maxHealth: 200
   level: 0
   kill: 0
   exp: 0
-  nextExp: 05000000050000000500000005000000050000000500000005000000050000000500000005000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000009f860100
+  nextExp: 050000000a0000000f00000014000000190000001e00000023000000280000002d000000320000003c00000046000000500000005a00000064000000780000008c000000a0000000b4000000c8000000f000000018010000400100006801000090010000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -39567,7 +39567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 5
+  speed: 3
   memoryspeed: 0
   scanner: {fileID: 0}
   animCon:
@@ -40171,7 +40171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &683695229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -254833,26 +254833,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.1
+  - spawnTime: 0.8
     spriteType: 0
-    health: 50
-    speed: 2.5
-  - spawnTime: 0.5
+    health: 30
+    speed: 0.8
+  - spawnTime: 0.7
     spriteType: 1
-    health: 100
-    speed: 1.5
-  - spawnTime: 0.5
+    health: 50
+    speed: 1.2
+  - spawnTime: 0.6
     spriteType: 2
-    health: 100
-    speed: 2
-  - spawnTime: 0.9
+    health: 120
+    speed: 1.8
+  - spawnTime: 0.5
     spriteType: 3
-    health: 100
-    speed: 2.5
-  - spawnTime: 0.9
+    health: 200
+    speed: 2.3
+  - spawnTime: 0.3
     spriteType: 4
-    health: 100
-    speed: 3
+    health: 300
+    speed: 2.5
   bossSpawnData:
   - speed: 2
     health: 1000
