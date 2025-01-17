@@ -52,7 +52,8 @@ public class AudioManager : MonoBehaviour
         Anj_DashYelling,
         Anj_Dash,
         Anj_Landing,
-        Anj_Dead
+        Anj_Dead,
+        Anj_Jump
     }
 
     void Awake()

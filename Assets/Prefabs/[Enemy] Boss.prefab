@@ -187,12 +187,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRigid: {fileID: 0}
   spawner: {fileID: 0}
-  MBulletCount: 1
+  MBulletCount: 10
   MBossBulletDamage: 1
-  MFireSpeed: 1
-  OBulletCount: 1
+  MFireSpeed: 3
+  OBulletCount: 10
   OBossBulletDamage: 1
-  OFireSpeed: 1
+  OFireSpeed: 7
   DashSpeed: 5
   IsBossDashing: 0
   BossDashDamage: 20
@@ -223,9 +223,9 @@ MonoBehaviour:
   IsBossFalling: 0
   WaitReposition: 5
   bossPattern: {fileID: 0}
-  LBulletCount: 1
+  LBulletCount: 20
   LBossBulletDamage: 1
-  LFireSpeed: 1
+  LFireSpeed: 5
 --- !u!114 &2185881017450112496
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -106,6 +106,11 @@ public class BossPattern : MonoBehaviour
 
             // 패턴을 랜덤으로 선택 @@ 테스트 0~1
             int number = Random.Range(0, 3);
+            if (number == 2)
+            {
+                // 돌진의 빈도는 화염보다 적게
+                number = Random.Range(0, 3);
+            }
 
             if (gameObject.GetComponent<BossReposition>().IsBossFalling)
             {
