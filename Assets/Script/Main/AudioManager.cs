@@ -51,7 +51,6 @@ public class AudioManager : MonoBehaviour
         Anj_Blade,
         Anj_DashYelling,
         Anj_Dash,
-        Anj_Jump,
         Anj_Landing,
         Anj_Dead
     }

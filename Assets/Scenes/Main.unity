@@ -43049,9 +43049,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c819e374608bf43b28237b8d1f9aa1f4, type: 3}
   - {fileID: 8300000, guid: 09a1eb7114a464e0dbcbf5c73bcc3eb2, type: 3}
   - {fileID: 8300000, guid: 129501449f2184c659be7938a846b93d, type: 3}
-  - {fileID: 8300000, guid: 2a87a6a4cbd4a624e9088a4d1726e324, type: 3}
+  - {fileID: 8300000, guid: 0405dc9dbd15e454791054a10e7382a3, type: 3}
   - {fileID: 8300000, guid: f5e32a73a903546a5b9e2283d313858f, type: 3}
-  - {fileID: 8300000, guid: f281971a7c3d8ce45b08ec4de2dcbdba, type: 3}
   - {fileID: 8300000, guid: 8c9b2eff513f448d281430937d0ca326, type: 3}
   - {fileID: 8300000, guid: 7a5f7a12423e9cf45835b92bcbbb3ebb, type: 3}
   sfxVolume: 0.6
