@@ -203,7 +203,7 @@ MonoBehaviour:
   maxHp: 100
   isBossLive: 0
   isBossAttacking: 0
-  MaxDamage: 50
+  MaxDamage: 10
 --- !u!114 &-6791970273465413145
 MonoBehaviour:
   m_ObjectHideFlags: 0

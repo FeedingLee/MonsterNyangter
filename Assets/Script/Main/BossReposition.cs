@@ -62,10 +62,10 @@ public class BossReposition : MonoBehaviour
 
         // 플레이어와 보스 사이의 거리 측정
         float distance = Vector3.Distance(targetTransform.position, bossTransform.position);
-        
+
         // 거리가 지정한 값보다 멀어졌을 경우 & BossReposion이 진행중이지 않을 경우
         // & 보스의 공격이 진행중이지 않을 경우
-        if (distance > fallingDistance && 
+        if (distance > fallingDistance &&
             !IsBossFalling &&
             !bossPattern.isBossAttacking)
         {
@@ -104,14 +104,14 @@ public class BossReposition : MonoBehaviour
 
         // 위치에 그림자 생성
         bossShadow = GameManager.instance.pool.GetEnemy(3);
-        bossShadow.transform.position = bossTransform.position - new Vector3(0,1,0);
+        bossShadow.transform.position = bossTransform.position - new Vector3(0, 1, 0);
 
         // 그림자 추적 허용
         bossShadow.GetComponent<BossShadow>().IsTraceTarget = true;
 
         // Boss 위치 하늘로 설정
         bossTransform.position += new Vector3(0, 5000, 0);
-        Debug.Log("bossPosition(in reposition) : " +  bossTransform.position);
+        Debug.Log("bossPosition(in reposition) : " + bossTransform.position);
 
         // 하늘에서 떨어지는 시간 대기
         yield return new WaitForSeconds(fallingWaitTime - 0.5f);
@@ -121,9 +121,9 @@ public class BossReposition : MonoBehaviour
 
         // 그림자 추적 종료 후 0.5초 뒤 하강 시작
         yield return new WaitForSeconds(0.5f);
-   
+
         // Boss 위치 그림자 위로 설정
-        bossTransform.position = bossShadow.transform.position + new Vector3(0, 25, 0);
+        bossTransform.position = bossShadow.transform.position + new Vector3(0, 50, 0);
 
         // 하강 목표 방향 설정
         dirVec = bossShadow.GetComponent<Transform>().position - bossTransform.position;
@@ -190,10 +190,10 @@ public class BossReposition : MonoBehaviour
 
             // 그림자 비활성화
             bossShadow.SetActive(false);
-       
+
             // 사방으로 돌맹이 발사
             Fire();
-        
+
             StartCoroutine(WaitAnim(0.5f));
         }
     }

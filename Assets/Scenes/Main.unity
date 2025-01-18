@@ -27846,8 +27846,8 @@ MonoBehaviour:
   isBossSpawn: 0
   playerId: 0
   weaponcode: 0
-  health: 20000
-  maxHealth: 20000
+  health: 300
+  maxHealth: 300
   level: 0
   kill: 0
   exp: 0
@@ -39567,7 +39567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 3
+  speed: 7
   memoryspeed: 0
   scanner: {fileID: 0}
   animCon:

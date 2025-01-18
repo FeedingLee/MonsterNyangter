@@ -116,7 +116,6 @@ public class BossPattern : MonoBehaviour
             if (gameObject.GetComponent<BossReposition>().IsBossFalling)
             {
                 // 보스가 텔포중일 때 공격기능 막음
-                //Debug.Log("isBossFalling, stop attack in " + this);
                 StopCoroutine(repeatActionCoroutine);
             }
 
@@ -181,7 +180,6 @@ public class BossPattern : MonoBehaviour
         if (repeatActionCoroutine == null) // 이미 실행 중인 경우 중복 실행 방지
         {
             repeatActionCoroutine = StartCoroutine(RepeatAction());
-            Debug.Log("Start Attack : " + repeatActionCoroutine.ToString());
         }
     }
 
@@ -191,7 +189,6 @@ public class BossPattern : MonoBehaviour
         {
             StopCoroutine(repeatActionCoroutine);
             repeatActionCoroutine = null;
-            Debug.Log("Stop Attack : " + repeatActionCoroutine);
         }
     }
 
@@ -339,7 +336,6 @@ public class BossPattern : MonoBehaviour
             if (damage >= MaxDamage)
             {
                 damage = MaxDamage;
-                Debug.Log("Damage : " + damage);
             }
 
             currentHp -= damage;
@@ -349,8 +345,6 @@ public class BossPattern : MonoBehaviour
             {
                 if (!isBossTired && currentHp <= maxHp / 2)
                 {
-                    Debug.Log("BossHp is half");
-
                     // 보스 지침상태로 전환
                     isBossTired = true;
                     anim.SetBool("isBossTired", true);
@@ -360,27 +354,20 @@ public class BossPattern : MonoBehaviour
 
                     // 광폭화
                     gameObject.GetComponent<BossBerserkMode>().Init();
-                    Debug.Log("BossBerserkMode");
                 }
             }
             else
-            {
+            {            
                 StopAttack();
                 isBossLive = false;
                 coll.enabled = false;
                 BossRigid.simulated = false;
                 spriter.sortingOrder = 1;
                 isBossTired = false;
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dead);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dead);               
                 anim.SetBool("Dead", true);
                 StartCoroutine(BossDeadsec(2.0f));
             }
         }
-        // 보스가 돌진중에 벽에 충돌할 경우 멈춤
-        /*else if (collision.CompareTag("Wall"))
-        {
-            Debug.Log("stop wall");
-            BossStop();
-        }*/
     }
 }

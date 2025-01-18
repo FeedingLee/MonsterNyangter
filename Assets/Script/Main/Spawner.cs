@@ -47,7 +47,7 @@ public class Spawner : MonoBehaviour
 
         // 보스가 스폰되자마자 내려찍기 패턴을 사용하는데 이 코드때문에 플레이어 주위에 대기하게 되므로 주석처리
         // 주석처리 하면 보스가 정상적으로 화면밖에 스폰됨
-        // Boss.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+        //Boss.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
         
         Debug.Log("BossSpawn in spawner");
     }
