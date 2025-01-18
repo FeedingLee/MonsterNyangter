@@ -200,9 +200,10 @@ MonoBehaviour:
   interval: 2
   BossSpeed: 3
   currentHp: 0
-  maxHp: 3000
+  maxHp: 100
   isBossLive: 0
   isBossAttacking: 0
+  MaxDamage: 50
 --- !u!114 &-6791970273465413145
 MonoBehaviour:
   m_ObjectHideFlags: 0

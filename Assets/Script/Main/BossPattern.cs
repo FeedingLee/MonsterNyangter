@@ -45,6 +45,7 @@ public class BossPattern : MonoBehaviour
     public bool isBossLive;                  // 보스 생존 확인
     bool isBossTired;                        // 보스 지침 상태 확인
     public bool isBossAttacking;             // 보스 공격 상태 확인
+    public float MaxDamage;                  // 보스가 한번에 입을 수 있는 최대 피해량
 
     public Coroutine repeatActionCoroutine;  // 실행 중인 코루틴을 저장할 변수
 
@@ -310,12 +311,9 @@ public class BossPattern : MonoBehaviour
     }
 
     void Dead()
-    {
-        // 보스 사망 사운드 재생
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dead);
-
+    {      
         // 보스 사망 시 비활성화
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
 
         // 승리 이벤트 시작
         GameManager.instance.GameVictory();
@@ -335,7 +333,16 @@ public class BossPattern : MonoBehaviour
         // 접촉한 오브젝트가 bullet일 경우
         if (collision.CompareTag("Bullet"))
         {
-            currentHp -= collision.GetComponent<Bullet>().damage;
+            float damage = collision.GetComponent<Bullet>().damage;
+
+            // 플레이어의 무기 데미지가 최대 데미지보다 높을경우 최대 데미지까지만 피해를 입음
+            if (damage >= MaxDamage)
+            {
+                damage = MaxDamage;
+                Debug.Log("Damage : " + damage);
+            }
+
+            currentHp -= damage;
             HitColorChange();
 
             if (currentHp > 0)
@@ -358,25 +365,22 @@ public class BossPattern : MonoBehaviour
             }
             else
             {
+                StopAttack();
                 isBossLive = false;
                 coll.enabled = false;
                 BossRigid.simulated = false;
                 spriter.sortingOrder = 1;
                 isBossTired = false;
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dead);
                 anim.SetBool("Dead", true);
-                StartCoroutine(BossDeadsec(5.0f));
-                //GameManager.instance.kill++;
-                //GameManager.instance.GetExp();
-                //spawner.bossSpawn = false;
-                //if (GameManager.instance.isLive)
-                //    AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
+                StartCoroutine(BossDeadsec(2.0f));
             }
         }
         // 보스가 돌진중에 벽에 충돌할 경우 멈춤
-        else if (collision.CompareTag("Wall"))
+        /*else if (collision.CompareTag("Wall"))
         {
             Debug.Log("stop wall");
             BossStop();
-        }
+        }*/
     }
 }
