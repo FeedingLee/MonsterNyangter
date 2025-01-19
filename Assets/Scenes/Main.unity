@@ -27846,12 +27846,12 @@ MonoBehaviour:
   isBossSpawn: 0
   playerId: 0
   weaponcode: 0
-  health: 300
-  maxHealth: 300
+  health: 600
+  maxHealth: 600
   level: 0
   kill: 0
   exp: 0
-  nextExp: 050000000a0000000f00000014000000190000001e00000023000000280000002d000000320000003c00000046000000500000005a00000064000000780000008c000000a0000000b4000000c8000000f000000018010000400100006801000090010000
+  nextExp: 050000000a0000000f00000014000000190000001e00000028000000320000004100000055000000640000006e00000078000000820000008c00000096000000aa000000be000000d2000000e6000000fa00000018010000360100004a01000068010000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -39567,7 +39567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 7
+  speed: 3
   memoryspeed: 0
   scanner: {fileID: 0}
   animCon:
@@ -43030,9 +43030,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4b65b8adf1a5d436785169345c0264fd, type: 3}
   - {fileID: 8300000, guid: e1215726140d9eb409d909ab08fad06e, type: 3}
   - {fileID: 8300000, guid: a5fa9be0231bc5b4a8b8afbb5def3eec, type: 3}
-  - {fileID: 8300000, guid: 14f24de2a9a70154e96297de25e2184c, type: 3}
-  - {fileID: 8300000, guid: d1bef3102d08ba944ac7bcac65733a26, type: 3}
-  - {fileID: 8300000, guid: d1bef3102d08ba944ac7bcac65733a26, type: 3}
+  - {fileID: 8300000, guid: fc963742683ddb44fbad58c3d1d4e28a, type: 3}
+  - {fileID: 8300000, guid: 1f1c1349db0d8d643a28748a3521d709, type: 3}
+  - {fileID: 8300000, guid: 1f1c1349db0d8d643a28748a3521d709, type: 3}
   - {fileID: 8300000, guid: 1b14cf67b11c640b388448e6885b2fee, type: 3}
   - {fileID: 8300000, guid: e34e5de4fb6f0405987dc922e27778b9, type: 3}
   - {fileID: 8300000, guid: 902828a83676948b2a085a2c006596fd, type: 3}
@@ -43045,7 +43045,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d2cdd7437ea53224280c331b469bac9e, type: 3}
   - {fileID: 8300000, guid: d2cdd7437ea53224280c331b469bac9e, type: 3}
   - {fileID: 8300000, guid: 0fb124df3513a724db5cc9cf4440ba7d, type: 3}
-  - {fileID: 8300000, guid: 6c7ca523d4d4423418a4fd5166f92b9f, type: 3}
+  - {fileID: 8300000, guid: 7f8f558ccdbdd7642bd0eaf8b6054e03, type: 3}
   - {fileID: 8300000, guid: 8e562d9c10b503441b438755d5f062f6, type: 3}
   - {fileID: 8300000, guid: 09a1eb7114a464e0dbcbf5c73bcc3eb2, type: 3}
   - {fileID: 8300000, guid: 040245ab45b799f4299c67bb8f0e19d8, type: 3}
@@ -254848,19 +254848,19 @@ MonoBehaviour:
   - spawnTime: 0.7
     spriteType: 1
     health: 50
-    speed: 1.2
+    speed: 1
   - spawnTime: 0.6
     spriteType: 2
-    health: 120
-    speed: 1.8
+    health: 70
+    speed: 1.3
   - spawnTime: 0.5
     spriteType: 3
-    health: 200
-    speed: 2.3
+    health: 90
+    speed: 1.6
   - spawnTime: 0.3
     spriteType: 4
-    health: 300
-    speed: 2.5
+    health: 120
+    speed: 2
   bossSpawnData:
   - speed: 2
     health: 1000

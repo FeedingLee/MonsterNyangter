@@ -37,11 +37,10 @@ public class BossReposition : MonoBehaviour
         isBossMove = true;
         IsBossFalling = false;
         dirVec = Vector2.zero;
-        time = 5;
         targetTransform = GameManager.instance.player.transform;
         bossPattern = gameObject.GetComponent<BossPattern>();
         anim = GetComponent<Animator>();
-        StartCoroutine(StartBossReposition());
+        time = WaitReposition;
     }
 
     void FixedUpdate()

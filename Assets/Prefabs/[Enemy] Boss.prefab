@@ -187,23 +187,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRigid: {fileID: 0}
   spawner: {fileID: 0}
-  MBulletCount: 10
-  MBossBulletDamage: 1
+  MBulletCount: 15
+  MBossBulletDamage: 20
   MFireSpeed: 3
   OBulletCount: 10
-  OBossBulletDamage: 1
+  OBossBulletDamage: 10
   OFireSpeed: 7
-  DashSpeed: 5
+  DashSpeed: 8
   IsBossDashing: 0
-  BossDashDamage: 20
+  BossDashDamage: 50
   BossDashDelay: 4
   interval: 2
   BossSpeed: 3
   currentHp: 0
-  maxHp: 100
+  maxHp: 5000
   isBossLive: 0
   isBossAttacking: 0
-  MaxDamage: 10
+  MaxDamage: 70
 --- !u!114 &-6791970273465413145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,11 +222,11 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   isBossMove: 0
   IsBossFalling: 0
-  WaitReposition: 5
+  WaitReposition: 10
   bossPattern: {fileID: 0}
   LBulletCount: 20
-  LBossBulletDamage: 1
-  LFireSpeed: 5
+  LBossBulletDamage: 20
+  LFireSpeed: 9
 --- !u!114 &2185881017450112496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,15 +240,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MBulletCount: 20
-  MBossBulletDamage: 1000
-  MFireSpeed: 5
-  OBulletCount: 10
-  OBossBulletDamage: 1000
+  MBossBulletDamage: 30
+  MFireSpeed: 4
+  OBulletCount: 15
+  OBossBulletDamage: 20
   OFireSpeed: 5
-  DashSpeed: 20
-  BossDashDamage: 1000
-  BossDashDelay: 2
+  DashSpeed: 12
+  BossDashDamage: 100
+  BossDashDelay: 3.46
   interval: 1
-  LBulletCount: 20
-  LBossBulletDamage: 1000
+  LBulletCount: 25
+  LBossBulletDamage: 30
   LFireSpeed: 5

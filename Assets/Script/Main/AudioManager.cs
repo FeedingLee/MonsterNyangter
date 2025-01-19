@@ -97,6 +97,17 @@ public class AudioManager : MonoBehaviour
             sfxPlayers[index].bypassListenerEffects = true;
             sfxPlayers[index].volume = sfxVolume;
         }
+
+        // 모든 오디오 클립 미리 로드
+        foreach (var clip in bgmClip)
+        {
+            clip.LoadAudioData();
+        }
+
+        foreach (var clip in WaitingbgmClip)
+        {
+            clip.LoadAudioData();
+        }
     }
 
     public void PlayBgm(bool isPlay)

@@ -62,14 +62,14 @@ public class LevelUp : MonoBehaviour
         // 2. 그 중에서 랜덤 3개 아이템 활성화
         int[] ran = new int[3];
 
-        // 3. 5의 배수 레벨에는 무기만 선택지에 나타나도록 
+        // 3. 5의 배수 레벨에는 능력치만 선택지에 나타나도록 
         if (GM_Objcet.GetComponent<GameManager>().level % 5 == 0)
         {
             while (true)
             {
-                ran[0] = Random.Range(0, 5);
-                ran[1] = Random.Range(0, 5);
-                ran[2] = Random.Range(0, 5);
+                ran[0] = Random.Range(6, 11);
+                ran[1] = Random.Range(6, 11);
+                ran[2] = Random.Range(6, 11);
 
                 if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
                     break;

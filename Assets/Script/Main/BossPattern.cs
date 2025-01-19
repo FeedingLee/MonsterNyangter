@@ -364,7 +364,9 @@ public class BossPattern : MonoBehaviour
                 BossRigid.simulated = false;
                 spriter.sortingOrder = 1;
                 isBossTired = false;
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dead);               
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dead);
+                anim.SetBool("isBossDashReady", false);
+                anim.SetBool("isBossDash", false);
                 anim.SetBool("Dead", true);
                 StartCoroutine(BossDeadsec(2.0f));
             }

@@ -23,10 +23,10 @@ MonoBehaviour:
   baseRate: 0
   baseCount: 0
   damages:
+  - 0.05
   - 0.1
-  - 0.2
+  - 0.15
   - 0.3
-  - 0.4
   - 0.5
   W_Speeds: []
   W_Rates: []

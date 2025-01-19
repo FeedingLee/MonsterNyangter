@@ -19,21 +19,21 @@ MonoBehaviour:
     : {3}\uAC1C"
   itemIcon: {fileID: 1461900761, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 10
-  baseSpeed: 100
+  baseSpeed: 150
   baseRate: 0
   baseCount: 2
   damages:
   - 0
   - 0.5
   - 1
-  - 1.5
   - 2
+  - 3.5
   W_Speeds:
-  - 0.1
-  - 0.2
+  - 0
   - 0.3
-  - 0.4
-  - 0.5
+  - 0.6
+  - 1.5
+  - 3
   W_Rates:
   - 0
   - 0
