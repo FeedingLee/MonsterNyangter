@@ -63,14 +63,14 @@ public class AchiveManager : MonoBehaviour
 
         switch (achive)
         {
-            case Achive.UnlockGaza:     // 0. 가쟈부 = 500킬 달성
-                isAchive = GameManager.instance.kill >= 500;    
+            case Achive.UnlockGaza:     // 0. 가쟈부 = 1000킬 달성
+                isAchive = GameManager.instance.kill >= 1000;    
                 break;
             case Achive.UnlockBowa:     // 1. 보와보와 = 생존 시 
                 isAchive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
                 break;
-            case Achive.UnlockWigller:   // 2. 흔들흔들 = 22레벨 달성시
-                isAchive = GameManager.instance.level >= 22;                
+            case Achive.UnlockWigller:   // 2. 흔들흔들 = 25레벨 달성시
+                isAchive = GameManager.instance.level >= 25;                
                 break;
         }
 

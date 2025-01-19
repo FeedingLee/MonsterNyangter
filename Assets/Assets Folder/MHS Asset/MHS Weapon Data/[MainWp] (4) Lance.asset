@@ -18,8 +18,8 @@ MonoBehaviour:
   itemDesc: "\uACF5\uACA9\uB825 : {1} \n\uB3CC\uC9C4\uC720\uC9C0 : {5}\n\uB3CC\uC9C4\uC18D\uB3C4
     : +{3} \n\uCFE8\uD0C0\uC784 : {4}\uCD08"
   itemIcon: {fileID: 1730978164, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
-  baseDamage: 5
-  baseSpeed: 3
+  baseDamage: 10
+  baseSpeed: 5
   baseRate: 13
   baseCount: 0
   damages:

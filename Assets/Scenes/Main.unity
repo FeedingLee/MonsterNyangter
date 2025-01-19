@@ -16276,6 +16276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: 1636758308, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 810514203}
   level: 0
 --- !u!114 &290501056
@@ -16827,6 +16828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: -1425460191, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 855084140}
   level: 0
 --- !u!1 &300202275
@@ -17992,6 +17994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: 0}
   weapon_data: {fileID: 0}
   level: 0
 --- !u!1 &324558613
@@ -24162,7 +24165,7 @@ RectTransform:
   m_GameObject: {fileID: 402228319}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1205727587}
@@ -24185,14 +24188,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1522407342, guid: 6bf3ebce382d8444482a7f9cc702ee7d, type: 3}
+  m_Sprite: {fileID: 141968804, guid: 6bf3ebce382d8444482a7f9cc702ee7d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25137,7 +25140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "[ \uC870\uAC74 ]\n\uD5CC\uD130\uB7AD\uD06C 22 \uB2EC\uC131"
+  m_Text: "[ \uC870\uAC74 ]\n\uD5CC\uD130\uB7AD\uD06C 25 \uB2EC\uC131"
 --- !u!222 &423699715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28483,12 +28486,12 @@ MonoBehaviour:
   isBossSpawn: 0
   playerId: 0
   weaponcode: 0
-  health: 200
-  maxHealth: 200
+  health: 100
+  maxHealth: 100
   level: 0
   kill: 0
   exp: 0
-  nextExp: 050000000a0000000f00000014000000190000001e000000280000003200000041000000550000006400000064000000640000006400000064000000640000008200000082000000820000008200000082000000c8000000c8000000c8000000c8000000
+  nextExp: 050000000a0000000f00000014000000190000001e0000004600000046000000460000004600000046000000640000006400000064000000640000006400000096000000960000009600000096000000960000002c010000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -36088,6 +36091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: 456234981, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 1960654130}
   level: 0
 --- !u!1 &597822644
@@ -40694,7 +40698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554ef892e06b2e74785152b1ddf528b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanRange: 7
+  scanRange: 9
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -44257,7 +44261,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8c9b2eff513f448d281430937d0ca326, type: 3}
   - {fileID: 8300000, guid: 0405dc9dbd15e454791054a10e7382a3, type: 3}
   - {fileID: 8300000, guid: 568b92d71d8b1e6428b8d9674e88d569, type: 3}
-  - {fileID: 8300000, guid: 83155882bccac4e10b90400ed3fe9fc8, type: 3}
+  - {fileID: 8300000, guid: d31d741259954414bb1090f75ca8e1b9, type: 3}
   sfxVolume: 0.6
   channels: 32
   sfxPlayers: []
@@ -44988,6 +44992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: 826363621, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 699373427}
   level: 0
 --- !u!1 &745486533
@@ -58225,6 +58230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: 1608488784, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 146737472}
   level: 0
 --- !u!1 &930992784
@@ -81204,7 +81210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25, y: -76}
+  m_AnchoredPosition: {x: 76, y: -76}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133523150
@@ -87714,6 +87720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: 924130445, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 1156075004}
   level: 0
 --- !u!1 &1239330073
@@ -90288,7 +90295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 76, y: -76}
+  m_AnchoredPosition: {x: 25, y: -127}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289776023
@@ -96311,7 +96318,7 @@ RectTransform:
   m_GameObject: {fileID: 1373654965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 896267702}
@@ -96334,14 +96341,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.91764706, g: 0.6, b: 0.6, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1522407342, guid: 6bf3ebce382d8444482a7f9cc702ee7d, type: 3}
+  m_Sprite: {fileID: 1952372557, guid: 6bf3ebce382d8444482a7f9cc702ee7d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -100786,7 +100793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 76, y: -25}
+  m_AnchoredPosition: {x: 25, y: -76}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450366168
@@ -117092,6 +117099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: -355552833, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 1274977027}
   level: 0
 --- !u!1 &1691978842
@@ -266337,7 +266345,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 1, y: 1}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1745293154
 MonoBehaviour:
@@ -274993,7 +275001,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "[ \uC870\uAC74 ]\n\uBAAC\uC2A4\uD130 500 \uB9C8\uB9AC \uCC98\uCE58"
+  m_Text: "[ \uC870\uAC74 ]\n\uBAAC\uC2A4\uD130 1000 \uB9C8\uB9AC \uCC98\uCE58"
 --- !u!222 &1897207664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -279611,25 +279619,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.4
-    spriteType: 0
-    health: 20
-    speed: 0.8
   - spawnTime: 0.3
+    spriteType: 0
+    health: 10
+    speed: 0.8
+  - spawnTime: 0.2
     spriteType: 1
     health: 50
     speed: 1
-  - spawnTime: 0.3
+  - spawnTime: 0.2
     spriteType: 2
-    health: 80
+    health: 70
     speed: 1.3
   - spawnTime: 0.2
     spriteType: 3
-    health: 110
+    health: 90
     speed: 1.6
   - spawnTime: 0.5
     spriteType: 4
-    health: 150
+    health: 110
     speed: 1.6
   bossSpawnData:
   - speed: 2
@@ -281657,6 +281665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: 279870727, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 934338157}
   level: 0
 --- !u!1 &1987365159
@@ -283246,6 +283255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: 22417660, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 747108873}
   level: 0
 --- !u!1 &2012278846
@@ -289240,6 +289250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeImg: {fileID: -305523233, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 1121057285}
   level: 0
 --- !u!1 &2119504791
