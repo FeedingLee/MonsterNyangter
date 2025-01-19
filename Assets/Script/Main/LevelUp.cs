@@ -67,9 +67,9 @@ public class LevelUp : MonoBehaviour
         {
             while (true)
             {
-                ran[0] = Random.Range(6, 11);
-                ran[1] = Random.Range(6, 11);
-                ran[2] = Random.Range(6, 11);
+                ran[0] = Random.Range(5, 10);
+                ran[1] = Random.Range(5, 10);
+                ran[2] = Random.Range(5, 10);
 
                 if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
                     break;

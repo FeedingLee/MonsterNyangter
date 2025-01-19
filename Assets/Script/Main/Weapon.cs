@@ -152,8 +152,8 @@ public class Weapon : MonoBehaviour
         }
         else if (id == 3)
         {
-            Critical_Damage = damage * 2 * (1 + Gear.damage_stat);
-            memorydamage = Critical_Damage / 2;
+            Critical_Damage = damage * 1.5f * (1 + Gear.damage_stat);
+            memorydamage = Critical_Damage / 1.5f;
             GreatSword();
         }
         else if (id == 4)
@@ -239,8 +239,8 @@ public class Weapon : MonoBehaviour
         }
         else if (id == 3)
         {
-            Critical_Damage = damage * 2;
-            memorydamage = Critical_Damage / 2;
+            Critical_Damage = damage * 1.5f;
+            memorydamage = Critical_Damage / 1.5f;
             GreatSword();
         }
         else if (id == 4)
@@ -285,7 +285,7 @@ public class Weapon : MonoBehaviour
         if (cooldown)                                          // 쿨다운 상태 (참모아 베기가 끝난 뒤) 
         {
             damage = memorydamage;                             // 데미지를 원래 데미지 값으로 변경
-            Critical_Damage = damage * 2;
+            Critical_Damage = damage * 1.5f;
             cooldown = false;                                  // 쿨다운 상태를 해제함
         }
         else if (!cooldown)                                    // 공격 가능 상태 (참모아 베기 중)

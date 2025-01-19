@@ -1,9 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using TreeEditor;
-using Unity.VisualScripting;
-/*using UnityEditor.ShaderGraph.Internal;*/
 using UnityEngine;
 
 public class BossPattern : MonoBehaviour

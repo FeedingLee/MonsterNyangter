@@ -37,6 +37,7 @@ public class Exp : MonoBehaviour
         // 충돌한 오브젝트의 이름이 Player 인 경우
         if (collision.gameObject.name == "Player")
         {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Exe_Get);
             // Player 의 경험치 증가
             GameManager.instance.GetExp();
             if (Item.Exp_Bonus == 1)
