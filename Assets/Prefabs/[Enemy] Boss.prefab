@@ -198,9 +198,9 @@ MonoBehaviour:
   BossDashDamage: 50
   BossDashDelay: 4
   interval: 3
-  BossSpeed: 3
+  BossSpeed: 2.5
   currentHp: 0
-  maxHp: 20000
+  maxHp: 16000
   isBossLive: 0
   isBossAttacking: 0
   MaxDamage: 50

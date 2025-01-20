@@ -63,7 +63,7 @@ public class LevelUp : MonoBehaviour
         int[] ran = new int[3];
 
         // 3. 4의 배수 레벨에는 능력치만 선택지에 나타나도록 
-        if (GM_Objcet.GetComponent<GameManager>().level % 4 == 0)
+        if (GM_Objcet.GetComponent<GameManager>().level % 5 == 0)
         {
             while (true)
             {

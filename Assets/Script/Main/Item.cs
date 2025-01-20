@@ -72,12 +72,13 @@ public class Item : MonoBehaviour
                 case ItemData.ItemType.GreatSword :
                 case ItemData.ItemType.Lance :
                     textDesc.text = string.Format(data.itemDesc,
-                        data.baseDamage,                                            // 기본 데미지 [0]
-                        data.baseDamage + (data.baseDamage * data.damages[level]),  // 최종 데미지 [1]
-                        data.baseSpeed + (data.W_Speeds[level] * 100),              // 최종 회전 속도 [2]
-                        data.baseCount + (data.counts[level]),                      // 최종 회전체 갯수 [3]
-                        data.baseRate + (data.baseRate * data.W_Rates[level]),      // 최종 쿨타임 [4]
-                        data.baseSpeed + (data.baseSpeed * data.W_Speeds[level]));  // 돌진유지 시간 [5]
+                        data.baseDamage,                                                        // 기본 데미지 [0]
+                        data.baseDamage + (data.baseDamage * data.damages[level]),              // 최종 데미지 [1]
+                        data.baseSpeed + (data.W_Speeds[level] * 100),                          // 최종 회전 속도 [2]
+                        data.baseCount + (data.counts[level]),                                  // 최종 회전체 갯수 [3]
+                        data.baseRate + (data.baseRate * data.W_Rates[level]),                  // 최종 쿨타임 [4]
+                        data.baseSpeed + (data.baseSpeed * data.W_Speeds[level]),               // 돌진유지 시간 [5]
+                        (data.baseDamage + (data.baseDamage * data.damages[level])) * 1.5f);    // 대검 데미지 [6]
                     break;
                 case ItemData.ItemType.HuntingBow:
                 case ItemData.ItemType.SniperHBG:

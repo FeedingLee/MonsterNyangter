@@ -224,7 +224,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CouponTime()
     {       
-        yield return new WaitForSeconds(60.0f);
+        yield return new WaitForSeconds(45.0f);
         Item.Exp_Bonus = 0;
         expbonuscheck = 0;
         StopCoroutine(expcoroutine);

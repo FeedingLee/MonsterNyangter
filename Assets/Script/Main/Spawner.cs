@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     public SpawnData[] spawnData;
     public BossSpawnData[] bossSpawnData;
     public float levelTime;
+    public Color StrongMonsterColor;
 
     int level;
     float timer;
@@ -38,7 +39,38 @@ public class Spawner : MonoBehaviour
     {
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
-        enemy.GetComponent<Enemy>().Init(spawnData[level]);
+
+        int randomIndex = Random.Range(0, 100);
+
+        // chance : 몬스터의 체력이 2배가 될 확률
+        if (spawnData[level].chance >= randomIndex)
+        {
+            // 원래 체력 임시 저장
+            int tmp = spawnData[level].health;
+
+            // 체력을 임의의 배율만큼 증가
+            float newHp = spawnData[level].health * spawnData[level].stronger;
+
+            Debug.Log("new 체력 : " + (int)newHp);
+
+            // 체력을 2배로
+            spawnData[level].health = (int)newHp;
+
+            // 체력이 2배인 몬스터는 색상이 지정한 색으로 변경
+            enemy.gameObject.GetComponent<SpriteRenderer>().color = StrongMonsterColor;
+
+            // 몬스터 스탯 초기화
+            enemy.GetComponent<Enemy>().Init(spawnData[level]);
+
+            // 체력 변수를 원래대로
+            spawnData[level].health = tmp;
+        }
+        else
+        {
+            enemy.GetComponent<Enemy>().Init(spawnData[level]);
+            Debug.Log("기존 체력: " + spawnData[level].health);
+        }
+
     }
 
     public void BossSpawn()
@@ -61,6 +93,8 @@ public class SpawnData
     public int spriteType;
     public int health;
     public float speed;
+    public int chance;
+    public float stronger;
 }
 
 [System.Serializable]
