@@ -24,10 +24,10 @@ MonoBehaviour:
   baseCount: 0
   damages:
   - 0
+  - 0.5
   - 1
-  - 2.25
-  - 3.25
-  - 4.5
+  - 2
+  - 3
   W_Speeds:
   - 0
   - 0.2
@@ -36,11 +36,11 @@ MonoBehaviour:
   - 0.7
   W_Rates:
   - 0
-  - 0
   - -0.1
   - -0.15
+  - -0.2
   - -0.3
-  counts: 0000000000000000010000000100000002000000
+  counts: 0000000000000000000000000100000002000000
   projectile: {fileID: 5975959092659265913, guid: 2d2d3bc09b09ba246a4bbba50a81558c, type: 3}
   weaponimage:
   - {fileID: 909941104, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}

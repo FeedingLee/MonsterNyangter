@@ -21,7 +21,7 @@ MonoBehaviour:
   baseDamage: 30
   baseSpeed: 0
   baseRate: 5
-  baseCount: 100
+  baseCount: 200
   damages:
   - 0
   - 0.5
@@ -40,6 +40,6 @@ MonoBehaviour:
   - -0.15
   - -0.3
   - -0.5
-  counts: 6400000064000000640000006400000064000000
+  counts: c8000000c8000000c8000000c8000000c8000000
   projectile: {fileID: 3358505908942346658, guid: 9a201c24213c85d468952987b2c5ec6f, type: 3}
   weaponimage: []

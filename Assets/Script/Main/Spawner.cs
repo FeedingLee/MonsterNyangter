@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public Transform[] spawnPoint;
     public SpawnData[] spawnData;
     public BossSpawnData[] bossSpawnData;
+    public GameManager GM;
     public float levelTime;
     public Color StrongMonsterColor;
 
@@ -32,7 +33,12 @@ public class Spawner : MonoBehaviour
         if (timer > spawnData[level].spawnTime)
         {
             timer = 0;
-            Spawn(); 
+            Spawn();
+            // 보스 스폰시 잡몹 소환 X
+            /*if (GM.isBossSpawn == false)
+            {           
+                Spawn();
+            }*/
         }
     }
     void Spawn()
@@ -51,8 +57,6 @@ public class Spawner : MonoBehaviour
             // 체력을 임의의 배율만큼 증가
             float newHp = spawnData[level].health * spawnData[level].stronger;
 
-            Debug.Log("new 체력 : " + (int)newHp);
-
             // 체력을 2배로
             spawnData[level].health = (int)newHp;
 
@@ -68,7 +72,6 @@ public class Spawner : MonoBehaviour
         else
         {
             enemy.GetComponent<Enemy>().Init(spawnData[level]);
-            Debug.Log("기존 체력: " + spawnData[level].health);
         }
 
     }
@@ -76,12 +79,6 @@ public class Spawner : MonoBehaviour
     public void BossSpawn()
     {
         GameObject Boss = GameManager.instance.pool.GetEnemy(1);
-
-        // 보스가 스폰되자마자 내려찍기 패턴을 사용하는데 이 코드때문에 플레이어 주위에 대기하게 되므로 주석처리
-        // 주석처리 하면 보스가 정상적으로 화면밖에 스폰됨
-        //Boss.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
-        
-        Debug.Log("BossSpawn in spawner");
     }
 }
 

@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
         {
             isBossSpawn = true;
             gameTime = maxGameTime;
-            Debug.Log("BossSpawn");
             // 보스 스폰
             player.GetComponentInChildren<Spawner>().BossSpawn();
             //GameVictory();

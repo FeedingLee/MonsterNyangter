@@ -137,7 +137,10 @@ public class BossPattern : MonoBehaviour
                     }
                     isBossAttacking = false;
                     break;
-                case 2:                   
+                case 2:
+                    // 돌진대기중에는 충돌 판정을 줄임
+                    gameObject.GetComponent<CapsuleCollider2D>().size = new Vector2(2.0f, 4.0f);
+
                     // 돌진 대기 n초
                     IsBossDashing = true;
                     isBossAttacking = true;
@@ -203,6 +206,9 @@ public class BossPattern : MonoBehaviour
     // 발사체 생성 함수
     public void Fire()
     {
+        // 피격판정 복구
+        gameObject.GetComponent<CapsuleCollider2D>().size = new Vector2(6.5f, 10.0f);
+
         // 보스 화염 사운드 재생
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_FireShoot);
 
@@ -265,6 +271,9 @@ public class BossPattern : MonoBehaviour
 
     void BossDash()
     {
+        // 대쉬중에는 판정 살짝 줄이기
+        gameObject.GetComponent<CapsuleCollider2D>().size = new Vector2(4.5f, 8.0f);
+
         // 보스 대쉬중 사운드 재생
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Dash);
 

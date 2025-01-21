@@ -15,10 +15,11 @@ public class Weapon : MonoBehaviour
     public int count;               // 회전하는 무기 갯수
 
     [Header("# Etc Data")]
-    public float memorydamage;      // 데미지 저장
-    public float Critical_Damage;   // 크리티컬 데미지
-    public float Chargespeed;       // 랜스 돌진 스피드 저장
-    Vector3 lastDirection;          // 조이스틱이 마지막으로 향한 방향값
+    public float memorydamage;                // 데미지 저장
+    public float Critical_Damage;             // 크리티컬 데미지
+    public float Chargespeed;                 // 랜스 돌진 스피드 저장
+    Vector3 lastDirection;                    // 조이스틱이 마지막으로 향한 방향값 [대검]
+    Vector3 lastSniperDirection = Vector3.up; // 조이스틱이 마지막으로 향한 방향값 [헤보건]
 
     /* [ 무기 상태 확인 변수 ] */
     bool charm = false;             // [대검] 참 모아베기상태 확인하는 변수
@@ -56,6 +57,7 @@ public class Weapon : MonoBehaviour
             // 쌍검의 공격 방식
             case 0:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime * (1 + Gear.stamina_stat));
+                DualBlades();
                 if (DB_level == 5)
                 {
                     changesprite();
@@ -359,11 +361,14 @@ public class Weapon : MonoBehaviour
     // 헤비보우건 배치 + 공격 로직
     void Sniper()
     {
-        Vector3 dir = joystickController.GetInputVector();                              // Joystick 방향 벡터 받아옴                                              
-        if (dir == Vector3.zero)                                                        // 정지상태에서는 무작위로 발사
+        Vector3 dir = joystickController.GetInputVector();       // Joystick 방향 벡터 받아옴                                              
+        if (dir == Vector3.zero)                                 // Joystick이 정지 상태라면
         {
-            float randomAngle = Random.Range(0f, 360f);
-            dir = new Vector3(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
+            dir = lastSniperDirection;                           // 마지막 방향으로 발사
+        }
+        else
+        {
+            lastSniperDirection = dir;                           // 새로운 방향 입력 시 업데이트
         }
 
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
@@ -371,7 +376,7 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
 
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Weapon_Sniper);                  // 발사 소리
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Weapon_Sniper); 
     }
 
     // 대검 회전 공격 코루틴
@@ -468,7 +473,7 @@ public class Weapon : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);                          // 방패에 맞게 사이즈, 포지션, 피격범위 등을 수정함
 
             childCollider.offset = new Vector2(0f, 0f);
-            childCollider.size = new Vector2(1.0f, 1.0f);
+            childCollider.size = new Vector2(2.0f, 2.0f);
 
             childTransform.transform.localPosition = new Vector3(0f, 0f, 0f);
         }

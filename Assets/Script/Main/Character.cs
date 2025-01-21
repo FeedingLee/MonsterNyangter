@@ -26,7 +26,7 @@ public class Character : MonoBehaviour
                 case 0: return 1.0f;
                 case 1: return 0.8f;
                 case 2: return 1.0f;
-                case 3: return 0.3f;
+                case 3: return 0.5f;
                 default: return 1.0f;
             }
         }
@@ -41,7 +41,7 @@ public class Character : MonoBehaviour
                 case 0: return 1.0f;
                 case 1: return 0.8f;
                 case 2: return 1.0f;
-                case 3: return 1.0f;
+                case 3: return 0.8f;
                 default: return 1.0f;
             }
         }
@@ -56,7 +56,7 @@ public class Character : MonoBehaviour
                 case 0: return 1.0f;
                 case 1: return 0.8f;
                 case 2: return 1.3f;
-                case 3: return 0.6f;
+                case 3: return 0.7f;
                 default: return 1.0f;
             }
         }

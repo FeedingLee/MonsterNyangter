@@ -192,18 +192,18 @@ MonoBehaviour:
   MFireSpeed: 3
   OBulletCount: 10
   OBossBulletDamage: 5
-  OFireSpeed: 7
+  OFireSpeed: 6
   DashSpeed: 8
   IsBossDashing: 0
-  BossDashDamage: 50
+  BossDashDamage: 30
   BossDashDelay: 4
   interval: 3
   BossSpeed: 2.5
   currentHp: 0
-  maxHp: 16000
+  maxHp: 14000
   isBossLive: 0
   isBossAttacking: 0
-  MaxDamage: 50
+  MaxDamage: 160
 --- !u!114 &-6791970273465413145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   bossPattern: {fileID: 0}
   LBulletCount: 20
   LBossBulletDamage: 10
-  LFireSpeed: 9
+  LFireSpeed: 3
 --- !u!114 &2185881017450112496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,16 +239,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e45a7eba6efb5540b7d50c19edb3bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MBulletCount: 20
+  MBulletCount: 25
   MBossBulletDamage: 15
   MFireSpeed: 3
-  OBulletCount: 10
+  OBulletCount: 20
   OBossBulletDamage: 10
-  OFireSpeed: 3
+  OFireSpeed: 6
   DashSpeed: 12
-  BossDashDamage: 50
+  BossDashDamage: 30
   BossDashDelay: 3.46
   interval: 2
   LBulletCount: 25
   LBossBulletDamage: 15
-  LFireSpeed: 5
+  LFireSpeed: 3
