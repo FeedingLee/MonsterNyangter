@@ -113,11 +113,14 @@ public class Enemy : MonoBehaviour
         yield return wait;
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
-        rigid.AddForce(dirVec.normalized * 5, ForceMode2D.Impulse);
+        rigid.AddForce(dirVec.normalized * 2, ForceMode2D.Impulse);
     }
 
     void Dead()
     {
+        // 빨간색의 강화몬스터의 색상을 초기화하기 위한 코드
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
         gameObject.SetActive(false);
     }
 }

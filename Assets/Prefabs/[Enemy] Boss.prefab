@@ -187,15 +187,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRigid: {fileID: 0}
   spawner: {fileID: 0}
-  MBulletCount: 15
-  MBossBulletDamage: 10
+  MBulletCount: 25
+  MBossBulletDamage: 8
   MFireSpeed: 3
   OBulletCount: 10
   OBossBulletDamage: 5
-  OFireSpeed: 6
+  OFireSpeed: 6.5
   DashSpeed: 8
   IsBossDashing: 0
-  BossDashDamage: 30
+  BossDashDamage: 15
   BossDashDelay: 4
   interval: 3
   BossSpeed: 2.5
@@ -217,15 +217,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallingWaitTime: 2
-  fallingDistance: 15
+  fallingDistance: 13
   fallingSpeed: 80
   targetTransform: {fileID: 0}
   isBossMove: 0
   IsBossFalling: 0
-  WaitReposition: 10
+  WaitReposition: 20
   bossPattern: {fileID: 0}
-  LBulletCount: 20
-  LBossBulletDamage: 10
+  LBulletCount: 30
+  LBossBulletDamage: 15
   LFireSpeed: 3
 --- !u!114 &2185881017450112496
 MonoBehaviour:
@@ -239,16 +239,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e45a7eba6efb5540b7d50c19edb3bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MBulletCount: 25
-  MBossBulletDamage: 15
+  MBulletCount: 30
+  MBossBulletDamage: 5
   MFireSpeed: 3
-  OBulletCount: 20
-  OBossBulletDamage: 10
-  OFireSpeed: 6
+  OBulletCount: 15
+  OBossBulletDamage: 5
+  OFireSpeed: 6.5
   DashSpeed: 12
-  BossDashDamage: 30
+  BossDashDamage: 15
   BossDashDelay: 3.46
   interval: 2
-  LBulletCount: 25
-  LBossBulletDamage: 15
+  LBulletCount: 30
+  LBossBulletDamage: 20
   LFireSpeed: 3

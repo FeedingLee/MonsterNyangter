@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public bool isBossSpawn = false;
     // 경험치 보너스 코루틴 확인용 변수
     public static int expbonuscheck = 0;
+    // 보와보와 업적용 변수
+    public int wincheck = 0; 
     private IEnumerator expcoroutine;
     [Header("# Player Info")]
     public int playerId;
@@ -27,7 +29,7 @@ public class GameManager : MonoBehaviour
     public int level;
     public int kill;
     public int exp;
-    public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
+    public int[] nextExp = {};
     [Header("# GameObject")]
     public PoolManager pool;
     public Player player;
@@ -134,6 +136,7 @@ public class GameManager : MonoBehaviour
     public void GameVictory()
     {
         StartCoroutine(GameVictoryRoutine());
+        wincheck = 1;
     }
 
     IEnumerator GameVictoryRoutine()

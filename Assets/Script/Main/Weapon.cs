@@ -452,7 +452,7 @@ public class Weapon : MonoBehaviour
     void LanceShieldMod()
     {
         Transform childTransform = transform.GetChild(0);                               // 자식오브젝트를 가져옴
-        BoxCollider2D childCollider = childTransform.GetComponent<BoxCollider2D>();     // 자식오브젝트의, BoxCollider2D를 가져옴
+        CircleCollider2D childCollider = childTransform.GetComponent<CircleCollider2D>(); // CircleCollider2D 가져오기     // 자식오브젝트의, BoxCollider2D를 가져옴
 
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();                      // 자식오브젝트의 스프라이트를 초기화
 
@@ -461,7 +461,7 @@ public class Weapon : MonoBehaviour
             //spriteRenderer.sprite = data.weaponimage[0];
 
             childCollider.offset = new Vector2(0f, 0.47f);                              // 포지션과, 사이즈를 창에 맞게 변경함
-            childCollider.size = new Vector2(0.5f, 1.8f);
+            childCollider.radius = 1.36f;
             childTransform.transform.localPosition = new Vector3(0f, 0.8f, 0f);
 
             LanceRotate();
@@ -473,7 +473,7 @@ public class Weapon : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);                          // 방패에 맞게 사이즈, 포지션, 피격범위 등을 수정함
 
             childCollider.offset = new Vector2(0f, 0f);
-            childCollider.size = new Vector2(2.0f, 2.0f);
+            childCollider.radius = 1.0f;
 
             childTransform.transform.localPosition = new Vector3(0f, 0f, 0f);
         }

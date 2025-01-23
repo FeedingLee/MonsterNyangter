@@ -67,7 +67,7 @@ public class AchiveManager : MonoBehaviour
                 isAchive = GameManager.instance.kill >= 800;    
                 break;
             case Achive.UnlockBowa:     // 1. 보와보와 = 생존 시 
-                isAchive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
+                isAchive = GameManager.instance.wincheck == 1;
                 break;
             case Achive.UnlockWigller:   // 2. 흔들흔들 = 36레벨 달성시
                 isAchive = GameManager.instance.level >= 36;                
