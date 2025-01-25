@@ -64,14 +64,14 @@ public class Spawner : MonoBehaviour
             enemy.gameObject.GetComponent<SpriteRenderer>().color = StrongMonsterColor;
 
             // 몬스터 스탯 초기화
-            enemy.GetComponent<Enemy>().Init(spawnData[level]);
+            enemy.GetComponent<Enemy>().Init(spawnData[level], spawnData[level].expIndex);
 
             // 체력 변수를 원래대로
             spawnData[level].health = tmp;
         }
         else
         {
-            enemy.GetComponent<Enemy>().Init(spawnData[level]);
+            enemy.GetComponent<Enemy>().Init(spawnData[level], 1);
         }
 
     }
@@ -91,7 +91,8 @@ public class SpawnData
     public int health;
     public float speed;
     public int chance;
-    public float stronger;
+    public float stronger;                  
+    public int expIndex;                    // 추가 경험치 구슬 갯수
 }
 
 [System.Serializable]

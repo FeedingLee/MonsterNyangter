@@ -80,10 +80,10 @@ public class GameManager : MonoBehaviour
                 weaponcode = 0;
                 break;
             case 1:
-                weaponcode = 1;
+                weaponcode = 0;
                 break;
             case 2:
-                weaponcode = 4;
+                weaponcode = 0;
                 break;
             case 3:
                 weaponcode = 2;

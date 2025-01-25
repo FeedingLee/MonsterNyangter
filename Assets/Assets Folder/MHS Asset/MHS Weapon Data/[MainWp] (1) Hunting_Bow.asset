@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemId: 1
-  itemName: " \uD65C "
+  itemName: "\uD65C "
   itemDesc: "\uACF5\uACA9\uB825 : {1} \n\uC5F0\uC0AC\uC18D\uB3C4 : {2}\n\uAD00\uD1B5\uB825
     : {3} "
   itemIcon: {fileID: -1926493157, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 10
   baseSpeed: 0
-  baseRate: 1
+  baseRate: 0.9
   baseCount: 1
   damages:
   - 0
+  - 0.2
   - 0.5
-  - 1.125
-  - 2.125
-  - 4.375
+  - 0.6
+  - 1.5
   W_Speeds:
   - 0
   - 0
@@ -36,10 +36,10 @@ MonoBehaviour:
   - 0
   W_Rates:
   - 0
+  - -0.05
   - -0.1
+  - -0.15
   - -0.2
-  - -0.25
-  - -0.3
-  counts: 0000000002000000030000000400000005000000
+  counts: 0000000001000000020000000200000003000000
   projectile: {fileID: 3358505908942346658, guid: 7790583530daee94886705d8ae9d210f, type: 3}
   weaponimage: []

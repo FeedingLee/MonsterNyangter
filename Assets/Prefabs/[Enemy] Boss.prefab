@@ -200,7 +200,7 @@ MonoBehaviour:
   interval: 3
   BossSpeed: 2.5
   currentHp: 0
-  maxHp: 14000
+  maxHp: 13000
   isBossLive: 0
   isBossAttacking: 0
   MaxDamage: 160

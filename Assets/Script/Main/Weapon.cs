@@ -20,6 +20,15 @@ public class Weapon : MonoBehaviour
     public float Chargespeed;                 // 랜스 돌진 스피드 저장
     Vector3 lastDirection;                    // 조이스틱이 마지막으로 향한 방향값 [대검]
     Vector3 lastSniperDirection = Vector3.up; // 조이스틱이 마지막으로 향한 방향값 [헤보건]
+    /* [ Damage 관련] */
+    public float Gear_RemDmg;
+    public float RemDmg;
+    /* [ Speed(공격속도, 돌진유지 등) 관련] */
+    public float Gear_RemSpd;
+    public float RemSpd;
+    /* [ Rate(연사속도, 쿨타임 등) 관련] */
+    public float Gear_RemRate;
+    public float RemRate;
 
     /* [ 무기 상태 확인 변수 ] */
     bool charm = false;             // [대검] 참 모아베기상태 확인하는 변수
@@ -45,6 +54,8 @@ public class Weapon : MonoBehaviour
     {
         player = GameManager.instance.player;
         joystickController = GameManager.instance.joystickController;
+
+        Gear_RemRate = 100;
     }
 
     void Update()
@@ -103,10 +114,10 @@ public class Weapon : MonoBehaviour
                 }
                 break;
             // 랜스의 공격 방식
-            case 4:                
+            case 4:
                 LanceShieldMod();
                 if (!lancecharge)
-                {                   
+                {
                     lancecharge = true;
                     Lance();
                     StartCoroutine(LanceAttack());
@@ -117,11 +128,11 @@ public class Weapon : MonoBehaviour
                     player.speed = GameManager.instance.player.memoryspeed + count; // 플레이어의 속도를 count만큼 올린다
                 }
 
-                if (LC_level == 5 && damage == Critical_Damage)        
+                if (LC_level == 5 && damage == Critical_Damage)
                 {
                     spriteRenderer.sprite = data.weaponimage[2];
                 }
-                else if (LC_level != 5 && damage == Critical_Damage)         
+                else if (LC_level != 5 && damage == Critical_Damage)
                 {
                     spriteRenderer.sprite = data.weaponimage[0];
                 }
@@ -129,7 +140,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void changesprite()  
+    public void changesprite()
     {
         // 모든 자식 오브젝트의 SpriteRenderer 컴포넌트 가져오기
         SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
@@ -143,9 +154,28 @@ public class Weapon : MonoBehaviour
 
     public void LevelUp(float damage, float speed, float rate, int count)
     {
+        RemDmg = damage;
+        RemSpd = speed;
+        RemRate = rate;
+
         this.damage = damage * Character.Damage * (1 + Gear.damage_stat);
+        if (Gear_RemDmg > this.damage)
+        {
+            this.damage = Gear_RemDmg + RemDmg;
+        }
+
         this.speed = speed * Character.WeaponSpeed * (1 + Gear.stamina_stat);
+        if (Gear_RemSpd > this.speed)
+        {
+            this.speed = Gear_RemSpd + RemSpd;
+        }
+
         this.rate = rate * Character.WeaponRate * (1 - Gear.rate_stat);
+        if (Gear_RemRate < this.rate)
+        {
+            this.rate = Gear_RemRate * RemRate;
+        }
+
         this.count = count + Gear.upgrade_stat;
 
         if (id == 0)
@@ -166,9 +196,9 @@ public class Weapon : MonoBehaviour
             Lance();
         }
 
-        switch(id)  // 무기
+        switch (id)  // 무기
         {
-            case 0: 
+            case 0:
                 DB_level++;
                 break;
             case 1:
@@ -376,7 +406,7 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
 
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Weapon_Sniper); 
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Weapon_Sniper);
     }
 
     // 대검 회전 공격 코루틴
@@ -452,14 +482,12 @@ public class Weapon : MonoBehaviour
     void LanceShieldMod()
     {
         Transform childTransform = transform.GetChild(0);                               // 자식오브젝트를 가져옴
-        CircleCollider2D childCollider = childTransform.GetComponent<CircleCollider2D>(); // CircleCollider2D 가져오기     // 자식오브젝트의, BoxCollider2D를 가져옴
+        CircleCollider2D childCollider = childTransform.GetComponent<CircleCollider2D>(); // CircleCollider2D 가져오기   
 
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();                      // 자식오브젝트의 스프라이트를 초기화
 
         if (damage == Critical_Damage)                                                  // 데미지 == 크리티컬 데미지라는 뜻은 돌진모드 라는 뜻
         {
-            //spriteRenderer.sprite = data.weaponimage[0];
-
             childCollider.offset = new Vector2(0f, 0.47f);                              // 포지션과, 사이즈를 창에 맞게 변경함
             childCollider.radius = 1.36f;
             childTransform.transform.localPosition = new Vector3(0f, 0.8f, 0f);

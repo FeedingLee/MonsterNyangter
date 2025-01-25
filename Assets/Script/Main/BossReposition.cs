@@ -105,7 +105,6 @@ public class BossReposition : MonoBehaviour
 
         // Boss 위치 하늘로 설정
         bossTransform.position += new Vector3(0, 5000, 0);
-        Debug.Log("bossPosition(in reposition) : " + bossTransform.position);
 
         // 하늘에서 떨어지는 시간 대기
         yield return new WaitForSeconds(fallingWaitTime - 0.5f);

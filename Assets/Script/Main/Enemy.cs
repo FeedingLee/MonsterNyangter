@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public float maxHealth;
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
+    public float expSpawnRange;                         // 경험치 스폰 범위
+    public int expSpawnIndex;                         // 경험치구슬 드랍 갯수
 
     bool isLive;
 
@@ -63,12 +65,13 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
     }
 
-    public void Init(SpawnData data)
+    public void Init(SpawnData data, int index)
     {
         anim.runtimeAnimatorController = animCon[data.spriteType];
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+        expSpawnIndex = index;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -95,13 +98,19 @@ public class Enemy : MonoBehaviour
 
             // 몬스터가 Exp구슬을 드랍하므로 직접 경험치가 증가되는 코드 주석처리
             //GameManager.instance.GetExp();
-
-
-            // 경험치 구슬 드랍
-            Transform exp;
-            exp = GameManager.instance.pool.GetEnemy(0).transform;
-            exp.parent = GameManager.instance.pool.transform;
-            exp.position = transform.position;
+            
+            if (expSpawnIndex > 1)
+            {
+                // 강화몬스터인 경우
+                SpawnExp(expSpawnIndex);
+            }
+            else
+            {
+                // 일반 몬스터인 경우
+                Transform exp = GameManager.instance.pool.GetEnemy(0).transform;
+                exp.parent = GameManager.instance.pool.transform;
+                exp.position = transform.position;
+            }
 
             if (GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Enemy_Dead);
@@ -122,5 +131,19 @@ public class Enemy : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 
         gameObject.SetActive(false);
+    }
+
+    void SpawnExp(int expIndex)
+    {
+        for (int i=0; i< expIndex; i++)
+        {
+            Transform exp = GameManager.instance.pool.GetEnemy(0).transform;
+            exp.parent = GameManager.instance.pool.transform;
+
+            float expSpawnX = Random.Range(-expSpawnRange / 2, expSpawnRange / 2 + 1);
+            float expSpawnY = Random.Range(-expSpawnRange / 2, expSpawnRange / 2 + 1);
+
+            exp.position = transform.position + new Vector3(expSpawnX, expSpawnY);
+        }
     }
 }

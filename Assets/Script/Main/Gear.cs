@@ -14,6 +14,10 @@ public class Gear : MonoBehaviour
     public static float stamina_stat;   // 스테미나 능력치
     public static int upgrade_stat;     // 무기 강화
 
+    public float RemDmg;
+    public float RemSpeed;
+    public float RemRate;
+
     public void Init(ItemData data)
     {
         // 기본세팅
@@ -58,22 +62,22 @@ public class Gear : MonoBehaviour
         switch (type)
         {
             case ItemData.ItemType.Rate_Up:
-                rate_stat = power;                                                      // 연사속도 능력치를, W_Rates 데미지 만큼 적용
+                rate_stat = power;                // 연사속도 능력치를, W_Rates 데미지 만큼 적용
                 RateUp();
                 break;
-            case ItemData.ItemType.Speed_Up:                                            
+            case ItemData.ItemType.Speed_Up:
                 SpeedUp();
                 break;
             case ItemData.ItemType.Damage_Up:
-                damage_stat = power;                                                    // 데미지 능력치를, Damages의 데미지 만큼 적용
+                damage_stat = power;              // 데미지 능력치를, Damages의 데미지 만큼 적용
                 DamageUp();
                 break;
             case ItemData.ItemType.Stamina_Up:
-                stamina_stat = power;                                                   // 스테미나 능력치를, W_Speeds의 데미지 만큼 적용
+                stamina_stat = power;             // 스테미나 능력치를, W_Speeds의 데미지 만큼 적용
                 StaminaUp();
                 break;
             case ItemData.ItemType.Weapon_Upgrade:
-                upgrade_stat = (int)power;                                                   // 업그레이드 능력치를, Counts의 데미지 만큼 적용
+                upgrade_stat = (int)power;        // 업그레이드 능력치를, Counts의 데미지 만큼 적용
                 WeaponUp();
                 break;
         }
@@ -87,11 +91,12 @@ public class Gear : MonoBehaviour
         foreach (Weapon weapon in weapons)
         {
             switch (weapon.id)
-            {
-                case 0:                                                                 // 쌍검은 Rate의 영향이 없음
-                    break;
-                default:                                                                
-                    weapon.rate = weapon.rate * (1.0f - power);                         // 현재 가진 무기들 스펙 업
+            {                                                                   
+                default:
+                    weapon.rate = weapon.rate * (1.0f - power);
+
+                    RemRate = weapon.rate;
+                    weapon.Gear_RemRate = RemRate;
                     break;
             }
         }
@@ -100,9 +105,9 @@ public class Gear : MonoBehaviour
     // 이동속도 스텟 증가 로직
     void SpeedUp()
     {
-        float speed = 3 * Character.Speed;                                              // 숫자는 플레이어의 기본속도를 의미함
+        float speed = 3 * Character.Speed;                  // 숫자는 플레이어의 기본속도를 의미함
         GameManager.instance.player.speed = speed + (speed * power);
-        GameManager.instance.player.memoryspeed = speed + (speed * power);              // 테스트
+        GameManager.instance.player.memoryspeed = speed + (speed * power);
     }
 
     // 공격력 스텟 증가 로직
@@ -114,12 +119,15 @@ public class Gear : MonoBehaviour
         {
             switch (weapon.id)
             {
-                default:    
+                default:
                     weapon.damage = weapon.damage * (1.0f + power);                     // 데미지 상승
                     weapon.Critical_Damage = weapon.Critical_Damage * (1.0f + power);   // 크리티컬 데미지 상승
                     weapon.memorydamage = weapon.memorydamage * (1.0f + power);         // memorydamage 값 상승
+
+                    RemDmg = weapon.damage;
+                    weapon.Gear_RemDmg = RemDmg;
                     break;
-            }          
+            }    
         }
     }
 
@@ -132,10 +140,11 @@ public class Gear : MonoBehaviour
         {
             switch (weapon.id)
             {
-                case 1 & 2:                                                             // 활, 헤비보우건은 W_Speeds의 영향이 없음
-                    break;
-                default:                                                                
-                    weapon.speed = weapon.speed * (1.0f + power);                       // 현재 가진 무기들 스펙 업
+                default:
+                    weapon.speed = weapon.speed * (1.0f + power);
+
+                    RemSpeed = weapon.speed;
+                    weapon.Gear_RemSpd = RemSpeed;
                     break;
             }
         }
@@ -148,12 +157,8 @@ public class Gear : MonoBehaviour
 
         foreach (Weapon weapon in weapons)
         {
-            switch (weapon.id)
-            {
-                default:
-                    weapon.count = weapon.count + (int)power;                           // 현재 가진 무기들 스펙 업
-                    break;
-            }
+            weapon.count = weapon.count + (int)power;
+            break;
         }
     }
 }

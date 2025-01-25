@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public bool ismove;                      // 플레이어 이동불가상태(ex: 넉백)을 위한 변수
 
+    public float hitSoundCooldown = 1.2f;    // 1.2초 소리 쿨타임
+    public float lastHitSoundTime;           // 마지막 재생 시간 기억
+
     public JoystickController joystick;      // JoystickController를 연결합니다.
 
     Rigidbody2D rigid;
@@ -72,14 +75,21 @@ public class Player : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") ||
-            collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss"))
         {
             if (!GameManager.instance.isLive)
                 return;
+
             GameManager.instance.health -= Time.deltaTime * 50;
 
-            if (GameManager.instance.health <= 0)// 사망로직
+            // 현재 시간과 마지막 재생 시간을 비교하여 0.5초마다 재생
+            if (Time.time - lastHitSoundTime >= hitSoundCooldown)
+            {
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Player_hit);
+                lastHitSoundTime = Time.time; // 마지막 재생 시간 업데이트
+            }
+
+            if (GameManager.instance.health <= 0) // 사망 로직
             {
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 anim.SetTrigger("Dead");

@@ -15,7 +15,7 @@ MonoBehaviour:
   itemType: 8
   itemId: 8
   itemName: "\uACF5\uACA9\uB825 \uC99D\uAC00"
-  itemDesc: "\uBB34\uAE30 \uACF5\uACA9\uB825\uC774 \n{0}% \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  itemDesc: "\uBB34\uAE30\uC758 \uACF5\uACA9\uB825\uC774 \n{0}% \uC99D\uAC00\uD569\uB2C8\uB2E4."
   itemIcon: {fileID: -305523233, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   baseDamage: 0
   baseSpeed: 0
@@ -24,9 +24,9 @@ MonoBehaviour:
   damages:
   - 0.1
   - 0.2
-  - 0.3
-  - 0.4
-  - 0.5
+  - 0.35
+  - 0.45
+  - 0.55
   W_Speeds: []
   W_Rates: []
   counts: 0000000000000000000000000000000000000000

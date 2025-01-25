@@ -54,7 +54,8 @@ public class AudioManager : MonoBehaviour
         Anj_Landing,
         Anj_Dead,
         Anj_Jump,
-        Exe_Get
+        Exe_Get,
+        Player_hit
     }
 
     void Awake()
