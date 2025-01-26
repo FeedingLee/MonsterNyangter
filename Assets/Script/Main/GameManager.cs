@@ -18,9 +18,13 @@ public class GameManager : MonoBehaviour
     public bool isBossSpawn = false;
     // 경험치 보너스 코루틴 확인용 변수
     public static int expbonuscheck = 0;
+    // 슈퍼 그물망 코루튼 확인용 변수
+    public static int supermagnetcheck = 0;
     // 보와보와 업적용 변수
     public int wincheck = 0; 
     private IEnumerator expcoroutine;
+    private IEnumerator magnetcoroutine;
+
     [Header("# Player Info")]
     public int playerId;
     public int weaponcode;
@@ -30,6 +34,7 @@ public class GameManager : MonoBehaviour
     public int kill;
     public int exp;
     public int[] nextExp = {};
+
     [Header("# GameObject")]
     public PoolManager pool;
     public Player player;
@@ -42,6 +47,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         expcoroutine = CouponTime();
+        magnetcoroutine = SuperMagnetTime();
 
         instance = this;
         Application.targetFrameRate = 60;
@@ -52,7 +58,12 @@ public class GameManager : MonoBehaviour
         if (expbonuscheck == 0 && Item.Exp_Bonus == 1)
         {
             Exp_Fever();
-        }        
+        }       
+        
+        if (supermagnetcheck == 0 && Item.Super_Magnet == 1)
+        {
+            Magnet_Fever();
+        }   
 
         if (!isLive)
             return;
@@ -120,6 +131,9 @@ public class GameManager : MonoBehaviour
         // 경험치 보너스 상태 초기화
         Item.Exp_Bonus = 0;
         expbonuscheck = 0;
+        // 자석 보너스 상태 초기화
+        Item.Super_Magnet = 0;
+        supermagnetcheck = 0;
 
         isLive = false;
 
@@ -155,6 +169,9 @@ public class GameManager : MonoBehaviour
         // 경험치 보너스 상태 초기화
         Item.Exp_Bonus = 0;
         expbonuscheck = 0;
+        // 자석 보너스 상태 초기화
+        Item.Super_Magnet = 0;
+        supermagnetcheck = 0;
 
         isLive = false;
         enemyCleaner.SetActive(true);
@@ -223,12 +240,27 @@ public class GameManager : MonoBehaviour
         expcoroutine = CouponTime();
         StartCoroutine(expcoroutine);
     }
-
     IEnumerator CouponTime()
     {       
         yield return new WaitForSeconds(45.0f);
         Item.Exp_Bonus = 0;
         expbonuscheck = 0;
         StopCoroutine(expcoroutine);
+    }
+
+    public void Magnet_Fever()
+    {
+        StopCoroutine(magnetcoroutine);
+        supermagnetcheck = 1;
+
+        magnetcoroutine = SuperMagnetTime();
+        StartCoroutine(magnetcoroutine);
+    }
+    IEnumerator SuperMagnetTime()
+    {
+        yield return new WaitForSeconds(10.0f);
+        Item.Super_Magnet = 0;
+        supermagnetcheck = 0;
+        StopCoroutine(magnetcoroutine);
     }
 }

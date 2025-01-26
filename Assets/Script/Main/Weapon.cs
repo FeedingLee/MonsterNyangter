@@ -173,7 +173,7 @@ public class Weapon : MonoBehaviour
         this.rate = rate * Character.WeaponRate * (1 - Gear.rate_stat);
         if (Gear_RemRate < this.rate)
         {
-            this.rate = Gear_RemRate * RemRate;
+            this.rate = Gear_RemRate;
         }
 
         this.count = count + Gear.upgrade_stat;

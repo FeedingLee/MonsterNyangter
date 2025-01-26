@@ -12,7 +12,7 @@ public class Scanner : MonoBehaviour
     public Transform nearestTarget;
 
     [Header("# ExpScan")]
-    public float expScanRange;         // Exp 구슬 흡수 범위
+    public float expScanRange;          // Exp 구슬 흡수 범위
     public RaycastHit2D[] expTargets;   // Exp 구슬 저장 배열
     public LayerMask expTargetLayer;    // Exp 레이어
 
@@ -28,8 +28,18 @@ public class Scanner : MonoBehaviour
             return;
 
         // 원형 범위로 Exp 구슬 객체 검색
-        expTargets = Physics2D.CircleCastAll(transform.position, expScanRange, Vector2.zero, 0, expTargetLayer);
-        EatExp();
+        if (Item.Super_Magnet == 1)
+        {
+            // 슈퍼 그물망 활성화 시
+            expTargets = Physics2D.CircleCastAll(transform.position, 100, Vector2.zero, 0, expTargetLayer);
+            EatExp();
+        }
+        else
+        {
+            // 그 외의 경우
+            expTargets = Physics2D.CircleCastAll(transform.position, expScanRange, Vector2.zero, 0, expTargetLayer);
+            EatExp();
+        }
     }
 
     // 가까운 표적 검색

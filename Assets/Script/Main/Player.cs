@@ -10,12 +10,12 @@ public class Player : MonoBehaviour
     public float memoryspeed; 
     public Scanner scanner;
     public RuntimeAnimatorController[] animCon;
-    public bool ismove;                      // 플레이어 이동불가상태(ex: 넉백)을 위한 변수
+    public bool ismove;                       // 플레이어 이동불가상태(ex: 넉백)을 위한 변수
 
-    public float hitSoundCooldown = 1.2f;    // 1.2초 소리 쿨타임
-    public float lastHitSoundTime;           // 마지막 재생 시간 기억
+    private float hitSoundCooldown = 1.2f;    // 1.2초 소리 쿨타임
+    private float lastHitSoundTime;           // 마지막 재생 시간 기억
 
-    public JoystickController joystick;      // JoystickController를 연결합니다.
+    public JoystickController joystick;       // JoystickController를 연결합니다.
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -110,8 +110,6 @@ public class Player : MonoBehaviour
             if (collision.gameObject.GetComponent<BossPattern>().IsBossDashing)
             {
                 ismove = false;
-                Debug.Log("StartCorountine KnockBack");
-                Debug.Log("BossStop in Player");
                 StartCoroutine(PlayerKnockBack(collision));
                 collision.gameObject.GetComponent<BossPattern>().BossStop();
             }
@@ -124,7 +122,6 @@ public class Player : MonoBehaviour
         anim.SetTrigger("Damage");
 
         // 보스가 플레이어와 충돌 시 데미지를 받음
-        Debug.Log("Damage: " + collision.gameObject.GetComponent<BossPattern>().BossDashDamage);
         GameManager.instance.health -= collision.gameObject.GetComponent<BossPattern>().BossDashDamage;
         
         // 보스 위치 계산
@@ -133,15 +130,14 @@ public class Player : MonoBehaviour
         // 플레이어 반동 방향 계산
         Vector2 dirVec = rigid.position - target.position;
         Vector2 nextVec = dirVec.normalized;
-        Debug.Log("반동 방향 : " + nextVec);
         
         // 보스와 충돌 시 플레이어가 일정한 힘으로 밀려남
         rigid.velocity = Vector2.zero;
         rigid.velocity = nextVec * 15.0f;
         //rigid.AddForce(nextVec * 5f, ForceMode2D.Impulse);
         
-        // 보스 돌진패턴에 피격당할 시 1.5초간 이동불가        
-        yield return new WaitForSeconds(1.5f);
+        // 보스 돌진패턴에 피격당할 시 0.8초간 이동불가        
+        yield return new WaitForSeconds(0.8f);
         rigid.velocity = Vector2.zero;
         ismove = true;
     }

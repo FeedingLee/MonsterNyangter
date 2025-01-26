@@ -62,7 +62,7 @@ public class LevelUp : MonoBehaviour
         // 2. 그 중에서 랜덤 3개 아이템 활성화
         int[] ran = new int[3];
 
-        // 3. 7의 배수 레벨에는 능력치만 선택지에 나타나도록 
+        // 3. 7의 배수 레벨에는 무기만 선택지에 나타나도록 
         if (GM_Objcet.GetComponent<GameManager>().level % 7 == 0)
         {
             while (true)
@@ -95,7 +95,7 @@ public class LevelUp : MonoBehaviour
             // 4. 만렙 아이템의 경우는 소비아이템으로 대체
             if (ranItem.level == ranItem.data.damages.Length || ranItem.gameObject.activeSelf)
             {
-                int randomIndex = Random.Range(10, 13);
+                int randomIndex = Random.Range(10, 14);
                 ranItem = items[randomIndex];
 
                 while (true)
@@ -103,14 +103,12 @@ public class LevelUp : MonoBehaviour
                     // 선택된 아이템이 이미 활성화 상태일 경우 리롤
                     if (ranItem.gameObject.activeSelf)
                     {
-                        randomIndex = Random.Range(10, 13);
+                        randomIndex = Random.Range(10, 14);
                         ranItem = items[randomIndex];
                     }
                     else
                         break;
                 }
-
-                // 랜덤아이템이 많다면 (4~7번까지) 강의 12 [39:42] 참고
                 items[randomIndex].gameObject.SetActive(true);
             }
             else

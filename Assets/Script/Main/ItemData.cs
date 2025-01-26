@@ -8,7 +8,7 @@ public class ItemData : ScriptableObject
     public enum ItemType 
     {  
         DualBlades, HuntingBow, SniperHBG , GreatSword, Lance,          // 메인무기
-        Rate_Up, Speed_Up, Heal, Damage_Up, Stamina_Up, Weapon_Upgrade, Magnet, Exp_Coupon
+        Rate_Up, Speed_Up, Heal, Damage_Up, Stamina_Up, Weapon_Upgrade, Magnet, Exp_Coupon, Super_Magnet
     }
     
     [Header("Main Info")]

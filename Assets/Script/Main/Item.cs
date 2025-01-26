@@ -11,6 +11,7 @@ public class Item : MonoBehaviour
     public Weapon weapon;
     public Gear gear;
     public static int Exp_Bonus;
+    public static int Super_Magnet;
 
     Image icon;
     Text textLevel;
@@ -161,6 +162,10 @@ public class Item : MonoBehaviour
             case ItemData.ItemType.Exp_Coupon:
                 Exp_Bonus = 1;   
                 GameManager.expbonuscheck = 0;
+                break;
+            case ItemData.ItemType.Super_Magnet:
+                Super_Magnet = 1;
+                GameManager.supermagnetcheck = 0;
                 break;
         }
 

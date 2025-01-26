@@ -35,6 +35,9 @@ public class GiveUpBtn : MonoBehaviour
             // 경험치 보너스 상태 초기화
             Item.Exp_Bonus = 0;
             GameManager.expbonuscheck = 0;
+            // 자석 보너스 상태 초기화
+            Item.Super_Magnet = 0;
+            GameManager.supermagnetcheck = 0;
 
             SceneManager.LoadScene("Main");
         }
