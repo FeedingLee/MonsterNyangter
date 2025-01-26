@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
             switch (GameManager.instance.playerId)
             {
                 case 0: return 1.0f;
-                case 1: return 1.2f;
+                case 1: return 1.1f;
                 case 2: return 0.8f;
                 case 3: return 1.5f;
                 default: return 1.0f;
@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
             switch (GameManager.instance.playerId)
             {
                 case 0: return 1.0f;
-                case 1: return 1.1f;
+                case 1: return 1.2f;
                 case 2: return 1.0f;
                 case 3: return 0.5f;
                 default: return 1.0f;
@@ -39,7 +39,7 @@ public class Character : MonoBehaviour
             switch (GameManager.instance.playerId)
             {
                 case 0: return 1.0f;
-                case 1: return 0.9f;
+                case 1: return 0.8f;
                 case 2: return 1.0f;
                 case 3: return 1.1f;
                 default: return 1.0f;
@@ -55,7 +55,7 @@ public class Character : MonoBehaviour
             {
                 case 0: return 1.0f;
                 case 1: return 0.75f;
-                case 2: return 1.1f;
+                case 2: return 1.2f;
                 case 3: return 0.7f;
                 default: return 1.0f;
             }
