@@ -3,35 +3,34 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ChangeBtn : MonoBehaviour
+public class Scene_ChangeBtn : MonoBehaviour
 {
-    public float fadeDuration = 2.0f; // Fade 시간 (초)
-    public float delayBeforeSceneChange = 1.0f; // 씬 변경 전 대기 시간 (초)
-    public Image transparentBlock; // 투명한 블럭 UI
-    public AudioSource bgmAudioSource; // BGM AudioSource
-    public Button ExitBtn; // 게임종료 버튼
+    public float fadeDuration = 1.5f;           // Fade 시간 (초)
+    public float delayBeforeSceneChange = 2.0f; // 씬 변경 전 대기 시간 (초)
+    public Image transparentBlock;              // 투명한 블럭 UI
+    public AudioSource bgmAudioSource;          // BGM AudioSource
+    public Button ExitBtn;                      // 게임종료 버튼
 
-    private bool isClicked = false; // 버튼이 클릭되었는지 여부
-    private bool hasFadedOut = false; // FadeOut이 완료되었는지 여부
-    private bool hasSceneChanged = false; // 씬이 변경되었는지 여부
+    private bool isClicked = false;             // 버튼이 클릭되었는지 여부
+    private bool hasFadedOut = false;           // FadeOut이 완료되었는지 여부
+    private bool hasSceneChanged = false;       // 씬이 변경되었는지 여부
 
     private void Update()
     {
-        // 버튼이 클릭되고 아직 FadeOut이 실행되지 않았다면
+        // 버튼이 클릭되고 아직 FadeOut이 실행되지 않았다면 실행
         if (isClicked && !hasFadedOut)
         {
-            // FadeOut 실행
             FadeOut();
         }
     }
 
-    public void ExitBtnOff()
+    private void ExitBtnOff()
     {
         ExitBtn.interactable = false;
     }
 
     // 버튼을 클릭하면 씬 변경
-    public void SceneChange()
+    private void SceneChange()
     {
         // 버튼을 처음 눌렀을 때 한 번만 실행
         if (!isClicked)

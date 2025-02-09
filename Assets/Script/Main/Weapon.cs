@@ -10,9 +10,9 @@ public class Weapon : MonoBehaviour
     public int id;
     public int prefabId;
     public float damage;
-    public float speed;             // 무기의 회전 속도
-    public float rate;              // 무기의 연사 속도
-    public int count;               // 회전하는 무기 갯수
+    public float speed;                       // 무기의 회전 속도
+    public float rate;                        // 무기의 연사 속도
+    public int count;                         // 회전하는 무기 갯수
 
     [Header("# Etc Data")]
     public float memorydamage;                // 데미지 저장
@@ -31,9 +31,9 @@ public class Weapon : MonoBehaviour
     public float RemRate;
 
     /* [ 무기 상태 확인 변수 ] */
-    bool charm = false;             // [대검] 참 모아베기상태 확인하는 변수
-    bool cooldown = false;          // 쿨타임을 확인하는 변수
-    bool lancecharge = false;       // [랜스] 돌진상태 확인하는 변수
+    bool charm = false;                        // [대검] 참 모아베기상태 확인하는 변수
+    bool cooldown = false;                     // 쿨타임을 확인하는 변수
+    bool lancecharge = false;                  // [랜스] 돌진상태 확인하는 변수
 
     /* [ 스크립트 연결 ] */
     float timer;
@@ -44,13 +44,13 @@ public class Weapon : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [Header("# Weapon Level")]
-    public static int DB_level;            // 쌍검
-    public static int HB_level;            // 활
-    public static int SH_level;            // 헤보건
-    public static int GS_level;            // 대검
-    public static int LC_level;            // 랜스
+    public static int DB_level;               // 쌍검
+    public static int HB_level;               // 활
+    public static int SH_level;               // 헤보건
+    public static int GS_level;               // 대검
+    public static int LC_level;               // 랜스
 
-    void Awake()
+    private void Awake()
     {
         player = GameManager.instance.player;
         joystickController = GameManager.instance.joystickController;
@@ -58,7 +58,7 @@ public class Weapon : MonoBehaviour
         Gear_RemRate = 100;
     }
 
-    void Update()
+    private void Update()
     {
         if (!GameManager.instance.isLive)
             return;
@@ -284,7 +284,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 쌍검 공격, 배치 로직
-    void DualBlades()
+    private void DualBlades()
     {
         for (int index = 0; index < count; index++)                         // 무기 갯수(count) 만큼 루프를 돌림
         {
@@ -312,7 +312,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 대검 배치 로직
-    void GreatSword()
+    private void GreatSword()
     {
         if (cooldown)                                          // 쿨다운 상태 (참모아 베기가 끝난 뒤) 
         {
@@ -347,7 +347,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 랜스 배치 로직
-    void Lance()
+    private void Lance()
     {
         for (int i = 0; i < 1; i++)
         {
@@ -371,7 +371,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 활 배치 + 공격 로직
-    void HuntingBow()
+    private void HuntingBow()
     {
         if (!player.scanner.nearestTarget)
             return;
@@ -389,7 +389,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 헤비보우건 배치 + 공격 로직
-    void Sniper()
+    private void Sniper()
     {
         Vector3 dir = joystickController.GetInputVector();       // Joystick 방향 벡터 받아옴                                              
         if (dir == Vector3.zero)                                 // Joystick이 정지 상태라면
@@ -410,7 +410,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 대검 회전 공격 코루틴
-    IEnumerator GreatSwordRotate()
+    private IEnumerator GreatSwordRotate()
     {
         int rotationCount = 0;                                                          // 회전 횟수를 추적하기 위한 변수
 
@@ -439,7 +439,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 랜스 움직이는 로직
-    void LanceRotate()
+    private void LanceRotate()
     {
         Vector3 dir = joystickController.GetInputVector();                              // Joystick 방향 벡터 받아옴
 
@@ -455,7 +455,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 랜스 공격 로직
-    IEnumerator LanceAttack()
+    private IEnumerator LanceAttack()
     {
         yield return new WaitForSeconds(rate);                                          // rate 만큼 쿨타임을 기다려야 돌진모드 활성화
 
@@ -479,7 +479,7 @@ public class Weapon : MonoBehaviour
     }
 
     // 랜스 무기 변경 로직
-    void LanceShieldMod()
+    private void LanceShieldMod()
     {
         Transform childTransform = transform.GetChild(0);                               // 자식오브젝트를 가져옴
         CircleCollider2D childCollider = childTransform.GetComponent<CircleCollider2D>(); // CircleCollider2D 가져오기   

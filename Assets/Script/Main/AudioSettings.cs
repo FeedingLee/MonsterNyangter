@@ -6,7 +6,7 @@ public class AudioSettings : MonoBehaviour
     public Slider bgmSlider;
     public Slider sfxSlider;
 
-    void Start()
+    private void Start()
     {
         // 기본값을 설정하고, 저장된 값이 있다면 불러옴
         bgmSlider.value = PlayerPrefs.GetFloat("BgmVolume", 0.2f);

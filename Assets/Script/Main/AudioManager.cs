@@ -58,7 +58,7 @@ public class AudioManager : MonoBehaviour
         Player_hit
     }
 
-    void Awake()
+    private void Awake()
     {
         bgmPlayer = GetComponent<AudioSource>();
         WaitingbgmPlayer = GetComponent<AudioSource>();
@@ -68,7 +68,7 @@ public class AudioManager : MonoBehaviour
         WaitBgmPlay();
     }
 
-    void Init()
+    private void Init()
     {
         // BGM Player »ý¼º
         GameObject bgmObject = new GameObject("BgmPlayer");

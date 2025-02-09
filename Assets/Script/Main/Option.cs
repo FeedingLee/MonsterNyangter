@@ -14,7 +14,7 @@ public class Option : MonoBehaviour
     private bool isPaused = false;
     private bool OptionPanel = false;
 
-    void Start()
+    private void Start()
     {
         // 게임 시작 시 Option Panel을 비활성화
         panel.SetActive(false);
@@ -26,7 +26,7 @@ public class Option : MonoBehaviour
         continueButton.onClick.AddListener(ContinueGame);
     }
 
-    public void Update()
+    private void Update()
     {
         /* [ 조건 ] 
         1. LevelUpFinish 가 true 일때
@@ -53,7 +53,7 @@ public class Option : MonoBehaviour
         }
     }
 
-    public void ToggleOption()
+    private void ToggleOption()
     {
         isPaused = !isPaused;
 
@@ -73,7 +73,7 @@ public class Option : MonoBehaviour
         }
     }
 
-    public void ContinueGame()
+    private void ContinueGame()
     {
         // 플레이어 오브젝트가 꺼져있으면, 게임 실행중이 아니기 때문에
         if (player.gameObject.activeInHierarchy == false)

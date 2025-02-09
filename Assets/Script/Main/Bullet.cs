@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
 
     Rigidbody2D rigid;
 
-    void Awake()
+    private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
     }
@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Enemy") || per == -1)
             return;
@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (!collision.CompareTag("Area") || per == -100)
             return;

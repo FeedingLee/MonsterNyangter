@@ -66,7 +66,7 @@ public class Scanner : MonoBehaviour
     }
 
     // 범위에 들어온 Exp 구슬들을 플레이어 방향으로 이동시킴
-    void EatExp()
+    private void EatExp()
     {
         foreach (RaycastHit2D target in expTargets)
         {

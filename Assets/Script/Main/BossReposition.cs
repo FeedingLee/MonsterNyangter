@@ -12,7 +12,7 @@ public class BossReposition : MonoBehaviour
     public bool IsBossFalling;          // 보스 순간이동 관련 bool 변수 
     public float WaitReposition;        // 보스 Reposition 쿨타임
     public BossPattern bossPattern;
-    float time;
+    private float time;
     Transform bossTransform;            // 자신(보스) 트랜스폼
     Rigidbody2D bossRigid;              // 자신(보스) Rigidbody2D
     Vector2 dirVec;                     // 이동 방향
@@ -20,12 +20,12 @@ public class BossReposition : MonoBehaviour
     Animator anim;                      // 보스 애니메이터 
     Coroutine test;
 
-    [Header("# Landing Firing")]             // 착지 전방향 발사 관련 변수
-    public int LBulletCount;                 // 발사 갯수 20
-    public float LBossBulletDamage;          // 발사 데미지
-    public float LFireSpeed;                 // 발사 속도 0.5
+    [Header("# Landing Firing")]        // 착지 전방향 발사 관련 변수
+    public int LBulletCount;            // 발사 갯수 20
+    public float LBossBulletDamage;     // 발사 데미지
+    public float LFireSpeed;            // 발사 속도 0.5
 
-    void Awake()
+    private void Awake()
     {
         bossTransform = transform;
         bossRigid = GetComponent<Rigidbody2D>();
@@ -38,7 +38,7 @@ public class BossReposition : MonoBehaviour
         time = WaitReposition;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         // Reposition 쿨타임 계산
         time += Time.deltaTime;
@@ -75,7 +75,7 @@ public class BossReposition : MonoBehaviour
         }
     }
 
-    IEnumerator StartBossReposition()
+    private IEnumerator StartBossReposition()
     {
         // 점프 사운드 재생
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Jump);
@@ -124,7 +124,7 @@ public class BossReposition : MonoBehaviour
         yield return new WaitForFixedUpdate();
     }
 
-    IEnumerator WaitAnim(float waitTime)
+    private IEnumerator WaitAnim(float waitTime)
     {
         // 착지 애니메이션이 재생중인 동안 대기
         yield return new WaitForSeconds(waitTime);
@@ -138,7 +138,7 @@ public class BossReposition : MonoBehaviour
         time = 0;
     }
 
-    void Fire()
+    private void Fire()
     {
         // 보스 착지 후 돌튀는 사운드 재생
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Anj_Rock);

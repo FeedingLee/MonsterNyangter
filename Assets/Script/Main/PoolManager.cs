@@ -14,7 +14,7 @@ public class PoolManager : MonoBehaviour
     // .. 보스 관련 풀 담당을 하는 리스트들
     List<GameObject>[] enemies;
 
-    void Awake()
+    private void Awake()
     {
         pools = new List<GameObject>[prefabs.Length];
 

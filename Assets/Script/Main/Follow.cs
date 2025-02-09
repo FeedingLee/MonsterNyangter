@@ -6,12 +6,12 @@ public class Follow : MonoBehaviour
 {
     RectTransform rect;
 
-    void Awake()
+    private void Awake()
     {
         rect = GetComponent<RectTransform>();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         rect.position = Camera.main.WorldToScreenPoint(GameManager.instance.player.transform.position);
     }

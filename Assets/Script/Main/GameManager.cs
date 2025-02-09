@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public bool isBossSpawn = false;
     // 경험치 보너스 코루틴 확인용 변수
     public static int expbonuscheck = 0;
-    // 슈퍼 그물망 코루튼 확인용 변수
+    // 슈퍼 그물망 코루틴 확인용 변수
     public static int supermagnetcheck = 0;
     // 보와보와 업적용 변수
     public int wincheck = 0; 
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemyCleaner;
     public BossPattern boss;
 
-    void Awake()
+    private void Awake()
     {
         expcoroutine = CouponTime();
         magnetcoroutine = SuperMagnetTime();
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
     }
 
-    void Update()
+    private void Update()
     {
         if (expbonuscheck == 0 && Item.Exp_Bonus == 1)
         {
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GameOverRoutine());
     }
 
-    IEnumerator GameOverRoutine()
+    private IEnumerator GameOverRoutine()
     {
         // 획득했던 스텟 값 초기화
         Gear.rate_stat = 0.0f;
@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
         wincheck = 1;
     }
 
-    IEnumerator GameVictoryRoutine()
+    private IEnumerator GameVictoryRoutine()
     {
         // 이전 게임에서 얻었던 값 초기화
         Gear.rate_stat = 0.0f;
@@ -232,6 +232,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /* 경험치 보너스 관련 */
     public void Exp_Fever()
     {        
         StopCoroutine(expcoroutine);
@@ -240,7 +241,7 @@ public class GameManager : MonoBehaviour
         expcoroutine = CouponTime();
         StartCoroutine(expcoroutine);
     }
-    IEnumerator CouponTime()
+    private IEnumerator CouponTime()
     {       
         yield return new WaitForSeconds(45.0f);
         Item.Exp_Bonus = 0;
@@ -248,6 +249,7 @@ public class GameManager : MonoBehaviour
         StopCoroutine(expcoroutine);
     }
 
+    /* 자력 강화 관련 */
     public void Magnet_Fever()
     {
         StopCoroutine(magnetcoroutine);
@@ -256,7 +258,7 @@ public class GameManager : MonoBehaviour
         magnetcoroutine = SuperMagnetTime();
         StartCoroutine(magnetcoroutine);
     }
-    IEnumerator SuperMagnetTime()
+    private IEnumerator SuperMagnetTime()
     {
         yield return new WaitForSeconds(10.0f);
         Item.Super_Magnet = 0;

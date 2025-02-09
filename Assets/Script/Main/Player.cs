@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public bool ismove;                       // 플레이어 이동불가상태(ex: 넉백)을 위한 변수
 
-    private float hitSoundCooldown = 1.2f;    // 1.2초 소리 쿨타임
+    private float hitSoundCooldown = 0.3f;    // 0.3초 소리 쿨타임
     private float lastHitSoundTime;           // 마지막 재생 시간 기억
 
     public JoystickController joystick;       // JoystickController를 연결합니다.
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     SpriteRenderer spriter;
     Animator anim;
 
-    void Awake()
+    private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
@@ -30,14 +30,14 @@ public class Player : MonoBehaviour
         ismove = true;
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
         speed *= Character.Speed;
         memoryspeed = speed;
         anim.runtimeAnimatorController = animCon[GameManager.instance.playerId];
     }
 
-    void Update()
+    private void Update()
     {
         // 사망로직
         if (GameManager.instance.health <= 0)
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         inputVec = joystick.GetInputVector(); // JoystickController에서 inputVec을 가져옵니다.
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (!GameManager.instance.isLive || !ismove)
             return;
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         rigid.MovePosition(rigid.position + nextVec);
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         if (!GameManager.instance.isLive || !ismove)
             return;
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss"))
         {
@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator PlayerKnockBack(Collider2D collision)
+    private IEnumerator PlayerKnockBack(Collider2D collision)
     {
         // 피격 애니메이션 재생
         anim.SetTrigger("Damage");

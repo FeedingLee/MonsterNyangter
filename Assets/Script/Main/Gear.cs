@@ -57,7 +57,7 @@ public class Gear : MonoBehaviour
         ApplyGear();
     }
 
-    void ApplyGear()
+    private void ApplyGear()
     {
         switch (type)
         {
@@ -84,7 +84,7 @@ public class Gear : MonoBehaviour
     }
 
     // 연사속도 스텟 증가 로직
-    void RateUp()
+    private void RateUp()
     {
         Weapon[] weapons = transform.parent.GetComponentsInChildren<Weapon>();
 
@@ -103,7 +103,7 @@ public class Gear : MonoBehaviour
     }
 
     // 이동속도 스텟 증가 로직
-    void SpeedUp()
+    private void SpeedUp()
     {
         float speed = 3 * Character.Speed;                  // 숫자는 플레이어의 기본속도를 의미함
         GameManager.instance.player.speed = speed + (speed * power);
@@ -111,7 +111,7 @@ public class Gear : MonoBehaviour
     }
 
     // 공격력 스텟 증가 로직
-    void DamageUp()
+    private void DamageUp()
     {
         Weapon[] weapons = transform.parent.GetComponentsInChildren<Weapon>();
 
@@ -132,7 +132,7 @@ public class Gear : MonoBehaviour
     }
 
     // 스테미나 스텟 증가 로직
-    void StaminaUp()
+    private void StaminaUp()
     {
         Weapon[] weapons = transform.parent.GetComponentsInChildren<Weapon>();
 
@@ -151,7 +151,7 @@ public class Gear : MonoBehaviour
     }
 
     // 무기 고유 능력치 (쌍검 갯수, 관통력, 참모아 횟수, 돌진모드 이동속도 등)
-    void WeaponUp()
+    private void WeaponUp()
     {
         Weapon[] weapons = transform.parent.GetComponentsInChildren<Weapon>();
 

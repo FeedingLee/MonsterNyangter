@@ -18,7 +18,7 @@ public class Item : MonoBehaviour
     Text textName;
     Text textDesc;
 
-    void Awake()
+    private void Awake()
     {
         icon = GetComponentsInChildren<Image>()[1];
         icon.sprite = data.itemIcon;
@@ -30,7 +30,7 @@ public class Item : MonoBehaviour
         textName.text = data.itemName;
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
         textLevel.text = "Lv." + (level + 1);
         if (level == 0)

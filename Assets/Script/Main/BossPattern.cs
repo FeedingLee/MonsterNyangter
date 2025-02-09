@@ -21,11 +21,6 @@ public class BossPattern : MonoBehaviour
     public float OBossBulletDamage;          // 발사 데미지
     public float OFireSpeed;                 // 발사 속도
 
-/*    [Header("# BossBullet")]
-    public int bulletCount;                  // 발사 갯수
-    public float BossBulletDamage;           // 발사 데미지
-    public float fireSpeed;                  // 발사 속도*/
-
     [Header("# BossDash")]
     public float DashSpeed;                  // 돌진 속도
     public bool IsBossDashing;               // 보스 돌진 상태 체크
@@ -38,13 +33,13 @@ public class BossPattern : MonoBehaviour
     public float currentHp;                  // 보스 현재 체력
     public float maxHp;                      // 보스 최대 체력
     public bool isBossLive;                  // 보스 생존 확인
-    bool isBossTired;                        // 보스 지침 상태 확인
+    public bool isBossTired;                 // 보스 지침 상태 확인
     public bool isBossAttacking;             // 보스 공격 상태 확인
     public float MaxDamage;                  // 보스가 한번에 입을 수 있는 최대 피해량
 
     public Coroutine repeatActionCoroutine;  // 실행 중인 코루틴을 저장할 변수
 
-    void Awake()
+    private void Awake()
     {
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
@@ -53,7 +48,7 @@ public class BossPattern : MonoBehaviour
         targetRigid = GameManager.instance.player.GetComponent<Rigidbody2D>();
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
         IsBossDashing = false;
         currentHp = maxHp;
@@ -69,15 +64,7 @@ public class BossPattern : MonoBehaviour
         anim.SetBool("isBossTired", false);
     }
 
-    private void Start()
-    {
-        // 오브젝트가 활성화 된 후 코루틴 시작
-        // 1220: 보스 패턴 진행중에 텔포 막기 & 텔포중 보스 패턴 막기
-        // 코루틴 시작 시 반환값을 저장
-        //repeatActionCoroutine = StartCoroutine(RepeatAction());
-    }
-
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (!GameManager.instance.isLive)
             return;
@@ -114,7 +101,7 @@ public class BossPattern : MonoBehaviour
                 StopCoroutine(repeatActionCoroutine);
             }
 
-            // 테스트
+            // 테스트용 패턴 반복 변수
             //number = 2;
 
             // 반복할 동작
@@ -167,9 +154,6 @@ public class BossPattern : MonoBehaviour
 
                     break;
             }
-
-            // 보스패턴 대기시간 / 2초 대기
-            //yield return new WaitForSeconds(interval / 2f);
         }
     }
 
@@ -191,13 +175,13 @@ public class BossPattern : MonoBehaviour
     }
 
     // 보스 사망 모션 후 n초동안 대기, 이후 보스 오브젝트 비활성화
-    IEnumerator BossDeadsec(float time)
+    private IEnumerator BossDeadsec(float time)
     {
         yield return new WaitForSeconds(time);
         Dead();
     }
 
-    IEnumerator WaitHitChange(float time)
+    private IEnumerator WaitHitChange(float time)
     {
         yield return new WaitForSeconds(time);
         spriter.color = Color.white;
@@ -219,7 +203,7 @@ public class BossPattern : MonoBehaviour
 
         for (int i = 0; i < MBulletCount; i++)
         {
-            float angle = i * angleStep;  // 각 발사체의 각도
+            float angle = i * angleStep;        // 각 발사체의 각도
             float rad = angle * Mathf.Deg2Rad;  // 각도를 라디안으로 변환
 
             // 방향 벡터 계산
@@ -269,7 +253,7 @@ public class BossPattern : MonoBehaviour
         bullet.GetComponent<BossBullet>().Init(bulletDamage, dir * addspeed, index);   // 총알 초기화
     }
 
-    void BossDash()
+    private void BossDash()
     {
         // 대쉬중에는 판정 살짝 줄이기
         gameObject.GetComponent<CapsuleCollider2D>().size = new Vector2(4.5f, 8.0f);
@@ -311,8 +295,8 @@ public class BossPattern : MonoBehaviour
         }
     }
 
-    void Dead()
-    {      
+    private void Dead()
+    {
         // 보스 사망 시 비활성화
         //gameObject.SetActive(false);
 
@@ -320,7 +304,7 @@ public class BossPattern : MonoBehaviour
         GameManager.instance.GameVictory();
     }
 
-    void HitColorChange()
+    private void HitColorChange()
     {
         // 피격색상(빨간색)으로 변경
         spriter.color = new Color(1f, 0.54f, 0.54f, 1f);
@@ -361,7 +345,7 @@ public class BossPattern : MonoBehaviour
                 }
             }
             else
-            {            
+            {
                 StopAttack();
                 isBossLive = false;
                 coll.enabled = false;

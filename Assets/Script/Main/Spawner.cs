@@ -14,13 +14,13 @@ public class Spawner : MonoBehaviour
     int level;
     float timer;
 
-    void Awake()
+    private void Awake()
     {
         spawnPoint = GetComponentsInChildren<Transform>();
         levelTime = GameManager.instance.maxGameTime / spawnData.Length;
     }
 
-    void Update()
+    private void Update()
     {
         if (!GameManager.instance.isLive)
             return;
@@ -41,7 +41,7 @@ public class Spawner : MonoBehaviour
             }*/
         }
     }
-    void Spawn()
+    private void Spawn()
     {
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
@@ -82,22 +82,22 @@ public class Spawner : MonoBehaviour
     }
 }
 
-//소환데이터 설정 클래스 [ 스프라이트 타입, 소환시간, 체력 등 ]
-[System.Serializable]
-public class SpawnData
-{
-    public float spawnTime;
-    public int spriteType;
-    public int health;
-    public float speed;
-    public int chance;
-    public float stronger;                  
-    public int expIndex;                    // 추가 경험치 구슬 갯수
-}
+    //소환데이터 설정 클래스 [ 스프라이트 타입, 소환시간, 체력 등 ]
+    [System.Serializable]
+    public class SpawnData
+    {   
+        public float spawnTime;
+        public int spriteType;
+        public int health;
+        public float speed;
+        public int chance;
+        public float stronger;                  
+        public int expIndex;                    // 추가 경험치 구슬 갯수
+    }   
 
-[System.Serializable]
-public class BossSpawnData
-{
-    public float speed;
-    public float health;
-}
+    [System.Serializable]
+    public class BossSpawnData
+    {
+        public float speed;
+        public float health;
+    }

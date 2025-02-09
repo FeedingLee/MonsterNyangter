@@ -7,7 +7,7 @@ public class GiveUpBtn : MonoBehaviour
 {
     public GameObject player; // Player 오브젝트를 참조하기 위한 변수
 
-    void Start()
+    private void Start()
     {
         // Player 오브젝트를 찾아서 변수에 할당
         if (player == null)

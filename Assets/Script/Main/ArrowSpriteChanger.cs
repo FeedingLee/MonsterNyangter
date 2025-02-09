@@ -11,11 +11,11 @@ public class ArrowSpriteChanger : MonoBehaviour
     public Sprite[] arrow;                                  
     SpriteRenderer spriterenderer;                          
 
-    void Start()
+    private void Start()
     {
         spriterenderer = GetComponent<SpriteRenderer>();
     }
-    void Update()
+    private void Update()
     {    
         switch (weapon_num)
         {

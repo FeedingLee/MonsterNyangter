@@ -16,7 +16,7 @@ public class LevelUp : MonoBehaviour
     public static LevelUp instance;
     public bool LevelUpFinish = true;
 
-    void Awake()
+    private void Awake()
     {
         rect = GetComponent<RectTransform>();
         items = GetComponentsInChildren<Item>(true);
@@ -51,7 +51,7 @@ public class LevelUp : MonoBehaviour
         items[index].OnClick();
     }
 
-    void Next()
+    private void Next()
     {
         // 1. 모든 아이템 비활성화
         foreach (Item item in items)

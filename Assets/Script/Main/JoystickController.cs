@@ -16,14 +16,14 @@ public class JoystickController : MonoBehaviour
     private Vector2 inputVec;                           // 조이스틱 입력 벡터
     private bool isJoy;                                 // 조이스틱이 활성 상태인지 여부
 
-    void Start()
+    private void Start()
     {
         joystickBackground.gameObject.SetActive(false); // 시작 시 조이스틱 배경 비활성화
         joystickHandle.gameObject.SetActive(false);     // 시작 시 조이스틱 핸들 비활성화
         isJoy = false;                                  // 조이스틱 비활성 상태로 초기화
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.touchCount > 0)                                  // 터치가 하나 이상 감지되었을 때
         {
@@ -52,7 +52,7 @@ public class JoystickController : MonoBehaviour
     }
 
     // 터치가 UI를 눌렀는지 확인하는 함수
-    bool IsTouchingUI(Touch touch)
+    private bool IsTouchingUI(Touch touch)
     {
         PointerEventData pointerData = new PointerEventData(EventSystem.current);                               // 터치 위치에 대한 포인터 데이터 생성
         pointerData.position = touch.position;                                                                  // 터치의 위치를 설정
@@ -72,20 +72,20 @@ public class JoystickController : MonoBehaviour
     }
 
     // 터치 위치에 맞춰 조이스틱의 배경 위치를 설정하는 함수
-    void SetJoystickPosition(Vector2 screenPosition)
+    private void SetJoystickPosition(Vector2 screenPosition)
     {
-        if (GameManager.instance.isLive)                                                                // 게임이 진행 중일 때만 조이스틱 설정
+        if (GameManager.instance.isLive)                                                                        // 게임이 진행 중일 때만 조이스틱 설정
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvas.transform as RectTransform, screenPosition, null, out Vector2 anchoredPosition); // 화면의 터치 좌표를 로컬 좌표로 변환
+                canvas.transform as RectTransform, screenPosition, null, out Vector2 anchoredPosition);         // 화면의 터치 좌표를 로컬 좌표로 변환
 
-            joystickBackground.anchoredPosition = anchoredPosition;                                     // 변환된 좌표를 조이스틱 배경에 적용
-            joystickHandle.anchoredPosition = Vector2.zero;                                             // 핸들을 배경의 중앙에 위치
+            joystickBackground.anchoredPosition = anchoredPosition;                                             // 변환된 좌표를 조이스틱 배경에 적용
+            joystickHandle.anchoredPosition = Vector2.zero;                                                     // 핸들을 배경의 중앙에 위치
         }
     }
 
     // 조이스틱 핸들을 터치 위치에 맞게 이동시키는 함수
-    void MoveJoystickHandle(Vector2 screenPosition)
+    private void MoveJoystickHandle(Vector2 screenPosition)
     {
         // 터치 위치를 캔버스의 로컬 좌표로 변환
         RectTransformUtility.ScreenPointToLocalPointInRectangle(

@@ -7,12 +7,12 @@ public class RePostion : MonoBehaviour
 {
     Collider2D coll;
 
-    void Awake()
+    private void Awake()
     {
         coll = GetComponent<Collider2D>();
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         // AreaTag가 아니면 (조건)
         if (!collision.CompareTag("Area"))

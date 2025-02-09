@@ -9,11 +9,11 @@ public class AchiveManager : MonoBehaviour
     public GameObject[] unlockCharacter;
     public GameObject uiNotice;
 
-    enum Achive { UnlockGaza, UnlockBowa, UnlockWigller }
+    private enum Achive { UnlockGaza, UnlockBowa, UnlockWigller }
     Achive[] achives;
     WaitForSecondsRealtime wait;
 
-    void Awake()
+    private void Awake()
     {
         achives = (Achive[])Enum.GetValues(typeof(Achive));
         wait = new WaitForSecondsRealtime(5);
@@ -23,7 +23,7 @@ public class AchiveManager : MonoBehaviour
         }
     }
 
-    void Init()
+    private void Init()
     {
         PlayerPrefs.SetInt("MyData", 1);
 
@@ -33,12 +33,12 @@ public class AchiveManager : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         UnlockCharacter();
     }
 
-    void UnlockCharacter()
+    private void UnlockCharacter()
     {
         for (int index=0; index<lockCharacter.Length; index++)
         {
@@ -49,7 +49,7 @@ public class AchiveManager : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         foreach (Achive achive in achives)
         {
@@ -57,7 +57,7 @@ public class AchiveManager : MonoBehaviour
         }
     }
     // 캐릭터 해금 조건
-    void CheckAchive(Achive achive)
+    private void CheckAchive(Achive achive)
     {
         bool isAchive = false;
 
@@ -88,7 +88,7 @@ public class AchiveManager : MonoBehaviour
         }
     }
 
-    IEnumerator NoticeRoutine()
+    private IEnumerator NoticeRoutine()
     {
         uiNotice.SetActive(true);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Player_LevelUp);

@@ -9,27 +9,24 @@ public class BossBullet : MonoBehaviour
     public float damage;                            // 발사체 데미지
     public RuntimeAnimatorController[] animCon;     // 애니메이터 배열
 
-    //public int count;
-    //public int per;
-
     Rigidbody2D rb;                                 // Rigidbody 컴포넌트를 가져오기 위한 변수
     Animator anim;                                  // 발사체의 애니메이터
 
     // 오브젝트가 생성되면 자동으로 실행되는 메서드
-    void Awake()
+    private void Awake()
     {
         // Rigidbody 컴포넌트를 가져옴
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-    void Start()
+    private void Start()
     {
         StartCoroutine(ResetBullet());
     }
 
     // 발사체 초기화 함수
-    public void Init(float damage, /*int per,*/ Vector3 dir, int index)
+    public void Init(float damage, Vector3 dir, int index)
     {
         this.damage = damage;
         rb.velocity = dir;
@@ -61,7 +58,7 @@ public class BossBullet : MonoBehaviour
         }
     }
 
-    IEnumerator ResetBullet()
+    private IEnumerator ResetBullet()
     {
         // 보스 발사체가 필드에 남아있을경우 비활성화
         yield return new WaitForSeconds(10.0f);

@@ -12,13 +12,13 @@ public class HUD : MonoBehaviour
     Text myText;
     Slider mySlider;
 
-    void Awake()
+    private void Awake()
     {
         myText = GetComponent<Text>();
         mySlider = GetComponent<Slider>();
     }
 
-    void LateUpdate() 
+    private void LateUpdate() 
     {
         switch (type)
         {

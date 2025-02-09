@@ -8,7 +8,7 @@ public class ClickSound : MonoBehaviour
         GetComponent<UnityEngine.UI.Button>().onClick.AddListener(PlayClickSound);
     }
 
-    void PlayClickSound()
+    private void PlayClickSound()
     {
         // AudioManager를 통해 효과음 재생
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);

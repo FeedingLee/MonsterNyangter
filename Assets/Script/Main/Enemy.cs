@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     public float expSpawnRange;                         // 경험치 스폰 범위
-    public int expSpawnIndex;                         // 경험치구슬 드랍 갯수
+    public int expSpawnIndex;                           // 경험치구슬 드랍 갯수
 
     bool isLive;
 
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
 
-    void Awake()
+    private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         wait = new WaitForFixedUpdate();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (!GameManager.instance.isLive)
             return;
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
         rigid.velocity = Vector2.zero;
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         if (!GameManager.instance.isLive)
             return;
@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
         expSpawnIndex = index;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Bullet") || !isLive)
             return;
@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    IEnumerator KnockBack()
+    private IEnumerator KnockBack()
     {
         yield return wait;
         Vector3 playerPos = GameManager.instance.player.transform.position;
@@ -125,7 +125,7 @@ public class Enemy : MonoBehaviour
         rigid.AddForce(dirVec.normalized * 2, ForceMode2D.Impulse);
     }
 
-    void Dead()
+    private void Dead()
     {
         // 빨간색의 강화몬스터의 색상을 초기화하기 위한 코드
         gameObject.GetComponent<SpriteRenderer>().color = Color.white;
@@ -133,7 +133,7 @@ public class Enemy : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void SpawnExp(int expIndex)
+    private void SpawnExp(int expIndex)
     {
         for (int i=0; i< expIndex; i++)
         {

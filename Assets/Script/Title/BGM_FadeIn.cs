@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FadeIn : MonoBehaviour
+public class BGM_FadeIn : MonoBehaviour
 {
-    private AudioSource audioSource;
-    public float maxVolume; // 최대 음량 설정
+    public AudioSource audioSource;
+    public float maxVolume;
     public double fadeInSeconds;
-    bool isFadeIn = true;
-    double fadeDeltaTime = 0;
+    private bool isFadeIn = true;
+    private double fadeDeltaTime = 0;
 
     // 시작 시점에서 호출됨
-    void Start()
+    public void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
     // 매 프레임마다 호출됨
-    void Update()
+    private void Update()
     {
         if (isFadeIn)
         {
