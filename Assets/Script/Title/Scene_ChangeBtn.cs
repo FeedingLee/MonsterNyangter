@@ -29,6 +29,11 @@ public class Scene_ChangeBtn : MonoBehaviour
         ExitBtn.interactable = false;
     }
 
+    private void GameQuit()
+    {
+        Application.Quit();
+    }
+
     // 버튼을 클릭하면 씬 변경
     private void SceneChange()
     {

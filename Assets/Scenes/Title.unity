@@ -366,8 +366,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2054114788}
+        m_TargetAssemblyTypeName: Scene_ChangeBtn, Assembly-CSharp
         m_MethodName: GameQuit
         m_Mode: 1
         m_Arguments:
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   delayBeforeSceneChange: 2
   transparentBlock: {fileID: 2085124538}
   bgmAudioSource: {fileID: 1791884202}
-  ExitBtn: {fileID: 718226676}
+  ExitBtn: {fileID: 0}
 --- !u!1 &2082382217
 GameObject:
   m_ObjectHideFlags: 0

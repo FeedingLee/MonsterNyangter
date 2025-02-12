@@ -232,7 +232,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /* 경험치 보너스 관련 */
+    /* 경험치 보너스(격운티켓) 관련 */
     public void Exp_Fever()
     {        
         StopCoroutine(expcoroutine);
@@ -243,13 +243,13 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator CouponTime()
     {       
-        yield return new WaitForSeconds(45.0f);
+        yield return new WaitForSeconds(30.0f);
         Item.Exp_Bonus = 0;
         expbonuscheck = 0;
         StopCoroutine(expcoroutine);
     }
 
-    /* 자력 강화 관련 */
+    /* 자력 강화(슈퍼 그물망) 관련 */
     public void Magnet_Fever()
     {
         StopCoroutine(magnetcoroutine);

@@ -75,6 +75,19 @@ public class LevelUp : MonoBehaviour
                     break;
             }
         }
+        // 3.5 17레벨에는 반드시 소모품을 한번 지급
+        else if (GM_Objcet.GetComponent<GameManager>().level % 17 == 0)
+        {
+            while (true)
+            {
+                ran[0] = Random.Range(10, 14);
+                ran[1] = Random.Range(10, 14);
+                ran[2] = Random.Range(10, 14);
+
+                if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
+                    break;
+            }
+        }
         else
         {
             while (true)

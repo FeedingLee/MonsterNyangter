@@ -16755,6 +16755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: 1636758308, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 810514203}
   level: 0
@@ -17307,6 +17309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: -1425460191, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 855084140}
   level: 0
@@ -18473,6 +18477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: 0}
   weapon_data: {fileID: 0}
   level: 0
@@ -25610,7 +25616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "[ \uC870\uAC74 ]\n\uD5CC\uD130\uB7AD\uD06C 27 \uB2EC\uC131"
+  m_Text: "[ \uC870\uAC74 ]\n\uD5CC\uD130\uB7AD\uD06C 29 \uB2EC\uC131"
 --- !u!222 &423699715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28878,7 +28884,7 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 05000000050000000a0000000a0000000a000000140000001e000000280000003200000032000000320000003c0000003c0000006e0000006e0000006e0000006e000000780000007800000096000000960000009600000004010000
+  nextExp: 05000000050000000a0000000a0000000a000000140000001e000000280000003200000032000000320000003c0000003c0000006e0000006e0000006e000000010000006e000000780000009600000096000000960000009600000004010000
   pool: {fileID: 101635608}
   player: {fileID: 672580345}
   uiLevelUp: {fileID: 1596467449}
@@ -36562,6 +36568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: 456234981, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 1960654130}
   level: 0
@@ -45407,6 +45415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: 826363621, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 699373427}
   level: 0
@@ -58813,6 +58823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: 1608488784, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 146737472}
   level: 0
@@ -88136,6 +88148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: 924130445, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 1156075004}
   level: 0
@@ -90627,7 +90641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25, y: -76}
+  m_AnchoredPosition: {x: 76, y: -76}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289776023
@@ -117516,6 +117530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: -355552833, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 1274977027}
   level: 0
@@ -282100,6 +282116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: 279870727, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 934338157}
   level: 0
@@ -283606,6 +283624,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: 22417660, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 747108873}
   level: 0
@@ -289932,6 +289952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36a11a9ba6690f42a1328116bc5d29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLevel: {fileID: 0}
+  WeaponImg: {fileID: 0}
   ChangeImg: {fileID: -305523233, guid: 2535030baf54b254a8c1fa4fa521ca87, type: 3}
   weapon_data: {fileID: 1121057285}
   level: 0

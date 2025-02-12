@@ -69,8 +69,8 @@ public class AchiveManager : MonoBehaviour
             case Achive.UnlockBowa:     // 1. 보와보와 = 생존 시 
                 isAchive = GameManager.instance.wincheck == 1;
                 break;
-            case Achive.UnlockWigller:   // 2. 흔들흔들 = 27레벨 달성시
-                isAchive = GameManager.instance.level >= 27;                
+            case Achive.UnlockWigller:   // 2. 흔들흔들 = 29레벨 달성시
+                isAchive = GameManager.instance.level >= 29;                
                 break;
         }
 
