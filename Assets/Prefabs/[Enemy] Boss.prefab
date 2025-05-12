@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRigid: {fileID: 0}
   spawner: {fileID: 0}
-  MBulletCount: 25
+  MBulletCount: 20
   MBossBulletDamage: 8
   MFireSpeed: 3
   OBulletCount: 10
@@ -197,11 +197,12 @@ MonoBehaviour:
   IsBossDashing: 0
   BossDashDamage: 15
   BossDashDelay: 4
-  interval: 3
+  interval: 4
   BossSpeed: 2.5
   currentHp: 0
-  maxHp: 13000
+  maxHp: 11500
   isBossLive: 0
+  isBossTired: 0
   isBossAttacking: 0
   MaxDamage: 160
 --- !u!114 &-6791970273465413145
@@ -239,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e45a7eba6efb5540b7d50c19edb3bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MBulletCount: 30
+  MBulletCount: 25
   MBossBulletDamage: 5
   MFireSpeed: 3
   OBulletCount: 15
@@ -248,7 +249,7 @@ MonoBehaviour:
   DashSpeed: 12
   BossDashDamage: 15
   BossDashDelay: 3.46
-  interval: 2
+  interval: 3
   LBulletCount: 30
   LBossBulletDamage: 20
   LFireSpeed: 3
